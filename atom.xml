@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Lisp Taiwan λ]]></title>
+  <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
+  <link href="http://lisp.tw//atom.xml" rel="self"/>
+  <link href="http://lisp.tw/"/>
+  <updated>2013-02-26T09:03:43.386Z</updated>
+  <id>http://lisp.tw//</id>
+  <author>
+    <name><![CDATA[Lisp Taiwan]]></name>
+    <email><![CDATA[lisptw@gmail.com]]></email>
+  </author>
+  <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[Lispers 名言佳句集]]></title>
+    <link href="http://lisp.tw//2013/02/26/lispers-quotes/"/>
+    <id>http://lisp.tw//2013/02/26/lispers-quotes/</id>
+    <published>2013-02-26T08:51:13.000Z</published>
+    <updated>2013-02-26T09:03:04.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+原文：<a href="http://lispers.org/">Lisp - made with secret alien technology</a>
+<span class="image-copyright"><a href="http://lispers.org/">http://lispers.org/</a></span>
+</span></p>
+<img src="/images/lispers.org-logo.png" title="Lisp - made with secret alien technology">
+
+<span id="more"></span>
+
+<blockquote>
+<p>“The greatest single programming language ever designed.” <br/>
+— <a href="http://en.wikipedia.org/wiki/Alan_Kay">Alan Kay</a>, on Lisp</p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Lisp is worth learning for the profound enlightenment experience you will have when you finally get it; that experience will make you a better programmer for the rest of your days, even if you never actually use Lisp itself a lot.” <br/>
+— <a href="http://www.catb.org/~esr/">Eric Raymond</a>, <a href="http://www.catb.org/~esr/faqs/hacker-howto.html">&quot;How to Become a Hacker&quot;</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“One of the most important and fascinating of all computer languages is Lisp (standing for &quot;List Processing&quot;), which was invented by John McCarthy around the time Algol was invented.” <br/>
+— <a href="http://www.cogs.indiana.edu/people/homepages/hofstadter.html">Douglas Hofstadter</a>, <a href="http://en.wikipedia.org/wiki/G%C3%B6del%2C_Escher%2C_Bach">Gödel, Escher, Bach</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Within a couple weeks of learning Lisp I found programming in any other language unbearably constraining.” <br/>
+— <a href="http://www.paulgraham.com/">Paul Graham</a>, Road to Lisp</p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Lisp is the most sophisticated programming language I know. It is literally decades ahead of the competition ... it is not possible (as far as I know) to actually use Lisp seriously before reaching the point of no return.” <br/>
+— <a href="http://defun.dk/weblog/">Christian Lynbech</a>, Road to Lisp</p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“<a href="http://en.wikipedia.org/wiki/Greenspun%27s_Tenth_Rule">Greenspun&#39;s Tenth Rule of Programming</a>: any sufficiently complicated C or Fortran program contains an ad hoc informally-specified bug-ridden slow implementation of half of Common Lisp.” <br/>
+— <a href="http://philip.greenspun.com/">Philip Greenspun</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“We were not out to win over the Lisp programmers; we were after the C++ programmers. We managed to drag a lot of them about halfway to Lisp. Aren&#39;t you happy?” <br/>
+— <a href="http://en.wikipedia.org/wiki/Guy_Steele">Guy Steele</a>, Java spec co-author, <a href="http://people.csail.mit.edu/gregs/ll1-discuss-archive-html/msg04045.html">LL1 mailing list, 2003</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Lisp has jokingly been called &quot;the most intelligent way to misuse a computer&quot;. I think that description is a great compliment because it transmits the full flavor of liberation: it has assisted a number of our most gifted fellow humans in thinking previously impossible thoughts.” <br/>
+— <a href="http://www.cs.utexas.edu/~EWD/">Edsger Dijkstra, CACM, 15:10</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Historically, languages designed for other people to use have been bad: Cobol, PL/I, Pascal, Ada, C++. The good languages have been those that were designed for their own creators: C, Perl, Smalltalk, Lisp.” <br/>
+— <a href="http://www.paulgraham.com/">Paul Graham</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Lisp ... made me aware that software could be close to executable mathematics.” <br/>
+— <a href="http://en.wikipedia.org/wiki/L._Peter_Deutsch">L. Peter Deutsch</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Lisp is a programmable programming language.” <br/>
+— <a href="http://www.paulgraham.com/chameleon.html">John Foderaro, CACM, September 1991</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Will write code that writes code that writes code that writes code for money.” <br/>
+— on <a href="http://groups.google.com/group/comp.lang.lisp">comp.lang.lisp</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“I object to doing things that computers can do.” <br/>
+— <a href="http://www.cc.gatech.edu/~shivers/">Olin Shivers</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Lisp is a language for doing what you&#39;ve been told is impossible.” <br/>
+— <a href="http://en.wikipedia.org/wiki/Kent_Pitman">Kent Pitman</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Anyone could learn Lisp in one day, except that if they already knew Fortran, it would take three days.” <br/>
+— <a href="http://web.media.mit.edu/~minsky/">Marvin Minsky</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Programming in Lisp is like playing with the primordial forces of the universe. It feels like lightning between your fingertips. No other language even feels close.” <br/>
+— <a href="http://cooking-with-lisp.blogspot.tw/">Glenn Ehrlich</a>, Road to Lisp</p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Lisp is the red pill.” <br/>
+— John Fraser, on <a href="http://groups.google.com/group/comp.lang.lisp/msg/4ee0678ea9a0ac28">comp.lang.lisp</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“The language God would have used to implement the Universe.” <br/>
+— Svein Ove Aas, Road to Lisp</p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Lisp doesn&#39;t look any deader than usual to me.” <br/>
+— <a href="http://www.visi.com/~thornley/david/">David Thornley</a>, reply to a question older than most programming languages</p>
+</blockquote>
+<p><br/><br/><br/></p>
+<blockquote>
+<p>“Don&#39;t worry about what anybody else is going to do. The best way to predict the future is to invent it.” <br/>
+— <a href="http://en.wikipedia.org/wiki/Alan_Kay">Alan Kay</a></p>
+</blockquote>
+<p><br/><br/><br/></p>
+<p>To learn firsthand what all these folks are talking about,
+continue on to Peter Seibel&#39;s excellent <a href="http://www.gigamonkeys.com/book/">Lisp tutorial</a>.
+Alien logo based on graphics by <a href="http://www.lisperati.com/logo.html">Conrad Barski</a>.</p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Lisp Taiwan's RSS]]></title>
+    <link href="http://lisp.tw//2013/02/19/lisp-taiwan-rss-feed/"/>
+    <id>http://lisp.tw//2013/02/19/lisp-taiwan-rss-feed/</id>
+    <published>2013-02-19T14:14:54.000Z</published>
+    <updated>2013-02-19T14:37:42.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：Lisp Taiwan
+<span class="image-copyright"><a href="http://en.wikipedia.org/wiki/Aaron_Swartz">wikipedia</a></span>
+</span></p>
+<img src="/images/Aaron-Swartz.jpg" width="400" title="In memoriam Aaron Swartz">
+
+<span id="more"></span>
+
+<blockquote>
+<p>At age 14, Swartz was a member of the working group that authored the RSS 1.0 web syndication specification, a lesser-used offshoot of an earlier RSS version.</p>
+</blockquote>
+<p>有在使用 RSS 閱讀器的讀者，Lisp Taiwan 的 RSS 種子是：</p>
+<pre><code><div class="line"><span class="label">http:</span>//feeds<span class="preprocessor">.feedburner</span><span class="preprocessor">.com</span>/LispTaiwan</div></code></pre>
+<p>To whom using RSS reader, Lisp Taiwan&#39;s RSS feed is:</p>
+<pre><code><div class="line"><span class="label">http:</span>//feeds<span class="preprocessor">.feedburner</span><span class="preprocessor">.com</span>/LispTaiwan</div></code></pre>
+<p>Subscribe and Learn some Lisp!</p>
+<blockquote>
+<p>“Lisp is worth learning for the profound enlightenment experience you will have when you finally get it; that experience will make you a better programmer for the rest of your days, even if you never actually use Lisp itself a lot.” &mdash; Eric S. Raymond</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Clojure 风格指南]]></title>
+    <link href="http://lisp.tw//2013/02/19/clojure-style-guide/"/>
+    <id>http://lisp.tw//2013/02/19/clojure-style-guide/</id>
+    <published>2013-02-18T16:16:00.000Z</published>
+    <updated>2013-02-19T05:05:11.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+原文：<a href="https://github.com/bbatsov/clojure-style-guide">Clojure Style Guide</a>
+譯者：<a href="https://github.com/JuanitoFatas/clojure-style-guide">JuanitoFatas</a>
+<span class="image-copyright"><a href="http://en.wikipedia.org/">http://en.wikipedia.org/</a></span>
+</span></p>
+<img src="/images/800px-Rich_Hickey.jpg" title="Rich Hickey – the inventor of the Clojure programming language">
+
+<span id="more"></span>
+
+<h1>Clojure 风格指南</h1>
+<p>这篇 Clojure 风格指南向你推荐现实世界中的最佳实践，Clojure 程序员如何写出可被别的 Clojure 程序员维护的代码。一份风格指南反映出现实世界中的用法，并带有一个理想，避免已经公认是危险的事物被人继续使用，不管看起来是多么的好。</p>
+<p>本指南依照相关规则分成数个小节。我尽力在规则之后说明理由（如果省略的话，我相信理由是显而易见的）。</p>
+<p>我没有想到所有的规则 —– 他们大致上是基于，我作为一个专业软体工程师的广泛生涯，从 Clojure 社群成员所得到的反馈及建议，和数个高度评价的 Clojure 编程资源，像是 <a href="http://www.clojurebook.com/">&quot;Clojure Programming&quot;</a> 以及 <a href="http://joyofclojure.com/">&quot;The Joy of Clojure&quot;</a>。</p>
+<p>本指南仍在完善中 –– 缺少某些章节，某些不完整，某些规则缺少例子，某些规则例子演示不够清楚。在完稿时，将会解决这些议题 –– 现在就先记在心上就好。</p>
+<p>你可以使用 <a href="https://github.com/TechnoGate/transmuter">Transmuter</a> 来产生本指南的一份 PDF 或 HTML 复本。</p>
+<h2>目录</h2>
+<ul>
+<li><a href="#-1">组织源代码与排版</a></li>
+<li><a href="#-2">语法</a></li>
+<li><a href="#-3">命名</a></li>
+<li><a href="#-4">复合类型</a></li>
+<li><a href="#mutation">Mutation</a></li>
+<li><a href="#-6">字串</a></li>
+<li><a href="#-7">异常</a></li>
+<li><a href="#-8">宏</a></li>
+<li><a href="#-9">注解</a><ul>
+<li><a href="#-10">注释</a></li>
+</ul>
+</li>
+<li><a href="#-11">基本原则</a></li>
+</ul>
+<h2><a href="#-1" id="-1">组织源代码与排版</a></h2>
+
+<blockquote>
+<p>几乎每人都深信，每一个除了自己的风格都又丑又难读。<br/>
+把 &quot;除了自己的&quot; 拿掉，他们或许是对的...<br/>
+-- Jerry Coffin (论缩排)</p>
+</blockquote>
+<ul>
+<li><p>每个缩排层级使用两个空格。不要使用 Hard Tabs。</p>
+<pre><code class="lang-clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> something</div><div class="line">  <span class="list">(<span class="title">something-else</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad - 四个空格</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> something</div><div class="line">    <span class="list">(<span class="title">something-else</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>垂直排列函数参数。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> even?</div><div class="line">        <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> even?</div><div class="line">  <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>排列 <code>let</code> 的绑定与 map 的关键字。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">let</span></span> <span class="collection">[thing1 <span class="string">"some stuff"</span></div><div class="line">      thing2 <span class="string">"other stuff"</span>]</span></div><div class="line">  <span class="collection">{<span class="attribute">:thing1</span> thing1</div><div class="line">   <span class="attribute">:thing2</span> thing2}</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">let</span></span> <span class="collection">[thing1 <span class="string">"some stuff"</span></div><div class="line">  thing2 <span class="string">"other stuff"</span>]</span></div><div class="line">  <span class="collection">{<span class="attribute">:thing1</span> thing1</div><div class="line">  <span class="attribute">:thing2</span> thing2}</span>)</span></div></code></pre>
+</li>
+<li><p>针对没有文档字串的 <code>defn</code>，选择性忽略函数名与参数向量之间的新行。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="collection">[x]</span></div><div class="line">  <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[x]</span></div><div class="line">  <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="collection">[x]</span> <span class="list">(<span class="title">bar</span> x)</span>)</span></div></code></pre>
+</li>
+<li><p>选择性忽略短的参数向量与函数体之间的新行。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[x]</span></div><div class="line">  <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; 短的函数这样写很好</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> goo <span class="collection">[x]</span> <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; 多参数的函数这样写很好</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="list">([<span class="title">x</span>] <span class="list">(<span class="title">bar</span> x)</span>)</span></div><div class="line">  <span class="list">([<span class="title">x</span> y]</div><div class="line">    <span class="list">(<span class="title"><span class="built_in">if</span></span> <span class="list">(<span class="title">predicate?</span> x)</span></div><div class="line">      <span class="list">(<span class="title">bar</span> x)</span></div><div class="line">      <span class="list">(<span class="title">baz</span> x)</span>)</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="collection">[x]</span> <span class="list">(<span class="title"><span class="built_in">if</span></span> <span class="list">(<span class="title">predicate?</span> x)</span></div><div class="line">        <span class="list">(<span class="title">bar</span> x)</span></div><div class="line">        <span class="list">(<span class="title">baz</span> x)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>缩排多行的文档字串。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="string">"Hello there. This is</div><div class="line">  a multi-line docstring."</span></div><div class="line">  <span class="collection">[]</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="string">"Hello there. This is</div><div class="line">a multi-line docstring."</span></div><div class="line">  <span class="collection">[]</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>使用 Unix 风格的行编码(BSD/Solaris/Linux/OSX 的用户不用担心，，Windows 用户要格外小心。)</p>
+<ul>
+<li><p>如果你使用 Git ，你也许会想加入下面这个配置，来保护你的项目被 Windows 的行编码侵入：</p>
+<pre><code class="lang-bash"><div class="line">$ git config --global core.autocrlf <span class="literal">true</span></div></code></pre>
+</li>
+</ul>
+</li>
+<li><p>若有任何文字在左括号、中括号、大括号前（<code>(</code>, <code>[</code>, <code>{</code>），或是在右括号、中括号、大括号之后（<code>)</code>, <code>]</code>, <code>}</code>），将文字与括号用一个空格分开。反过来说，在左括号后、右括号前不要有空格。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">foo</span> <span class="list">(<span class="title">bar</span> baz)</span> quux)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title">foo</span><span class="list">(<span class="title">bar</span> baz)</span>quux)</span></div><div class="line"><span class="list">(<span class="title">foo</span> <span class="list">( <span class="title">bar</span> baz )</span> quux)</span></div></code></pre>
+</li>
+<li><p>不要在循序的复合类型的字面常量语法里使用逗号。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">[1 2 3]</div><div class="line">(1 2 3)</div><br><div class="line">;; bad</div><div class="line">[1, 2, 3]</div><div class="line">(1, 2, 3)</div></code></pre>
+</li>
+<li><p>明智的使用逗号与断行来加强 map 的可读性。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">{:name "Bruce Wayne" :alter-ego "Batman"}</div><br><div class="line">;; good and arguably a bit more readable</div><div class="line">{:name "Bruce Wayne"</div><div class="line"> :alter-ego "Batman"}</div><br><div class="line">;; good and arguably more compact</div><div class="line">{:name "Bruce Wayne", :alter-ego "Batman"}</div></code></pre>
+</li>
+<li><p>将所有尾随括号放在同一行。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> something</div><div class="line">  <span class="list">(<span class="title">something-else</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> something</div><div class="line">  <span class="list">(<span class="title">something-else</span>)</span></div><div class="line">)</span></div></code></pre>
+</li>
+<li><p>顶层形式用空行间隔开来。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">def</span></span> x ...)</span></div><br><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo ...)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">def</span></span> x ...)</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo ...)</span></div></code></pre>
+</li>
+<li><p>函数或宏定义中间不要放空行。</p>
+</li>
+<li>可行的场合下，避免每行超过 80 字符。</li>
+<li>避免尾随的空白。</li>
+<li>一个文件、一个命名空间。</li>
+<li><p>每个命名空间用 <code>ns</code> 形式开始，加上 <code>refer</code>、<code>require</code>、<code>use</code>  以及 <code>import</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="list">(<span class="title"><span class="built_in">ns</span></span> examples.ns</div><div class="line">  <span class="list">(:<span class="title">refer-clojure</span> <span class="attribute">:exclude</span> <span class="collection">[next replace remove]</span>)</span></div><div class="line">  <span class="list">(:<span class="title">require</span> <span class="list">(<span class="title">clojure</span> <span class="collection">[string <span class="attribute">:as</span> string]</span></div><div class="line">                     <span class="collection">[set <span class="attribute">:as</span> set]</span>)</span></div><div class="line">            <span class="collection">[clojure.java.shell <span class="attribute">:as</span> sh]</span>)</span></div><div class="line">  <span class="list">(:<span class="title"><span class="built_in">use</span></span> <span class="list">(<span class="title">clojure</span> zip xml)</span>)</span></div><div class="line">  <span class="list">(:<span class="title"><span class="built_in">import</span></span> java.util.Date</div><div class="line">           java.text.SimpleDateFormat</div><div class="line">           <span class="list">(<span class="title">java.util.concurrent</span> Executors</div><div class="line">                                 LinkedBlockingQueue)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>避免单段的命名空间。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">ns</span></span> example.ns)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">ns</span></span> example)</span></div></code></pre>
+</li>
+<li><p>避免使用过长的命名空间（也就是超过 5 段）</p>
+</li>
+<li><p>函数避免超过 10 行代码。多数函数应小于 5 行。</p>
+</li>
+<li><p>参数列表避免超过 3 个或 4 个位置参数（positional parameters）。</p>
+</li>
+</ul>
+<h2><a href="#-2" id="-2">语法</a></h2>
+
+<ul>
+<li>避免使用操作命名空间的函数，像是：<code>require</code> 与 <code>refer</code>。他们在 REPL 之外完全用不到。</li>
+<li>使用 <code>declare</code> 来启用 forward references。</li>
+<li><p>偏好像是 <code>map</code> 与 <code>loop/recur</code> 的高阶函数。</p>
+</li>
+<li><p>函数体内偏好使用 pre 函数与 post 条件来检查。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[x]</span></div><div class="line">  <span class="collection">{<span class="attribute">:pre</span> <span class="collection">[<span class="list">(<span class="title"><span class="built_in">pos?</span></span> x)</span>]</span>}</span></div><div class="line">  <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[x]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">if</span></span> <span class="list">(<span class="title"><span class="built_in">pos?</span></span> x)</span></div><div class="line">    <span class="list">(<span class="title">bar</span> x)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">throw</span></span> <span class="list">(<span class="title">IllegalArgumentException</span> <span class="string">"x must be a positive number!"</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>不要在函数内定义变量。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; very bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">def</span></span> x<span class="number"> 5</span>)</span></div><div class="line">  ...)</span></div></code></pre>
+</li>
+<li><p>不要用局域绑定遮蔽 <code>clojure.core</code> 内的名称。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; bad - you're forced to used clojure.core/map fully qualified inside</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[map]</span></div><div class="line">  ...)</span></div></code></pre>
+</li>
+<li><p>使用 <code>seq</code> 作为终止条件来测试序列是否为空（这个技巧有时候称为 <em>nil punning</em>）。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> print-seq <span class="collection">[s]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">when</span></span> <span class="list">(<span class="title"><span class="built_in">seq</span></span> s)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">prn</span></span> <span class="list">(<span class="title"><span class="built_in">first</span></span> s)</span>)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">recur</span></span> <span class="list">(<span class="title"><span class="built_in">rest</span></span> s)</span>)</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> print-seq <span class="collection">[s]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">when-not</span></span> <span class="list">(<span class="title"><span class="built_in">empty?</span></span> s)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">prn</span></span> <span class="list">(<span class="title"><span class="built_in">first</span></span> s)</span>)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">recur</span></span> <span class="list">(<span class="title"><span class="built_in">rest</span></span> s)</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>when</code> 取代 <code>(if ... (do ...)</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> pred</div><div class="line">  <span class="list">(<span class="title">foo</span>)</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">if</span></span> pred</div><div class="line">  <span class="list">(<span class="title"><span class="built_in">do</span></span></div><div class="line">    <span class="list">(<span class="title">foo</span>)</span></div><div class="line">    <span class="list">(<span class="title">bar</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>if-let</code> 取代 <code>let</code> + <code>if</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">if-let</span></span> <span class="collection">[result <span class="attribute">:foo</span>]</span></div><div class="line">  <span class="list">(<span class="title">something-with</span> result)</span></div><div class="line">  <span class="list">(<span class="title">something-else</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">let</span></span> <span class="collection">[result <span class="attribute">:foo</span>]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">if</span></span> result</div><div class="line">    <span class="list">(<span class="title">something-with</span> result)</span></div><div class="line">    <span class="list">(<span class="title">something-else</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>when-let</code> 取代 <code>let</code> + <code>when</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when-let</span></span> <span class="collection">[result <span class="attribute">:foo</span>]</span></div><div class="line">  <span class="list">(<span class="title">do-something-with</span> result)</span></div><div class="line">  <span class="list">(<span class="title">do-something-more-with</span> result)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">let</span></span> <span class="collection">[result <span class="attribute">:foo</span>]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">when</span></span> result</div><div class="line">    <span class="list">(<span class="title">do-something-with</span> result)</span></div><div class="line">    <span class="list">(<span class="title">do-something-more-with</span> result)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>if-not</code> 取代 <code>(if (not ...) ...)</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">if-not</span></span> <span class="list">(<span class="title">pred</span>)</span></div><div class="line">  <span class="list">(<span class="title">foo</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">if</span></span> <span class="list">(<span class="title"><span class="built_in">not</span></span> pred)</span></div><div class="line">  <span class="list">(<span class="title">foo</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>when-not</code> 取代 <code>(when (not ...) ...)</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when-not</span></span> pred</div><div class="line">  <span class="list">(<span class="title">foo</span>)</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> <span class="list">(<span class="title"><span class="built_in">not</span></span> pred)</span></div><div class="line">  <span class="list">(<span class="title">foo</span>)</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>not=</code> 取代 <code>(not (= ...))</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">not=</span></span> foo bar)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">not</span></span> <span class="list">(<span class="title"><span class="built_in">=</span></span> foo bar)</span>)</span></div></code></pre>
+</li>
+<li><p>偏好 <code>%</code> 胜于 <code>%1</code> 在只有一个参数的函数字面常量。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">#(Math/round %)</div><br><div class="line">;; bad</div><div class="line">#(Math/round %1)</div></code></pre>
+</li>
+<li><p>偏好 <code>%1</code> 胜于 <code>%</code> 在超过一个参数的函数字面常量。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">#(Math/pow %1 %2)</div><br><div class="line">;; bad</div><div class="line">#(Math/pow % %2)</div></code></pre>
+</li>
+<li><p>不要在不必要的情况用匿名函数包装函数。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> even? <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="list">(<span class="title"><span class="built_in">even?</span></span> %)</span> <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>若函数体由一个以上形式组成，不要使用函数的字面常量语法。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">(fn [x]</div><div class="line"> (println x)</div><div class="line"> (* x 2))</div><br><div class="line">;; bad (you need an explicit do form)</div><div class="line">#(do (println %)</div><div class="line">    (* % 2))</div></code></pre>
+</li>
+<li><p><code>complement</code> 与使用匿名函数相比，喜好使用前者。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> <span class="list">(<span class="title"><span class="built_in">complement</span></span> some-pred?)</span> coll)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="list">(<span class="title"><span class="built_in">not</span></span> <span class="list">(<span class="title">some-pred?</span> %)</span>)</span> coll)</span></div></code></pre>
+<p>这个规则应该在函数有明确的反函数时忽略（如：<code>even?</code> 与 <code>odd?</code>）。</p>
+</li>
+<li><p>在可以产生更简洁代码的情况时利用 <code>comp</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> #<span class="list">(<span class="title">capitalize</span> <span class="list">(<span class="title">trim</span> %)</span>)</span> <span class="collection">[<span class="string">"top "</span> <span class="string">" test "</span>]</span>)</span></div><br><div class="line"><span class="comment">;; better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> <span class="list">(<span class="title"><span class="built_in">comp</span></span> capitalize trim)</span> <span class="collection">[<span class="string">"top "</span> <span class="string">" test "</span>]</span>)</span></div></code></pre>
+</li>
+<li><p>在可以产生更简洁代码的情况时利用 <code>partial</code> 。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> #<span class="list">(<span class="title"><span class="built_in">+</span></span><span class="number"> 5</span> %)</span> <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div><br><div class="line"><span class="comment">;; (arguably) better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> <span class="list">(<span class="title"><span class="built_in">partial</span></span> +<span class="number"> 5</span>)</span> <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>偏好使用 threading macros <code>-&gt;</code> （thread-first）及 <code>-&gt;&gt;</code> （thread-last）来简化嵌套形式。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">-&gt;</span> <span class="collection">[1<span class="number"> 2</span><span class="number"> 3</span>]</span></div><div class="line">    reverse</div><div class="line">    <span class="list">(<span class="title"><span class="built_in">conj</span></span><span class="number"> 4</span>)</span></div><div class="line">    prn)</span></div><br><div class="line"><span class="comment">;; not as good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">prn</span></span> <span class="list">(<span class="title"><span class="built_in">conj</span></span> <span class="list">(<span class="title"><span class="built_in">reverse</span></span> <span class="collection">[1<span class="number"> 2</span><span class="number"> 3</span>]</span>)</span><span class="number"></div><div class="line">           4</span>)</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">-&gt;&gt;</span> <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span></div><div class="line">     <span class="list">(<span class="title"><span class="built_in">filter</span></span> even?)</span></div><div class="line">     <span class="list">(<span class="title"><span class="built_in">map</span></span> <span class="list">(<span class="title"><span class="built_in">partial</span></span> *<span class="number"> 2</span>)</span>)</span>)</span></div><br><div class="line"><span class="comment">;; not as good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> <span class="list">(<span class="title"><span class="built_in">partial</span></span> *<span class="number"> 2</span>)</span></div><div class="line">     <span class="list">(<span class="title"><span class="built_in">filter</span></span> even? <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>当连锁调用 Java interop 的方法时，偏好 <code>..</code> 胜于 <code>-&gt;</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">-&gt;</span> <span class="list">(<span class="title">System/getProperties</span>)</span> <span class="list">(<span class="title">.get</span> <span class="string">"os.name"</span>)</span>)</span></div><br><div class="line"><span class="comment">;; better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">..</span></span> System getProperties <span class="list">(<span class="title"><span class="built_in">get</span></span> <span class="string">"os.name"</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>在 <code>cond</code> 与 <code>condp</code> 使用 <code>:else</code> 作为最后的测试表达式。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">(cond</div><div class="line">  (&lt; n 0) "negative"</div><div class="line">  (&gt; n 0) "positive"</div><div class="line">  :else "zero"))</div><br><div class="line">;; bad</div><div class="line">(cond</div><div class="line">  (&lt; n 0) "negative"</div><div class="line">  (&gt; n 0) "positive"</div><div class="line">  true "zero"))</div></code></pre>
+</li>
+<li><p>当谓词与表达式不变时，偏好用 <code>condp</code> 来取代 <code>cond</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">cond</span></span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 10</span>)</span> <span class="attribute">:ten</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 20</span>)</span> <span class="attribute">:twenty</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 30</span>)</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:else</span> <span class="attribute">:dunno</span>)</span></div><br><div class="line"><span class="comment">;; much better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">condp</span></span> = x<span class="number"></div><div class="line">  10</span> <span class="attribute">:ten</span><span class="number"></div><div class="line">  20</span> <span class="attribute">:twenty</span><span class="number"></div><div class="line">  30</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:dunno</span>)</span></div></code></pre>
+</li>
+<li><p>当测试表达式是编译期时间常量时，偏好使用 <code>case</code> 取代 <code>cond</code> 或 <code>condp</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">cond</span></span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 10</span>)</span> <span class="attribute">:ten</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 20</span>)</span> <span class="attribute">:twenty</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 30</span>)</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:else</span> <span class="attribute">:dunno</span>)</span></div><br><div class="line"><span class="comment">;; better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">condp</span></span> = x<span class="number"></div><div class="line">  10</span> <span class="attribute">:ten</span><span class="number"></div><div class="line">  20</span> <span class="attribute">:twenty</span><span class="number"></div><div class="line">  30</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:dunno</span>)</span></div><br><div class="line"><span class="comment">;; best</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">case</span></span> x<span class="number"></div><div class="line">  10</span> <span class="attribute">:ten</span><span class="number"></div><div class="line">  20</span> <span class="attribute">:twenty</span><span class="number"></div><div class="line">  30</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:dunno</span>)</span></div></code></pre>
+</li>
+<li><p>适当的时机下使用 <code>set</code> 作为谓词。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">remove</span></span> #<span class="list">(<span class="title"><span class="built_in">=</span></span> %<span class="number"> 0</span>)</span> <span class="collection">[0<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span>]</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">remove</span></span> #<span class="collection">{0}</span> <span class="collection">[0<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span>]</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">count</span></span> <span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="list">(<span class="title"><span class="built_in">or</span></span> <span class="list">(<span class="title"><span class="built_in">=</span></span> % \a)</span></div><div class="line">                    <span class="list">(<span class="title"><span class="built_in">=</span></span> % \e)</span></div><div class="line">                    <span class="list">(<span class="title"><span class="built_in">=</span></span> % \i)</span></div><div class="line">                    <span class="list">(<span class="title"><span class="built_in">=</span></span> % \o)</span></div><div class="line">                    <span class="list">(<span class="title"><span class="built_in">=</span></span> % \u)</span>)</span></div><div class="line">               <span class="string">"mary had a little lamb"</span>)</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">count</span></span> <span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="collection">{\a \e \i \o \u}</span> <span class="string">"mary had a little lamb"</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>使用 <code>(inc x)</code> &amp; <code>(dec x)</code> 而不是 <code>(+ x 1)</code> and <code>(- x 1)</code>。</p>
+</li>
+<li><p>使用 <code>(pos? x)</code>, <code>(neg? x)</code> &amp; <code>(zero? x)</code> 而不是 <code>(&gt; x 0)</code>,
+<code>(&lt; x 0)</code> &amp; <code>(= x 0)</code>。</p>
+</li>
+<li><p>使用包装好的 Java interop 形式。</p>
+<pre><code class="lang-Clojure"><div class="line">;;; object creation</div><div class="line">;; good</div><div class="line">(java.util.ArrayList. 100)</div><br><div class="line">;; bad</div><div class="line">(new java.util.ArrayList 100)</div><br><div class="line">;;; static method invocation</div><div class="line">;; good</div><div class="line">(Math/pow 2 10)</div><br><div class="line">;; bad</div><div class="line">(. Math pow 2 10)</div><br><div class="line">;;; instance method invocation</div><div class="line">;; good</div><div class="line">(.substring "hello" 1 3)</div><br><div class="line">;; bad</div><div class="line">(. "hello" substring 1 3)</div><br><div class="line">;;; static field access</div><div class="line">;; good</div><div class="line">Integer/MAX_VALUE</div><br><div class="line">;; bad</div><div class="line">(. Integer MAX_VALUE)</div><br><div class="line">;;; instance field access</div><div class="line">;; good</div><div class="line">(.someField some-object)</div><br><div class="line">;; bad</div><div class="line">(. some-object some-field)</div></code></pre>
+</li>
+</ul>
+<h2><a href="#-3" id="-3">命名</a></h2>
+
+<blockquote>
+<p>程式设计的真正难题是替事物命名及无效的缓存。 <br/>
+-- Phil Karlton</p>
+</blockquote>
+<ul>
+<li>遇到给命名空间取名时，偏好下列两种架构：<ul>
+<li><code>project.module</code></li>
+<li><code>organization.project.module</code></li>
+</ul>
+</li>
+<li>多段的命名空间，使用 <code>lisp-case</code> 。</li>
+<li>函数与变量名使用 <code>lisp-case</code>。</li>
+<li>协议、记录、结构及类型使用驼峰形式（专有缩略词保持大写：HTTP、RFC、XML）</li>
+<li>谓词方法的名字（返回布尔值的方法）以问号结尾（例：<code>even?</code>）。</li>
+<li>STM 事务里不安全的函数、宏的名字以惊叹号结尾（例：<code>reset!</code>）。</li>
+<li><p>conversation 函数使用 <code>-&gt;</code> 取代 <code>to</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> f-&gt;c ...)</span></div><br><div class="line"><span class="comment">;; not so good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> f-to-c ...)</span></div></code></pre>
+</li>
+<li><p>使用 <code>*earmuffs*</code> 耳套（星号）给将会重新绑定的东西（也就是动态的）。</p>
+</li>
+<li>常量不要使用特殊的表示法；除非特别说明，假设一切都是常量。</li>
+<li>Use <code>_</code> for destructuring targets and formal arguments names whose
+value will be ignored by the code at hand.</li>
+<li>惯用名遵循 <code>clojure.core</code> 的范例，如 <code>pred</code> 与 <code>coll</code>。<ul>
+<li>函数：<ul>
+<li><code>f</code>, <code>g</code>, <code>h</code> - 函数输入</li>
+<li><code>n</code> - 整数输入（通常是大小）</li>
+<li><code>index</code> - 整数索引</li>
+<li><code>x</code>, <code>y</code> - 数字</li>
+<li><code>s</code> - 字串输入</li>
+<li><code>coll</code> - 复合类型</li>
+<li><code>pred</code> - 谓词闭包</li>
+<li><code>&amp; more</code> - 可变输入</li>
+</ul>
+</li>
+<li>宏：<ul>
+<li><code>expr</code> - 表达式</li>
+<li><code>body</code> - 宏的主体</li>
+<li><code>binding</code> - 宏的绑定向量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a href="#-4" id="-4">复合类型</a></h2>
+
+<blockquote>
+<p>单数据结构与百个函数，好过十个函数与数据结构 <br/>
+-- Alan J. Perlis</p>
+</blockquote>
+<ul>
+<li>避免使用列表来储存通用的数据（除非列表正是你所需要的）。</li>
+<li><p>哈希键偏好使用关键字。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">{:name "Bruce" :age 30}</div><br><div class="line">;; bad</div><div class="line">{"name" "Bruce" "age" 30}</div></code></pre>
+</li>
+<li><p>在允许的场合下，偏好使用复合类型的字面常量语法。但在定义集合时，当数值为编译期时间常量时，仅使用字面常量语法。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">[1 2 3]</div><div class="line">#{1 2 3}</div><div class="line">(hash-set (func1) (func2)) ; values determined at runtime</div><br><div class="line">;; bad</div><div class="line">(vector 1 2 3)</div><div class="line">(hash-set 1 2 3)</div><div class="line">#{(func1) (func2)} ; will throw runtime exception if (func1) = (func2)</div></code></pre>
+</li>
+<li><p>在任何情况下避免通过索引来访问复合类型的成员。</p>
+</li>
+<li><p>在允许的场合下，偏好使用作为关键字的函数来从 map 取出数值。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="list">(<span class="title"><span class="built_in">def</span></span> m <span class="collection">{<span class="attribute">:name</span> <span class="string">"Bruce"</span> <span class="attribute">:age</span><span class="number"> 30</span>}</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(:<span class="title"><span class="built_in">name</span></span> m)</span></div><br><div class="line"><span class="comment">;; bad - 太罗嗦</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">get</span></span> m <span class="attribute">:name</span>)</span></div><br><div class="line"><span class="comment">;; bad - 有 NullPointerException 之虞</span></div><div class="line"><span class="list">(<span class="title">m</span> <span class="attribute">:name</span>)</span></div></code></pre>
+</li>
+<li><p>利用多数复合类型是其元素的函数这个事实。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="collection">{\a \e \o \i \u}</span> <span class="string">"this is a test"</span>)</span></div><br><div class="line"><span class="comment">;; 差劲 - 烂到不敢给你看</span></div></code></pre>
+</li>
+<li><p>利用关键字可以当作复合类型的函数这个事实。</p>
+<pre><code class="lang-Clojure"><div class="line">((juxt :a :b) {:a "ala" :b "bala"})</div></code></pre>
+</li>
+<li><p>避免使用过渡的复合类型，除非在攸关性能的部分代码使用。</p>
+</li>
+<li><p>避免使用 Java 的 collections。</p>
+</li>
+<li><p>除了 interop 与攸关性能的代码（大量处理原生类型的代码）外，避免使用 Java 的数组。</p>
+</li>
+</ul>
+<h2><a href="#mutation" id="mutation">Mutation</a></h2>
+
+<h3>Refs</h3>
+<ul>
+<li>考虑看看将所有带有 <code>io!</code> 宏的 IO 调用包起来，来避免在事务中不小心调用到这些代码。</li>
+<li>无论何时都避免使用 <code>ref-set</code> 。</li>
+<li>试著使事务的大小（封装在事务里的工作量）越小越好。</li>
+<li>避免有短期、长期与同一个 Ref 互动的事务。</li>
+</ul>
+<h3>Agents</h3>
+<ul>
+<li>仅针对 CPU 绑定或不阻塞 IO、其他线程的动作使用 <code>send</code> 。</li>
+<li>给看起来可能会阻塞、睡眠或阻碍线程的动作使用 <code>send-off</code> 。</li>
+</ul>
+<h3>原子</h3>
+<ul>
+<li>避免在 STM 事务里更新原子。</li>
+<li>无论何时都避免使用 <code>reset!</code> 。</li>
+</ul>
+<h2><a href="#-6" id="-6">字串</a></h2>
+
+<ul>
+<li><p>偏好使用 <code>clojure.string</code> 里定义的字串操作函数，而不是 Java interop，或是自己写。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">clojure.string/upper-case</span> <span class="string">"bruce"</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title">.toUpperCase</span> <span class="string">"bruce"</span>)</span></div></code></pre>
+</li>
+</ul>
+<h2><a href="#-7" id="-7">异常</a></h2>
+
+<ul>
+<li>重用现有的异常类型。符合语言习惯的 Clojure 代码，当真的抛出异常时，会抛出标准类型的异常（如 <code>java.lang.IllegalArgumentException</code>、<code>java.lang.UnsupportedOperationException</code>、<code>java.lang.IllegalStateException</code>、<code>java.io.IOException</code>）。</li>
+<li>偏好使用 <code>with-open</code> 胜于 <code>finally</code>。</li>
+</ul>
+<h2><a href="#-8" id="-8">宏</a></h2>
+
+<ul>
+<li>不要在函数可以办到的情况下使用宏。</li>
+<li>先撰写宏的用途的示例子，再开始撰写宏。</li>
+<li>不管是什么时候，只要可能的话，将复杂的宏拆成较小的函数。</li>
+<li>宏应该仅作为提供语法糖的功能，其核心为清晰的函数。这么做会改善可组合性 (composability)。</li>
+<li>偏好引用形式语法胜于手动构造列表</li>
+</ul>
+<h2><a href="#-9" id="-9">注解</a></h2>
+
+<blockquote>
+<p>良好的代码是最佳的文档。当你要加一个注释时，扪心自问，<br/>
+&quot;如何改善代码让它不需要注释？&quot; 改善代码然后记录下来使它更简洁。 <br/>
+-- Steve McConnell</p>
+</blockquote>
+<ul>
+<li><p>撰写本身即文档的代码并忽略本节。我是认真的！</p>
+</li>
+<li><p>至少用四个分号来写标题注解。</p>
+</li>
+<li><p>用三个分号来写顶层级别的注解。</p>
+</li>
+<li><p>使用两个分号来给一段代码写注解，分号放在代码之前。</p>
+</li>
+<li><p>使用一个分号来写加注式的注解。</p>
+</li>
+<li><p>分号与文字之间至少有一个空格。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;;;; Frob Grovel</span></div><br><div class="line"><span class="comment">;;; This section of code has some important implications:</span></div><div class="line"><span class="comment">;;;   1. Foo.</span></div><div class="line"><span class="comment">;;;   2. Bar.</span></div><div class="line"><span class="comment">;;;   3. Baz.</span></div><br><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> fnord <span class="collection">[zarquon]</span></div><div class="line">  <span class="comment">;; If zob, then veeblefitz.</span></div><div class="line">  <span class="list">(<span class="title">quux</span> zot</div><div class="line">        mumble             <span class="comment">; Zibblefrotz.</span></div><div class="line">        frotz)</span>)</span></div></code></pre>
+</li>
+<li><p>注解是完整的句子时，应该将第一个字大写，并用一个句号结束注解。普遍来说，使用正确的标点符号。句与句之间用一个空白隔开。</p>
+</li>
+<li><p>避免多余的注解。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">inc</span></span> counter)</span> <span class="comment">; increments counter by one</span></div></code></pre>
+</li>
+<li><p>持续更新注解。过时的注解比没有注解还糟糕。</p>
+</li>
+<li><p>当你需要注解一个特定的形式时，偏好使用 <code>#_</code> 读取宏胜于一般的注解。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">+</span></span> foo #_<span class="list">(<span class="title">bar</span> x)</span> delta)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">+</span></span> foo</div><div class="line">   <span class="comment">;; (bar x)</span></div><div class="line">   delta)</span></div></code></pre>
+</li>
+</ul>
+<blockquote>
+<p>好代码就像是好的笑话 - 它不需要解释 <br/>
+-- Russ Olsen</p>
+</blockquote>
+<ul>
+<li>避免撰写注解来解释糟糕的代码。重构代码使其一目了然 （要嘛就做，要嘛不做 –― 不要只是试试看。–– Yoda）</li>
+</ul>
+<h3><a href="#-10" id="-10">注释</a></h3>
+
+<ul>
+<li>注释通常会直接写在相关代码的那行后面。</li>
+<li>注释关键字后面接著一个冒号与空格，接著是描述问题的说明。</li>
+<li>如果描述问题需要多行时，之后的行需与第一行对齐。</li>
+<li><p>将注释打上名字缩写与日期标签，这样之后才可轻松识别出来。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> some-fun</div><div class="line">  <span class="collection">[]</span></div><div class="line">  <span class="comment">;; FIXME: This has crashed occasionally since v1.2.3. It may</span></div><div class="line">  <span class="comment">;;        be related to the BarBazUtil upgrade. (xz 13-1-31)</span></div><div class="line">  <span class="list">(<span class="title">baz</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>在问题简单到任何文档都会显得冗余的情况下，可在最后一行留下注释。这种用途是个例外，而不是个规则。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> bar</div><div class="line">  <span class="collection">[]</span></div><div class="line">  <span class="list">(<span class="title">sleep</span><span class="number"> 100</span>)</span>)</span> <span class="comment">; OPTIMIZE</span></div></code></pre>
+</li>
+<li>使用 <code>TODO</code> 来标记之后应被加入的未实现功能或特色。</li>
+<li>使用 <code>FIXME</code> 来标记一个需要修复的代码。</li>
+<li>使用 <code>OPTIMIZE</code> 来标记可能影响性能的缓慢或效率低落的代码。</li>
+<li>使用 <code>HACK</code> 来标记代码异味，其中包含了可疑的编码实践以及应该需要重构。</li>
+<li>使用 <code>REVIEW</code> 来标记任何需要审视及确认正常动作的地方。举例来说： <code>REVIEW: 我们确定用户现在是这么做的吗？</code></li>
+<li>如果你觉得适当的话，使用其他习惯的注解关键字，但记得把它们记录在项目的 <code>README</code> 或类似的地方。</li>
+</ul>
+<h3><a href="#-11" id="-11">基本原则</a></h3>
+
+<ul>
+<li>用函数式风格来编程。适当的避免 mutation。</li>
+<li>保持一致。在理想的世界里，与这些准则保持一致。</li>
+<li>使用常识。</li>
+</ul>
+<h1>贡献</h1>
+<p>在本指南所写的每个东西都不是定案。这只是我渴望想与同样对 Clojure 编程风格有兴趣的大家一起工作，以致于最终我们可以替整个 Clojure 社群创造一个有益的资源。</p>
+<p>欢迎开票或发送一个带有改进的更新请求。在此提前感谢你的帮助！</p>
+<h1>口耳相传</h1>
+<p>一份社群策动的风格指南，对一个社群来说，只是让人知道有这个社群。微博转发这份指南，分享给你的朋友或同事。我们得到的每个注解、建议或意见都可以让这份指南变得更好一点。而我们想要拥有的是最好的指南，不是吗？</p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Clojure/" term="Clojure"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[写给我们的函数式编程]]></title>
+    <link href="http://lisp.tw//2013/02/17/functional-programming-for-the-rest-of-us/"/>
+    <id>http://lisp.tw//2013/02/17/functional-programming-for-the-rest-of-us/</id>
+    <published>2013-02-17T08:11:58.000Z</published>
+    <updated>2013-02-19T05:04:05.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+原文：<a href="http://www.defmacro.org/ramblings/fp.html">Functional Programming For The Rest of Us</a>
+譯者：<a href="#" title="电邮: lihaitao 在 gmail.com">lihaitao</a>
+原發表日期：2006/6/19
+校对：刘凯清
+修订：Lisp Taiwan
+</span></p>
+<img src="/images/fp-is-beautiful.png" title="Functional Programming is beautiful by Conrad Barski">
+
+<span id="more"></span>
+
+<p><span class="image-copyright alignright meta-info"><a href="http://wadler.blogspot.sg/">http://wadler.blogspot.sg/</a></span></p>
+<h1>写给我们的函数式编程</h1>
+<p>程序员拖沓成性，每天到了办公室后，泡咖啡，检查邮箱，阅读 RSS feed，到技术站点查阅最新的文章，在编程论坛的相关版面浏览公共讨论，并一次次地刷新以免漏掉一条信息。然后是午饭，回来后盯了 IDE 没几分钟，就再 次检查邮箱，倒咖啡。最后在不知不觉中，结束了一天。</p>
+<p>不平凡的事是每隔一段时间会跳出一些很有挑战性的文章。如果没错，这些天你至少发现了一篇这类文章——很难快速通读它们，于是就将之束之高阁，直到突然你发现自己已经有了一个长长的链接列表和一个装满了 PDF 文件的目录，然后你梦想着到一个人迹罕至的森林里的小木屋苦读一年以期赶上，要是每天清晨你 沿着那里的林中小溪散步时会有人带来食物和带走垃圾就更好了。</p>
+<p>虽然我对你的订阅清单一无所知，但我的清单却是一大堆关于函数式编程的文章。而这些基本上是最难阅读的了。它们用枯燥的学院派语言写成，即使“在华尔街行业浸淫十年的专家（veterans）”也不能理解函数式编程（也写作 FP）都在探讨些什么。如果你去问花旗集团（Citi Group）或德意志银行（Deutsche Bank）的项目经理<a href="#1">[1]</a>，为什么选择了 JMS 而不是 Erlang，他们可能回答不能在产业级的应用中使用学院派语言。问题是，一些最为复杂的，有着最严格需求的系统却是用函数式编程元素写成。有些说法不能让人信服。</p>
+<p>的确，关于函数式编程的文章和论文难于理解，但他们本来不必这么晦涩。这一知识隔阂的形成完全是历史原因。函数式编程的概念本身并不困难。这篇文章 可以作为“简易的函数式编程导引”。是一座从我们命令式（imperative）的思维模式到函数式编程的桥梁。去取杯咖啡回来继续读下去吧。可能你的同事很快就会开始取笑你对函数式编程发表的观点了。</p>
+<p>那么什么是函数式编程呢？它怎么产生？它可以被掌握吗？如果它真如其倡导者所言，为什么没有在行业中得到更广泛的使用？为什么好像只有那些拿着博士学位的人才使用它？最要紧的是，为什么它就 TMD 这么难学？这些 closure, continuation, currying，惰性求值和无副作用等等究竟是些什么东西？没有大学参与的项目怎么使用它？为什么它看上去这么诡异于和我们命令式思想友好，圣洁和亲近 的一切的一切？我们将于不久扫清这些疑问。首先让我来解释形成实际生活和学界文章之间巨大隔阂的缘起，简单得像一次公园的散步。</p>
+<h2>信步游园</h2>
+<p><span class="image-copyright meta-info"><a href="http://gbpost.wordpress.com">http://gbpost.wordpress.com</a></span></p>
+<img src="/images/plato.jpg" width="300" height="400" title="Palto">
+
+<p>启动时间机器，我们散步在两千多年以前的一个被遗忘了太久的春季明媚的日子，那是公元前 380 年。雅典城墙外的橄榄树树荫里，柏拉图和一个英俊的奴隶小男孩朝着学院走去。“天气真好”，“饮食不错”，然后话题开始转向哲思。</p>
+<p>“瞧那两个学生，”为了使问题更容易理解，柏拉图仔细地挑选着用词，“你认为谁更高呢？”小男孩看着那两个人站着的水漕说，“他们差不多一样高”。柏拉图说：“你的差不多一样是什么意思？”。“我在这里看他们是一样高的，不过我肯定如果走近些就会看出他们高度的差别。”</p>
+<p>柏拉图笑了，他正把这个孩子带到正确的方向。“那么你是说，我们这个世界没有完全的等同了？”小男孩想了一会儿回答，“对，我不这样认为，任何事物总有一些区别，即使我们看不到它。”这句话非常到位！“那么如果这世上没有完全的相等，你又是如何理解‘完全’相等这个概念的呢？”小男孩迷惑得说：“我不知道。”最初尝试着理解数学的本质时也会产生这种疑惑。</p>
+<p>柏拉图暗示这个世上的万物都只是一个对完美的近似。他还认识到我们即使没有接触到完美但依然可以理解这一概念。所以他得出结论，完美的数学形式只能 存在于另一个世界，我们通过和那个世界的某种联系在一定程度上知晓他们。很明显我们不能看到完美的圆，但我们可以理解什么是完美的圆并用数学公式将它表达 出来。那么，什么是数学？为什么宇宙可以用数学定理描述？数学可以描述宇宙中的所有现象吗？<a href="#2">[2]</a></p>
+<p>数学哲学是一个很复杂的课题。像大多数哲学学科一样它更倾向于提出问题而不是给出解答。这些意见中很多都循回绕转于一个事实，即数学实际上是一个谜 语：我们设置了一系列基本的不冲突的原理和一些可以施加于这些原理的操作规则，然后我们就能堆砌这些规则以形成更复杂的规则。数学家把这种方法叫做“形式 系统”或“演算”。如果愿意，我们可以很快写出一个关于 Tetris（译者注：一种通常被称为俄罗斯方块的游戏）的形式系统。实际上，工作中的 Tetris 实现就是一个形式系统，只是被指定使用了个不常见的表现形式。</p>
+<p>人马座的那个生物文明也许不能理解我们的 Tetris 和圆的范式，因为可能他们唯一的感知输入是气味香橙的橘子。他们也许永远不会发现 Tetris 范式，但很可能会有一个圆的范式。我们也可能将无法阅读它，因为我们的嗅觉没有那么复杂，可是一旦我们理解了那一范式的表示形式（通过这种传感器和标准解码技术来理解这种语言），其底层的概念就可被任何智能文明所理解。</p>
+<p>有趣的是如果从来没有智能文明存在，Tetris 和圆的范式仍然严密合理，只是没有人注定将会发现他们。如果产生了一种智能文明，他就会发现一些形式系统来帮助描述宇宙的规律。但他还是不大可能发现 Tetris 因为宇宙中再没有和它相似的事物。在现实世界中这类无用的形式系统或迷题的例子数不胜数，Tetris 只是其中的一个典型。我们甚至不能确定自然数是否是对客观世界的完整近似，至少我们可以简单的想像一个很大的数它不能用宇宙中任何东西描述，因为它以近乎无穷。</p>
+<h2>历史一瞥 <a href="#">[3]</a></h2>
+<p><span class="image-copyright meta-info"><a href="http://www.migulski.com/">http://www.migulski.com/</a></span></p>
+<img src="/images/princeton-gothic.jpg" title="Princeton">
+
+<p>再次启动时间机器，这一次的旅行近了很多，我们回到 1930 年代。大萧条正在蹂躏着那个或新或就的时代。空前的经济下挫影响着几乎所有阶层的家庭生活，只有少数人还能够保持着饥谨危机前的安逸。一些人就如此幸运地位列其中，我们关心的是普林斯顿大学的数学家们。</p>
+<p>采用了歌特式风格设计建造的新办公室给普林斯顿罩上天堂般的幸福光环，来自世界各地的逻辑学家被邀请到普林斯顿建设一个新的学部。虽然彼时的美国民众已难能弄到一餐的面包，普林斯顿的条件则是可以在高高的穹顶下，精致雕凿的木质墙饰边上整日的品茶讨论或款款慢步于楼外的林荫之中。</p>
+<p>阿隆左·丘奇就是一个在这种近于奢侈的环境中生活着的数学家。他在普林斯顿获得本科学位后被邀留在研究生院继续攻读。阿隆左认为那里的建筑实属浮华，所以他很少一边喝茶一边与人讨论数学，他也不喜欢到林中散步。阿隆左是一个孤独者：因为只有一个人时他才能以最高的效率工作。虽然如此，他仍与一些普林斯顿人保持的定期的联系，其中包括阿兰·图灵，约翰·冯·诺依曼，和库尔特·哥德尔。</p>
+<p>这四个人都对形式系统很感兴趣，而不太留意现实世界，以便致力于解决抽象的数学难题。他们的难题有些共同之处：都是探索关于计算的问题。如果我们有了无限计算能力的机器，哪些问题可以被解决？我们可以使他们自动地得以解决吗？是否还是有些问题无法解决，为什么？不同设计的各种机器是否具有相同的计算能力？</p>
+<p>通过和其它人的合作，阿隆左·丘奇提出了一个被称为 lambda 演算的形式系统。这个系统本质上是一种虚拟的机器的编程语言，他的基础是一些以函数为参数和返回值的函数。函数用希腊字母 lambda 标识，这个形式系统因此得名<a href="#4">[4]</a>。利用这一形式系统，阿隆左就可以对上述诸多问题推理并给出结论性的答案。</p>
+<p>独立于阿隆左，阿兰·图灵也在进行着相似的工作，他提出了一个不同的形式系统（现在被称为图灵机），并使用这一系统独立得给出了和阿隆左相似的结论。后来被证明图灵机和 lambda 演算能力等同。</p>
+<p>我们的故事本可以到此结束，我会就此歇笔，而你也将浏览到下一个页面，如果第二次世界大战没有在那时打响。整个世界笼罩在战争的火光和硝烟之中，美 国陆军和海军前所未有的大量使用炮弹，为了改进炮弹的精确度，部队组织了大批的科学家持续地计算微分方程以解出弹道发射轨迹。渐渐意识到这个任务用人力手 工完成太耗精力后，人们开始着手开发各种设备来攻克这个难关。第一个解出了弹道轨迹的机器是 IBM 制造的 Mark I —— 它重达 5 吨，有 75 万个组件，每秒可以完成三次操作。</p>
+<p>竞争当然没有就此结束，1949 年，EDVAC（Electronic Discrete Variable Automatic Computer，爱达瓦克）被推出并获得了极大的成功。这是对冯·诺依曼架构的第一个实践实例，实际上也是图灵机的第一个现实实现。那一年好运与阿隆左 ·丘奇无缘。</p>
+<p>直到 1950 年代将尽，一位 MIT 的教授 John McCarthy（也是普林斯顿毕业生）对阿隆左·丘奇的工作产生了兴趣。1958 年，他公开了表处理语言 Lisp。Lisp 是对阿隆左·丘奇的 lambda 演算的实现但同时它工作在冯·诺依曼计算机上！很多计算机科学家认识到了 Lisp 的表达能力。1973 年，MIT 人工智能实验室的一组程序员开发了被称为Lisp 机器的硬件 –– 阿隆左 lambda 演算的硬件实现！</p>
+<h2>函数式编程</h2>
+<p>函数式编程是对阿隆左·丘奇理论的实践应用。但也并非全部 lambda 演算都被应用到了实践中，因为 lambda 演算不是被设计为在物理局限下工作的。因此，象面向对象的编程一样，函数式编程是一系列理念，而不是严格的教条。现在有很多种函数式编程语言，他们中的大多数以不同方式完成不同任务。在本文中我将就最广泛使用的源自函数式编程的思想作一解释，并将用 Java 语言举例。(的确，你可以用 Java 写出函数式的 程序如果你有显著的受虐倾向）。在下面的小节中，我将会把 Java 作为一种函数式语言，并对其稍加修改使它成为一种可用的函数式语言。现在开始吧。</p>
+<p>lambda 演算被设计用来探询关于计算的问题，所以函数式编程主要处理计算，并惊人地用函数来完成这一过程。函数是函数式编程的基本单位，函数几乎被用于一切，包括 最简单的计算，甚至变量都由计算取代。在函数式编程中，变量只是表达式的别名（这样我们就不必把所有东西打在一行里）。变量是不能更改的，所有变量只能被赋值一次。用 Java 的术语来说，这意味着所有单一变量都被声明为 <code>final</code>（或 C++ 的 <code>const</code>）。在函数式编程中没有非 <code>final</code> 的变量。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">final</span> <span class="keyword">int</span> i = <span class="number">5</span>;</div><div class="line"><span class="keyword">final</span> <span class="keyword">int</span> j = i + <span class="number">3</span>;</div></code></pre></td></tr></table></figure>
+
+<p>因为函数式编程中所有变量都是 <code>final</code> 的，所以可以提出这样两个有趣的表述：没有必要总是写出关键字 <code>final</code>，没有必要把变量再称为变量。那么现在我们对 Java 作出两个修改：在我们的函数式 Java 中所有变量默认都是 final的，我们将变量（variable）称为符号（symbol）。</p>
+<p>就此你也许会质疑，用我们新创造的语言还能写出有些复杂度的程序吗？如果每个符号都是不可变更（non-mutalbe）的，那么就无法改变任何状态！其实事实并非完全如此。在阿隆左研究其 lambda 演算时，他并不想将某个状态维护一段时间以期未来对其进行修改。他关注的是对数据的操作（也通常被称为”演算体 caculating stuff”）。既然已被证明 lambda 演算与图灵机等价，它可以完成所有命令式编程语言能够完成的任务。那么，我们怎么才能做到呢？</p>
+<p>答案是函数式程序能保存状态，只是它并非通过变量而是使用函数来保存状态。状态保存在函数的参数中，保存在堆栈上。如果你要保存某个状态一段时间并时不时地对其进行一些修改，可以写个递归函数。举个例子，我们写个函数来翻转 Java 的字符串。记住，我们声明的每个变量默认都是 <code>final</code> 的。<a href="#5">[5]</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div></code></pre></td><td class="code"><pre><code><div class="line">String reverse(String arg) {</div><div class="line">  <span class="keyword">if</span>(arg.length == <span class="number">0</span>) {</div><div class="line">    <span class="keyword">return</span> arg;</div><div class="line">  }</div><div class="line">  <span class="keyword">else</span> {</div><div class="line">    <span class="keyword">return</span> reverse(arg.substring(<span class="number">1</span>, arg.length)) + arg.substring(<span class="number">0</span>,<span class="number">1</span>);</div><div class="line">  }</div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>这个函数很慢因为它不断地调用自己<a href="#6">[6]</a>，它还也是个嗜内存魔因为要持续分配对象。不过它的确是在用函数式风格。你可能会问，怎么有人会这样写程序？好的，我这就慢慢讲来：</p>
+<h2>函数式编程的优点</h2>
+<p>你可能会认为我根本无法对上面那个畸形的函数给出个合理的解释。我开始学习函数式编程时就是这么认为的。不过我是错了。有很好的理由使用这种风格，当然其中一些属主观因素。例如，函数式程序被认为更容易阅读。因为每个街区的孩子都知道，是否容易理解在旁观者的眼中，所以我将略去这些主观方面的理由。幸运的是，还有很多的客观理由。</p>
+<h3>单元测试</h3>
+<p>因为函数式编程的每一个符号都是 final 的，没有函数产生过副作用。因为从未在某个地方修改过值，也没有函数修改过在其作用域之外的量并被其他函数使用（如类成员或全局变量）。这意味着函数求值的结果只是其返回值，而惟一影响其返回值的就是函数的参数。</p>
+<p>这是单元测试者的梦中仙境。对被测试程序中的每个函数，你只需在意其参数，而不必考虑函数调用顺序，不用谨慎地设置外部状态。所有要做的就是传递代表了边际情况的参数。如果程序中的每个函数都通过了单元测试，你就对这个软件的质量有了相当的自信。而命令式编程就不能这样乐观了，在 Java 或 C++ 中只检查函数的返回值还不够 —— 我们还必须验证这个函数可能修改了的外部状态。</p>
+<h3>调试</h3>
+<p>如果一个函数式程序不如你期望地运行，调试也是轻而易举。因为函数式程序的 bug 不依赖于执行前与其无关的代码路径，你遇到的问题就总是可以再现。在命令式程序中，bug 时隐时现，因为在那里函数的功能依赖与其他函数的副作用，你可能会在和 bug 的产生无关的方向探寻很久，毫无收获。函数式程序就不是这样 —— 如果一个函数的结果是错误的，那么无论之前你还执行过什么，这个函数总是返回相同的错误结果。</p>
+<p>一旦你将那个问题再现出来，寻其根源将毫不费力，甚至会让你开心。中断那个程序的执行然后检查堆栈，和命令式编程一样，栈里每一次函数调用的参数都呈现在你眼前。但是在命令式程序中只有这些参数还不够，函数还依赖于成员变量，全局变量和类的状态（这反过来也依赖着这许多情况）。函数式程序里函数只依赖于它的参数，而那些信息就在你注视的目光下！还有，在命令式程序里，只检查一个函数的返回值不能够让你确信这个函数已经正常工作了，你还要去查看那个函数作用域外数十个对象的状态来确认。对函数式程序，你要做的所有事就是查看其返回值！</p>
+<p>沿着堆栈检查函数的参数和返回值，只要发现一个不尽合理的结果就进入那个函数然后一步步跟踪下去，重复这一个过程，直到它让你发现了 bug 的生成点。</p>
+<h3>并发</h3>
+<p>函数式程序无需任何修改即可并发执行。不用担心死锁和临界区，因为你从未用锁！函数式程序里没有任何数据被同一线程修改两次，更不用说两个不同的线程了。这意味着可以不假思索地简单增加线程而不会引发折磨着并行应用程序的传统问题。</p>
+<p>事实既然如此，为什么并不是所有人都在需要高度并行作业的应用中采用函数式程序？嗯，他们正在这样做。爱立信公司设计了一种叫作 <a href="http://www.erlang.org/">Erlang</a> 的函数式语言并将它使用在需要极高抗错性和可扩展性的电信交换机上。还有很多人也发现了 Erlang 的优势并开始<a href="http://www.erlang.org/faq/faq.html#AEN50">使用它</a>。我们谈论的是电信通信控制系统，这与设计华尔街的典型系统相比对可靠性和可升级性要求高了得多。实际上，Erlang 系统并不可靠和易扩展，Java 才是。Erlang 系统只是坚如磐石。</p>
+<p>关于并行的故事还没有就此停止，即使你的程序本身就是单线程的，那么函数式程序的编译器仍然可以优化它使其运行于多个 CPU 上。请看下面这段代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line">String s1 = somewhatLongOperation1();</div><div class="line">String s2 = somewhatLongOperation2();</div><div class="line">String s3 = concatenate(s1, s2);</div></code></pre></td></tr></table></figure>
+
+<p>在函数编程语言中，编译器会分析代码，辨认出潜在耗时的创建字符串 <code>s1</code> 和 <code>s2</code> 的函数，然后并行地运行它们。这在命令式语言中是不可能的，因为在那 里，每个函数都有可能修改了函数作用域以外的状态并且其后续的函数又会依赖这些修改。在函数式语言里，自动分析函数并找出适合并行执行的候选函数简单的像 自动进行的函数内联化！在这个意义上，函数式风格的程序是“不会过时的技术”（即使不喜欢用行业术语，但这回要破例一次）。硬件厂商已经无法让 CPU 运行得更快了，于是他们增加了处理器核心的速度并因并行而获得了四倍的速度提升。当然他们也顺便忘记提及我们的多花的钱只是用在了解决平行问题的软件上了。一小部分的命令式软件和 100% 的函数式软件都可以直接并行运行于这些机器上。</p>
+<h3>代码热部署</h3>
+<p>过去要在 Windows 上安装更新，重启计算机是难免的，而且还不只一次，即使是安装了一个新版的媒体播放器。Windows XP 大大改进了这一状态，但仍不理想（我今天工作时运行了 Windows Update，现在一个烦人的图标总是显示在托盘里除非我重启一次机器）。Unix 系统一直以来以更好的模式运行，安装更新时只需停止系统相关的组件，而不是整个操作系统。即使如此，对一个大规模的服务器应用这还是不能令人满意的。电信系统必须 100% 的时间运行，因为如果在系统更新时紧急拨号失效，就可能造成生命的损失。华尔街的公司也没有理由必须在周末停止服务以安装更新。</p>
+<p>理想的情况是完全不停止系统任何组件来更新相关的代码。在命令式的世界里这是不可能的。考虑运行时上载一个 Java 类并重载一个新的定义，那么所有这个类的实例都将不可用，因为它们被保存的状态丢失了。我们可以着手写些繁琐的版本控制代码来解决这个问题，然后将这个类的所有实例序列化，再销毁这些实 例，继而用这个类新的定义来重新创建这些实例，然后载入先前被序列化的数据并希望载入代码可以恰到地将这些数据移植到新的实例。在此之上，每次更新都要重 新手动编写这些用来移植的代码，而且要相当谨慎地防止破坏对象间的相互关系。理论简单，但实践可不容易。</p>
+<p>对函数式的程序，所有的状态即传递给函数的参数都被保存在了堆栈上，这使的热部署轻而易举！实际上，所有我们需要做的就是对工作中的代码和新版本的 代码做一个差异比较，然后部署新代码。其他的工作将由一个语言工具自动完成！如果你认为这是个科幻故事，请再思考一下。多年来 Erlang 工程师一直更新着他们的运转着的系统，而无需中断它。</p>
+<h3>机器辅助的推理和优化</h3>
+<p>函数式语言的一个有趣的属性就是他们可以用数学方式推理。因为一种函数式语言只是一个形式系统的实现，所有在纸上完成的运算都可以应用于用这种语言书写的程序。编译器可以用数学理论将转换一段代码转换为等价的但却更高效的代码<a href="#7">[7]</a>。多年来关系数据库一直在进行着这类优化。没有理由不能把这一技术应用到常规软件上。</p>
+<p>另外，还能使用这些技术来证明部分程序的正确，甚至可能创建工具来分析代码并为单元测试自动生成边界用例！对稳固的系统这种功能没有价值，但如果你要设计心律调节器或空中交通控制系统，这种工具就不可或缺。如果你编写的应用程序不是产业的核心任务，这类工具也是你强于竞争对手的杀手锏。</p>
+<h2>高阶函数</h2>
+<p>我记得自己在了解了上面列出的种种优点后曾想：“那都是非常好的特性，可是如果我不得不用天生就不健全的语言编程，把一切变量声明为 <code>final</code> 产生的代码将是垃圾一堆。” 这其实是误解。在如 Java 这般的命令式语言环境里，将所有变量声明为 <code>final</code> 没有用，但是在函数式语言里不是这样。函数式语言提供了不同的抽象工具它会使你忘记你曾经习惯于修改变量。高阶函数就是这样一种工具。</p>
+<p>函数式语言中的函数不同于 Java 或 C 中的函数，而是一个超集——它有着 Java 函数拥有的所有功能，但还有更多。创建函数的方式和 C 中相似:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> add(<span class="keyword">int</span> i, <span class="keyword">int</span> j) {</div><div class="line">  <span class="keyword">return</span> i + j;</div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>这意味着有些东西和同样的 C 代码有区别。现在扩展我们的 Java 编译器使其支持这种记法。当我们输入上述代码后编译器会把它转换成下面的 Java 代码（别忘了，所有东西都是 <code>final</code> 的）：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">add_function_t</span> {</span></div><div class="line">  <span class="keyword">int</span> add(<span class="keyword">int</span> i, <span class="keyword">int</span> j) {</div><div class="line">    <span class="keyword">return</span> i + j;</div><div class="line">  }</div><div class="line">}</div><br><div class="line">add_function_t add = <span class="keyword">new</span> add_function_t();</div></code></pre></td></tr></table></figure>
+
+<p>这里的符号 <code>add</code> 并不是一个函数。这是一个有一个成员函数的很小的类。我们现在可以把 <code>add</code> 作为函数参数放入我们的代码中。还可以把它赋给另一个符号。我们在运行时创建的 <code>add_function_t</code> 的实例如果不再被使用就将会被垃圾回收掉。这些使得函数成为第一级的对象无异于整数或字符串。（作为参数）操作函数的函数被称为高阶函数。别让这个术语吓着你，这和 Java 的类别操作其它类别（把它们作为参数）没有什么区别。我们本可以把它们称为“高阶类”但没有人注意到这个，因为 Java 背后没有一个强大的学术社区。</p>
+<p>那么怎样，何时应该使用高阶函数呢？我很高兴你这样问。如果你不曾考虑类的层次，就可能写出了一整团堆砌的代码块。当你发现其中一些行的代码重复出 现，就把他们提取成函数（幸运的是这些依然可以在学校里学到）。如果你发现在那个函数里一些逻辑动作根据情况有变，就把他提取成高阶函数。糊涂了？下面是 一个来自我工作的实例：假如我的一些 Java 代码接受一条信息，用多种方式处理它然后转发到其他服务器。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    <span class="keyword">void</span> handleMessage(Message msg) {</div><div class="line">        <span class="comment">// ...</span></div><div class="line">        msg.setClientCode(<span class="string">"ABCD_123"</span>);</div><div class="line">        <span class="comment">// ...</span></div><br><div class="line">        sendMessage(msg);</div><div class="line">    }</div><br><div class="line">    <span class="comment">// ...</span></div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>现在假设要更改这个系统，现在我们要把信息转发到两个服务器而不是一个。除了客户端的代码一切都像刚才一样 —— 第二个服务器希望这是另一种格式。怎么处理这种情况？我们可以检查信息的目的地并相应修改客户端代码的格式，如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    <span class="keyword">void</span> handleMessage(Message msg) {</div><div class="line">        <span class="comment">// ...</span></div><div class="line">        <span class="keyword">if</span>(msg.getDestination().equals(<span class="string">"server1"</span>) {</div><div class="line">            msg.setClientCode(<span class="string">"ABCD_123"</span>);</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            msg.setClientCode(<span class="string">"123_ABC"</span>);</div><div class="line">        }</div><div class="line">        <span class="comment">// ...</span></div><br><div class="line">        sendMessage(msg);</div><div class="line">    }</div><br><div class="line">    <span class="comment">// ...</span></div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>然而这不是可扩展的方法，如果加入了更多的服务器，这个函数将线性增长，更新它会成为我的梦魇。面向对象的方法是把 MessageHandler 作为基类，在导出类中专业化客户代码操作：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div><div class="line-number">16</div><div class="line-number">17</div><div class="line-number">18</div><div class="line-number">19</div><div class="line-number">20</div><div class="line-number">21</div><div class="line-number">22</div><div class="line-number">23</div><div class="line-number">24</div><div class="line-number">25</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    <span class="keyword">void</span> handleMessage(Message msg) {</div><div class="line">        <span class="comment">// ...</span></div><div class="line">        msg.setClientCode(getClientCode());</div><div class="line">        <span class="comment">// ...</span></div><br><div class="line">        sendMessage(msg);</div><div class="line">    }</div><br><div class="line">    <span class="keyword">abstract</span> String getClientCode();</div><br><div class="line">    <span class="comment">// ...</span></div><div class="line">}</div><br><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandlerOne</span> <span class="keyword">extends</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    String getClientCode() {</div><div class="line">        <span class="keyword">return</span> <span class="string">"ABCD_123"</span>;</div><div class="line">    }</div><div class="line">}</div><br><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandlerTwo</span> <span class="keyword">extends</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    String getClientCode() {</div><div class="line">        <span class="keyword">return</span> <span class="string">"123_ABCD"</span>;</div><div class="line">    }</div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>现在就可以对每一个服务器实例化一个适合的类。添加服务器的操作变得容易维护了。但对于这么一个简单的修改仍然要添加大量的代码。为了支持不同的客户代码我们创建了两个新的类型！现在我们用高阶函数完成同样的功能：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div><div class="line-number">16</div><div class="line-number">17</div><div class="line-number">18</div><div class="line-number">19</div><div class="line-number">20</div><div class="line-number">21</div><div class="line-number">22</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    <span class="keyword">void</span> handleMessage(Message msg, Function getClientCode) {</div><div class="line">        <span class="comment">// ...</span></div><div class="line">        Message msg1 = msg.setClientCode(getClientCode());</div><div class="line">        <span class="comment">// ...</span></div><br><div class="line">        sendMessage(msg1);</div><div class="line">    }</div><br><div class="line">    <span class="comment">// ...</span></div><div class="line">}</div><br><div class="line">String getClientCodeOne() {</div><div class="line">    <span class="keyword">return</span> <span class="string">"ABCD_123"</span>;</div><div class="line">}</div><br><div class="line">String getClientCodeTwo() {</div><div class="line">    <span class="keyword">return</span> <span class="string">"123_ABCD"</span>;</div><div class="line">}</div><br><div class="line">MessageHandler handler = <span class="keyword">new</span> MessageHandler();</div><div class="line">handler.handleMessage(someMsg, getClientCodeOne);</div></code></pre></td></tr></table></figure>
+
+<p>没有创建新的类型和新的类别层次，只是传入合适的函数作为参数，完成了面向对象方式同样的功能，同时还有一些额外的优点。没有使自己囿于类的层次之中：可以在运行时传入函数并在任何时候以更高的粒度更少的代码修改他们。编译器高效地为我们生成了面向对象的“粘合”代码！除此之外，我们还获得了 所有函数式编程的其他好处。当然函数式语言提供的抽象不只这些，高阶函数只是一个开始：</p>
+<h2>Currying</h2>
+<p>我认识的大多数人都读过“四人帮”的那本<a href="http://book.douban.com/subject/1436745/">设计模式</a>，任何自重的程序员都会告诉你那本书是语言中立的，模式在软件工程中是通用的，和使用的语言无关。这个说法颇为高贵，故而不幸的是，有违现实。</p>
+<p>函数式编程极具表达能力。在函数式语言中，语言既已达此高度，设计模式就不再是必需，最终你将设计模式彻底消除而以概念编程。适配器（Adapter）模式就是这样的一个例子。（究竟适配器和 Facade 模式区别在哪里？可能有些人需要在这里再多费些篇章）。一旦语言有了叫作 <em>currying</em> 的技术，这一模式就可以被消除。</p>
+<p>适配器模式最有名的是被应用在 Java 的“默认”抽象单元 –– 类别上。在函数式编程里，模式被应用到函数。模式带有一个接口并将它转换成另一个对他人有用的接口。这有一个适配器模式的例子：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> pow(<span class="keyword">int</span> i, <span class="keyword">int</span> j);</div><div class="line"><span class="keyword">int</span> square(<span class="keyword">int</span> i)</div><div class="line">{</div><div class="line">    <span class="keyword">return</span> pow(i, <span class="number">2</span>);</div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>上面的代码把一个整数幂运算接口转换成为了一个平方接口。在学术文章里，这个雕虫小技被叫作 currying (得名于逻辑学家 Haskell Curry，他曾将相关的数学理论形式化 )。因为在函数式编程中函数（反之如类别)被作为参数来回传递，currying 很频繁地被用来把函数调整为更适宜的接口。因为函数的接口是他的参数，使用 currying 可以减少参数的数目(如上例所示)。</p>
+<p>函数式语言内建了这一技术。不用手动地创建一个包装了原函数的函数，函数式语言可以为你代劳。同样地，扩展我们的语言，让他支持这个技术：</p>
+<pre><code><div class="line">square = <span class="keyword">int</span> <span class="built_in">pow</span>(<span class="keyword">int</span> i, <span class="number">2</span>);</div></code></pre>
+<p>这将为我们自动创建出一个有一个参数的函数 <code>square</code>。他把第二个参数设置为 <code>2</code> 再调用函数 pow。这行代码会被编译为如下的 Java 代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">square_function_t</span> {</span></div><div class="line">    <span class="keyword">int</span> square(<span class="keyword">int</span> i) {</div><div class="line">        <span class="keyword">return</span> pow(i, <span class="number">2</span>);</div><div class="line">    }</div><div class="line">}</div><div class="line">square_function_t square = <span class="keyword">new</span> square_function_t();</div></code></pre></td></tr></table></figure>
+
+<p>正如你所见，通过简单地创建一个对原函数的包装，在函数式编程中，这就是 currying —— 快速简易创建包装的捷径。把精力集中在你的业务上，让编译器为你写出必要的代码！什么时候使用 currying？这很简单，任何时候你想要使用适配器模式（包装）时。</p>
+<h2>惰性求值</h2>
+<p>惰性（或延迟）求值这一技术可能会变得非常有趣一旦我们采纳了函数式哲学。在讨论并行时已经见过下面的代码片断：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line">String s1 = somewhatLongOperation1();</div><div class="line">String s2 = somewhatLongOperation2();</div><div class="line">String s3 = concatenate(s1, s2);</div></code></pre></td></tr></table></figure>
+
+<p>在一个命令式语言中求值顺序是确定的，因为每个函数都有可能会变更或依赖于外部状态，所以就必须有序的执行这些函数：首先是
+<code>somewhatLongOperation1</code>，然后 <code>somewhatLongOperation2</code>，最后 <code>concatenate</code>，在函数式语言里就不尽然了。</p>
+<p>前面提到只要确保没有函数修改或依赖于全局变量，<code>somewhatLongOperation1</code> 和 <code>somewhatLongOperation2</code> 可以被并行执行。但是如果我们不想同时运行这两个函数，还有必要保证有序的执行他们呢？答案是不。我们只在其他函数依赖于 <code>s1</code> 和 <code>s2</code> 时才需要执行这两个函数。我们甚至在 <code>concatenate</code> 调用之前都不必执行他们 —— 可以把他们的求值延迟到 <code>concatenate</code> 函数内实际用到他们的位置。如果用一个带 有条件分支的函数替换 <code>concatenate</code> 并且只用了两个参数中的一个，另一个参数就永远没有必要被求值。在 <a href="http://www.haskell.org/">Haskell</a> 语言中，不确保一切都（完全）按顺序执行，因为 Haskell 只在必要时才会对其求值。</p>
+<p>惰性求值优点众多，但缺点也不少。我们会在这里讨论它的优点而在下一节中解释其缺点。</p>
+<h3>优化</h3>
+<p>惰性求值有客观的优化潜力。惰性编译器看函数式代码就像数学家面对的代数表达式 -– 可以注销一部分而完全不去运行它，重新调整代码段以求更高的 效率，甚至重整代码以降低出错，所有确定性优化（guaranteeing optimizations）不会破坏代码。这是严格用形式原语描述程序的巨大优势 –– 代码固守着数学定律并可以数学的方式进行推理。</p>
+<h3>抽象控制结构</h3>
+<p>惰性求值提供了更高一级的抽象，它使得不可能的事情得以实现。例如，考虑实现如下的控制结构：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line">unless(stock.isEuropean()) {</div><div class="line">    sendToSEC(stock);</div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>我们希望只在祖先不是欧洲人时才执行 <code>sendToSEC</code>。如何实现 <code>unless</code>？如果没有惰性求值，我们需要某种形式的宏（macro）系统，但 Haskell 这样的语言不需要它。把他实现为一个函数即可：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">void</span> unless(<span class="keyword">boolean</span> condition, List code) {</div><div class="line">    <span class="keyword">if</span>(!condition)</div><div class="line">        code;</div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>注意如果条件为真代码将不被执行。我们不能在一个严格的语言中再现这种求值，因为 <code>unless</code> 调用之前会先对参数进行求值。</p>
+<h3>无穷数据结构</h3>
+<p>惰性求值允许定义无穷数据结构，对严格语言来说实现这个要复杂的多。考虑一个 Fibonacci 数列，显然我们无法在有限的时间内计算出或在有限的内存里保存一个无穷列表。在严格语言如 Java 中，只能定义一个能返回 Fibonacci 数列中特定成员的 Fibonacci 函数，在 Haskell 中，我们对其进一步抽象并定义一个关于 Fibonacci 数的无穷列表，因为作为一个惰性的语言，只有列表中实际被用到的部分才会被求值。这使得可以抽象出很多问题并从一个更高的层次重新审视他们。（例如，我们可以在一个无穷列表上使用表处理函数）。</p>
+<h3>缺点</h3>
+<p>当然从来不存在免费的午餐。惰性求值有很多的缺点，主要就在于，懒。有很多现实世界的问题需要严格求值。例如考虑下例：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line">System.out.println(”Please enter your name: “);</div><div class="line">System.in.readLine();</div></code></pre></td></tr></table></figure>
+
+<p>在惰性求值的语言里，不能保证第一行会在第二行之前执行！那么我们就不能进行输入输出操作，不能有意义地使用原生接口（因为他们相互依赖其副作用必须被有序的调用），从而与整个世界隔离。如果引入允许特定执行顺序的原语又将失去数学地推理代码的诸多好处（为此将葬送函数式编程与其相关的所有优点）。幸运的是，并非丧失了一切，数学家为此探索并开发出了许多技巧来保证函数在一定设置下代码以特定的顺序执行。这样我们就赢得了两个世界。这些技术包括 continuation、monad 和 uniqueness typing（一致型别）。我只会在本文中解释 continuation，把 monad 和 uniqueness typing 留到将来的文章中。有趣的是，除了确保函数求值顺序，continuation 在很多别的情况下也很有用。这点等一会儿就会提到。</p>
+<h2>Continuations</h2>
+<p>Continuations 对于程序设计的意义，就像《达芬奇密码》对人类历史的意义：即对人类最大秘密的惊人揭示。也许不是，但他在概念上的突破性至少和揭示了负数的平方根意义等同。</p>
+<p>我们在学习函数时，只是学到了一半的事实，因为我们基于一个错误的假定:函数只能将结果返回到它的调用函数。在这个意思上 continuation 是广义的函数。函数不必要返回到其调用函数而可以返回到程序的任何地方。我们把 ”continuation” 作为参数传给一个函数，它指定了这个函数返回的位置。这个描述可能听起来更加复杂。看一下下面的代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> i = add(<span class="number">5</span>, <span class="number">10</span>);</div><div class="line"><span class="keyword">int</span> j = square(i);</div></code></pre></td></tr></table></figure>
+
+<p>函数 add 在其被调用的位置将结果 <code>15</code> 赋给了 <code>i</code>，接下来 <code>i</code> 的值被用来调用 <code>square</code>。注意所有的惰性求值编译器都不能调整这几行代码因为第二行依赖着第一行的成功求值。下面用续延传递风格又称 CPS (Continuation Passing Style) 来重写这段代码，这里函数 <code>add</code> 会将结果返回到 <code>square</code> 而不是原来的调用函数。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line">int j = <span class="keyword">add</span>(<span class="number">5</span>, <span class="number">10</span>, square)<span class="comment">;</span></div></code></pre></td></tr></table></figure>
+
+<p>这个例子中 <code>add</code> 有了另一个参数 —— 一个 <code>add</code> 必须在它求值结束时用其返回值调用的函数。这里 <code>square</code> 是 <code>add</code> 的一个 continuation。这两种情况下，<code>j</code> 都将等于 <code>255</code>。</p>
+<p>这就是强制使惰性语言有序地求值两个表达式的第一个技巧。考虑下面这段（熟悉的）IO 代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line">System.out.println(<span class="string">"Please enter your name: "</span>);</div><div class="line">System.in.readLine();</div></code></pre></td></tr></table></figure>
+
+<p>这两行不相依赖所以编译器会自由的重新调整他们的执行顺序。然而，如果我们用 CPS 来重写这段代码，就会有一个依赖，编译器会因此而强制对这两行代码有序执行！</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line">System.out.println(<span class="string">"Please enter your name: "</span>, System.in.readLine);</div></code></pre></td></tr></table></figure>
+
+<p>这里 <code>println</code> 需要用自己的返回结果作为参数去调用 <code>readLine</code> 并将 <code>readLine</code> 返回值作为自己的返回值。这样就能确保这两行被有序执行而且 <code>readLine</code> 一定被执行（因为整个计算期望最后的结果为结果）。Java 的 <code>println</code> 返回 <code>void</code> 但如果它返回的是一个抽象值（<code>readLine</code> 所期待的），我们就解决了这个问题！当然这样的链接函数调用很快就会使代码难以读懂，不过这个可以避免。比 如我们可以给语言添加些语法糖，就可以简单的按顺序输入表达式，然后由编译器自动为我们链接这些函数调用。这样就可以如愿地使用期望的求值顺序并保留一切函数式编程的好处 （包括数学地对我们程序进行推理的能力）！如果还是有迷惑，记住函数是只有一个成员的类的实例。重写上述代码使得 <code>println</code> 和 <code>readLine</code> 成为类的实例，这样就对一切都清楚了。</p>
+<p>如果我在此结束本节，那将仅仅涉及到 continuation 最浅显的应用。用 CPS 重写整个程序，那里所有的函数都增加一个额外的 continuation 参数并把函数结果传给它。也可以通过简单地把函数当作 continuation 函数（总是返回到调用者的函数）的特殊实例来将程序转为 CPS 风格。这种转换很容易被自动化（事实上，许多编译器就是这么做的）。</p>
+<p>一旦我们将一个程序转为了CPS，那么很明显每个指令都将有些 continuation, 这是一个该指令在执行结束时会用其执行结果调用的函数，通常的程序中，这是一个它要返回的地址。从上面的例子中随便举个例子，比如 add(5, 10)。在用 CPS 风格写的程序里，add 的 continuation 很明显 —— 这是一个 add 在其执行结束时会调用的函数。那么如果在非 CPS 的程序里，它是什么呢？当然我们可以把程序转为 CPS ，但有这个必要吗？</p>
+<p>其实没有必要。仔细看一下我们的 CPS 转换过程。如果尝试为它写一个编译器，然后经过长期的思考后，你意识到这个 CPS 的版本根本不需要栈！没有函数会以传统的意义“返回”，它只是用结果调用了另一个函数。我们无需在调用时将函数参数压栈再于调用结束时弹出栈，而只是简单 的把他们保存在一大块内存中，然后使用跳转指令。不再需要原来的参数——他们不会再次被用到，因为没有函数会返回！</p>
+<p>所以，用 CPS 风格写成的程序没有堆栈，但每个函数却有一个额外的参数可被调用。不是 CPS 风格的程序没有可以被调用的这个参数，但却有栈。栈中存放着什么？只是参数和一个指向函数返回地址的指针。你看到光了吗？栈中只是放着 continuation 的信息！栈中指向返回指令的指针本质上和 CPS 程序里将被调用的函数是等价的。如果你想探究 <code>add(5,10)</code> 的 continuation，只要简单地检查它在堆栈的执行点！</p>
+<p>这的确很简单。continuation 和栈上指向返回地址的指针是等价的，只是 continuation 是被显式传递，所以不必和函数被调用点是同一位置。如果还记得 continuation 就是一个函数，并且在我们的语言里，函数被编译为一个类的实例，你就会理解指向栈中返回指令的指针实际就是传递给 continuation 的参数，因为我们的函数（就像一个类的实例）只是一个指针。这意味着给定程序中任意时间和任意位置，你都可以去请求一个当前的 continuation（它就是当前的栈的信息）。</p>
+<p>好的，这样我们就知道了什么是当前的 continuation。他有什么意义？一旦我们得到了当前的 continuation 并将它保存在某处，我们就最终将程序当前的状态保存了下来 —— 及时地冷冻下来。这就像操作系统将其置为休眠状态。一个 continuation 对象里保存了在我们获得它的地方重新启动程序的必要信息。操作系统在每次发生线程间的上下文切换时也是如此。唯一的区别是它保留着全部控制。请求一个 continuation 对象（在 Scheme 里，可以调用 call-with-current-continuation 函数）后，你就会获得一个包括了当前 continuation 的对象 –– 堆栈（或者在 CPS 情况下则是下一个要调用的函数）。可以把这个对象保存在一个变量（或者是磁盘）里。当你用这 continuation “重启”程序时，就会转回到处你取得这个对象的那个状态。这就象切换回一个被挂起的线程或唤醒休眠着的操作系统，区别是用 continuation，你可以多次地重复这一过程。当操作系统被唤醒时，休眠信息就被销毁了。但如果那些信息没有被销毁，你也就可以一次次地将它唤醒到同一点，就象重返过去一样。有了 continuation 你就有了这个控制力！</p>
+<p>Continuation 应该在什么情况下使用呢？通常在尝试模拟一个本质上是无状态的应用时可以简化你的任务。Continuation 很适合在 <a href="http://www.seaside.st/">Web 应用程序</a>中使用。微软公司的 ASP.NET 技术极尽苦心地模拟状态以便你在开发 Web 应用时少费周折。可如果 C# 支持了continuation，ASP.NET 的复杂度就可以减半 —— 你只需要保存一个 continuation，当用户下次发出 web 请求时重启它即可。对程序员来说，web 应用程序将不再有中断 —— 程序只是简单的从下一行重启！利用 continuation 这一抽象解决问题真是令人难以置信的便利。考虑到越来越多的胖客户端应用程序正在向服务器端转移，将来 continuation 也会变得越来越重要。</p>
+<h2>模式匹配</h2>
+<p>模式匹配不是什么新的创新的特性。事实上，它和函数式编程的关系不大。把产生模式匹配归因于函数式编程的唯一的原因是函数式语言一度提供了模式匹配，然而现在的命令式语言还做不到。</p>
+<p>让我们用一个例子深入了解一下模式匹配。这是一个 Java 的 Fibonacci 函数：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> fib(<span class="keyword">int</span> n) {</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><br><div class="line">    <span class="keyword">return</span> fib(n - <span class="number">2</span>) + fib(n - <span class="number">1</span>);</div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>让我们从 Java 衍生出的语言来支持模式匹配：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> fib(<span class="number">0</span>) {</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">}</div><div class="line"><span class="keyword">int</span> fib(<span class="number">1</span>) {</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">}</div><div class="line"><span class="keyword">int</span> fib(<span class="keyword">int</span> n) {</div><div class="line">    <span class="keyword">return</span> fib(n - <span class="number">2</span>) + fib(n - <span class="number">1</span>);</div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>两者有什么区别？编译器为我们实现了分支。这有什么大不了？的确没什么。有人注意到有大量的函数包括了复杂的 <code>swich</code> 语句（尤其是在函数式程序中）所以认为这种抽象形式很好。我们把一个函数定义分离成多个，然后把模式置于参数中（有点象重载）。当这个函数被调用时，编译 器使其比较参数和其运行时的定义然后选择其中正确的一个。这一般是通过选择可选的最特定的定义来完成。例如，<code>int fib(int n)</code> 可以以 <code>n</code> 等于 <code>1</code> 被调用，但是实际上 <code>fib(n)</code> 没有被调用，因为 <code>fib(1)</code> 更加特定。</p>
+<p>模式匹配通常要比我这个例子复杂，比如，高级模式匹配系统可以让我们这样做：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> f(<span class="keyword">int</span> n &lt; <span class="number">10</span>) { … }</div><div class="line"><span class="keyword">int</span> f(<span class="keyword">int</span> n) { … }</div></code></pre></td></tr></table></figure>
+
+<p>模式匹配什么时候适用？情况太多了！每当你有一个嵌套着 <code>if</code> 的复杂的数据结构，这时就可以用模式匹配以更少的代码完成得更好。一个很好的例子闪现在我脑海，这就是所有 Win32 平台都提供了的标准的 WinProc 函数（即使它通常被抽象了）。通常模式匹配系统能检测集合也可以应付简单的值。例如，当传给函数一个数组后，就可以找出所有首元素为 <code>1</code> 第三个元素大于 <code>3</code> 的所有数组。</p>
+<p>模式匹配还有一个好处即如果需要增加或修改条件，那么不必对付一个巨大的函数。只需增加或修改适合的定义即可。这消除了“四人帮”（<a href="http://c2.com/cgi/wiki?GangOfFour">GoF</a>）书中的一大类设计模式。条件越复杂，模式匹配就越有用。一旦习惯了它，你就会担心没有了模式匹配的日子如何打发。</p>
+<h2>Closures</h2>
+<p>到此我们已经讨论了纯的函数式语言 –– 实现了 lambda 演算又不包括与丘奇形式系统矛盾的语言 –– 环境里的特性，可是还有很多在lambda 演算框架之外的函数语言的有用特征。虽然一个公理系统的实现可以让我们象数学表达式那样思考程序但它未必是实际可行的。许多语言选择去合并一些函数式的元素而 没有严格的坚持函数式的教条。很多象这样的语言（如 Common Lisp）不要求变量是 final 的 –– 可以即处对其修改。他们还不要求函数只依赖于其参数——允许函数访问外部状态。但这些语言也的确包含着函数式的特征 –– 如高阶函数，在非纯粹的函数 式语言里传递函数作为参数和限制在 lambda 演算系统中的作法有些不同，它需要一种常被称为词法闭包（lexical closure）的有趣特性。下面我给出几个例子。记住，这里变量不再是 final 的，函数可以引用其作用域外的变量：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div></code></pre></td><td class="code"><pre><code><div class="line">Function makePowerFn(<span class="keyword">int</span> power) {</div><div class="line">   <span class="keyword">int</span> powerFn(<span class="keyword">int</span> base) {</div><div class="line">       <span class="keyword">return</span> pow(base, power);</div><div class="line">   }</div><br><div class="line">   <span class="keyword">return</span> powerFn;</div><div class="line">}</div><br><div class="line">Function square = makePowerFn(<span class="number">2</span>);</div><div class="line">square(<span class="number">3</span>); <span class="comment">// returns 9</span></div></code></pre></td></tr></table></figure>
+
+<p>函数 <code>make-power-fn</code> 返回了一个函数，它有一个参数，并对这个参数进行一定阶的幂运算。如果对 <code>square(3)</code> 求值会有什么结果？变量 <code>power</code> 不在 <code>powerFn</code> 的作用域中，因为 <code>makePowerFn</code> 已经返回它的栈桢而不复存在。那么 <code>square</code> 如何工作？一定是这个语言以某种方式将 <code>power</code> 的值保存了起来以便 <code>square</code> 使用。如果我们再新建一个函数 <code>cube</code>，用来计算参数的立方又会怎样？运行环境必须存储两个 <code>power</code> 的拷贝，每个我们用 <code>make-power-fn</code> 生成的函数都用一个拷贝。保存这些值的现象就被称为 closure。 closure 不只保存宿主函数的参数。例如，closure 可能会是这样：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div><div class="line-number">16</div><div class="line-number">17</div></code></pre></td><td class="code"><pre><code><div class="line">Function makeIncrementer() {</div><div class="line">   <span class="keyword">int</span> n = <span class="number">0</span>;</div><br><div class="line">   <span class="keyword">int</span> increment() {</div><div class="line">       <span class="keyword">return</span> ++n;</div><div class="line">   }</div><div class="line">}</div><br><div class="line">Function inc1 = makeIncrementer();</div><div class="line">Function inc2 = makeIncrementer();</div><br><div class="line">inc1(); <span class="comment">// returns 1;</span></div><div class="line">inc1(); <span class="comment">// returns 2;</span></div><div class="line">inc1(); <span class="comment">// returns 3;</span></div><div class="line">inc2(); <span class="comment">// returns 1;</span></div><div class="line">inc2(); <span class="comment">// returns 2;</span></div><div class="line">inc2(); <span class="comment">// returns 3;</span></div></code></pre></td></tr></table></figure>
+
+<p>运行时已保存了 <code>n</code>，所以递增器可以访问它，而且运行时为每个递增器都保存了一个 <code>n</code> 的拷贝，即使这些拷贝本应在 <code>makeIncrementer</code> 返回时消失。这些代码被如何编译？closure 在底层是如何工作的？很幸运，我们可以去幕后看看。</p>
+<p>一点常识会很有帮助，首先会注意到的是局部变量的生命期不再由简单的作用域限定而是不确定的。那么显然可以由此得出结论它们不再被保存在栈上 —— 反之必须被保存在堆上<a href="#8">[8]</a>。这样一来，closure 的实现就象我们前面讨论的函数一样了，只是它还有一个指向周围变量的引用。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">some_function_t</span> {</span></div><div class="line">   SymbolTable parentScope;</div><br><div class="line">   <span class="comment">// ...</span></div><div class="line">}</div></code></pre></td></tr></table></figure>
+
+<p>当一个 closure 引用了一个不在其作用域的变量时，它会在其祖先作用域中查找这个引用。就是这样！Closure 将函数式和面向对象的世界紧密结合。当你创建了一个包含了一些状态的类并把它传到别处时，考虑一下 closure。Closure 就是这样在取出作用域中的变量的同时创建“成员变量”，所以你不必亲自去做这些！</p>
+<h2>下一步的计划？</h2>
+<p>关于函数式编程，本文作了浅显地讨论。有时候一次粗浅的射猎可能会进展为重大的收获与我也受益匪浅。将来我还计划写写 category 理论，monad，函数式数据结构，函数式语言中的类型体系，函数式并发，函数式数据库等等还有很多。如果我得以（在学习的过程中）写出了上述诸多主题中的一半，我的生命就完整了。同时，<a href="http://google.com">Google</a> 是我们的好朋友。</p>
+<h2>评论？</h2>
+<p>如果你有任何问题，意见或建议，请发到邮箱 <a href="mailto:coffeemug@gmail.com">coffeemug@gmail.com</a>。很高兴收到你的反馈</p>
+<hr class="end"></hr>
+
+<p><a id="1">[1]:</a> 我在 2005 年找工作时常常提出这个问题，当时我得到的是数量可观的一脸茫然。想像一下，这些人至少每人会得到 30 万美元，如果他们理解了他们可以得到的大部分工具。</p>
+<p><a id="2">[2]:</a> 这像是个悖论。物理学家和数学家被迫确认他们还不完全清楚是否宇宙万物遵循着可以被数学描述的规则。</p>
+<p><a id="3">[3]:</a> 我一直厌恶提供了一堆枯燥的日期，人名和地点的纪年式历史课。对我而言，历史是改变了这个世界的人的生活，是他们行为之后的个人动机，是他们得以影响亿万生灵的体制。所以这个关于历史的小节注定无法完整，只讨论了于此关系及其密切的人物与事件。</p>
+<p><a id="4">[4]:</a> 我在学习函数式编程的时候，很不喜欢术语 lambda，因为我没有真正理解它的意义。在这个环境里，lambda 是一个函数，那个希腊字母只是方便书写的数学记法。每当你听到 lambda 时，只要在脑中把它翻译成函数即可。</p>
+<p><a id="5">[5]:</a> 有趣的是 Java 的字符串是不可变更的，探讨这一离经叛道的设计的原因也非常有趣，不过在这里会分散我们对原目标的注意力</p>
+<p><a id="6">[6]:</a> 大多数函数式编程语言的编译器能通过将递归尽可能转为迭代来进行优化，这被称为<a href="http://en.wikipedia.org/wiki/Tail_recursion">尾递归优化</a>。</p>
+<p><a id="7">[7]:</a> 相反未必成立，虽然有时可以证明两端代码等价，但这不是所有情况下都成立。</p>
+<p><a id="8">[8]:</a> 这实际上不比存储在栈上慢，因为一旦引入了垃圾回收器，内存分配就成为了一个 <code>O(1)</code> 的操作。</p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/Erlang/" term="Erlang"/>
+    <category scheme="http://lisp.tw//tags/Haskell/" term="Haskell"/>
+    <category scheme="http://lisp.tw//tags/Java/" term="Java"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[God wrote in Lisp code]]></title>
+    <link href="http://lisp.tw//2013/02/17/god-wrote-in-lisp-code/"/>
+    <id>http://lisp.tw//2013/02/17/god-wrote-in-lisp-code/</id>
+    <published>2013-02-16T19:39:43.000Z</published>
+    <updated>2013-02-19T14:41:37.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：<a href="https://twitter.com/garfield_xue">薛宏</a>
+原發表日期：2008/2/7
+<span class="image-copyright"><a href="http://psychob.soup.io/">http://psychob.soup.io/</a></span>
+</span></p>
+<img src="/images/god-lisp.jpg" title="God is using Lisp.">
+
+<span id="more"></span>
+
+
+
+<p>前一阵子听到这首歌
+<a href="http://www.gnu.org/fun/jokes/eternal-flame.ogg">God wrote in Lisp code</a> (结尾有歌词)
+感觉越来越迷恋 Lisp 了</p>
+<blockquote>
+<p>If you give someone Fortran, he has Fortran. <br/>
+If you give someone Lisp, he has any language he pleases. <br/>
+–– Guy L. Steele Jr.</p>
+</blockquote>
+<p>如果世界上只有一种编程语言
+我会毫不犹豫地选择 Lisp
+Lisp 是除 Fortran 之外第二古老的语言
+然而她太超越时代了
+由于基于 Lambda 演算理论
+1960 年在冯诺依曼机上运行效率很低
+甚至要专门的 Lisp Machine
+等到一般 PC 能运行 Lisp 时
+大家早已习惯了冯诺依曼式的语言了
+某位图灵奖得主曽感慨
+我们何时才能从冯诺依曼式的语言中解脱
+如果晚 20 年诞生的话
+恐怕早已横行天下了
+貌似有人预言最终编程语言都会趋向于 Lisp
+从 C# 的演化中可以看到些蛛丝马迹</p>
+<p>Lisp 是简洁的
+哪个语言能用其自身的30代码写出她自身的解释器(meta-evaluator)！(参见 <a href="http://daiyuwen.freeshell.org/gb/rol/roots_of_lisp.html">The Root of Lisp</a>)
+Lisp 是千变万化的
+她甚至不是一种语言
+而是一种元语言(meta-language)
+Lisp 不是用来直接编程的
+而是用来构建合适的语言(Domain Specific Language, DSL)
+组合子+宏
+你便拥有了一切</p>
+<p>Lisp 的使用者都是些神秘的小团体
+传说纽约有个神奇的3人组
+每次都能在极短的时间内完成几乎不可能完成的项目
+不过也有例外
+貌似有家公司号称拥有地球上最多的 Lisp 程序员(几千个)
+他们的代码库由几千种 DSL 加上上万个的宏组成。。。
+这让我想到以前的一部电影
+一群疯子为了求证上帝的存在与否
+把银河系内的所有电脑联网构成一台超级计算机
+启动后电脑说
+Yes, now there is a God
+。。。</p>
+<p>很怀念前一阵子
+每天 6 点爬起来
+如痴如醉地看 SICP 的录像
+这可是 1980 年 MIT 的课程录像吖！</p>
+<p>On Lisp 是本好书
+亚马逊上居然卖到 300 多美金
+而且销量十分不错。。。
+虽然作者的主页上提供免费的PDF下载
+还记得那条画着 Y 组合子的胳膊么</p>
+<img src="/images/hand-ycombinator.jpg" title="Y combinator hand.">
+
+<p>他就是这本书的作者</p>
+<hr class="end"></hr>
+
+<h2>歌詞</h2>
+<blockquote>
+<p>God wrote in lisp code <br/>
+I was taught assembler <br/>
+in my second year of school. <br/>
+It’s kinda like construction work – <br/>
+with a toothpick for a tool. <br/>
+So when I made my senior year, <br/>
+I threw my code away, <br/>
+And learned the way to program <br/>
+that I still prefer today. <br/></p>
+<p>Now, some folks on the Internet <br/> <br/>
+put their faith in C++. <br/> <br/>
+They swear that it’s so powerful, <br/> <br/>
+it’s what God used for us. <br/> <br/>
+And maybe it lets mortals dredge <br/> <br/>
+their objects from the C. <br/> <br/>
+But I think that explains <br/> <br/>
+why only God can make a tree. <br/> <br/></p>
+<p>For God wrote in Lisp code <br/> <br/>
+When he filled the leaves with green. <br/> <br/>
+The fractal flowers and recursive roots: <br/> <br/>
+The most lovely hack I’ve seen. <br/> <br/>
+And when I ponder snowflakes, <br/> <br/>
+never finding two the same, <br/> <br/>
+I know God likes a language <br/> <br/>
+with its own four-letter name. <br/> <br/></p>
+<p>Now, I’ve used a SUN under Unix, <br/>
+so I’ve seen what C can hold. <br/>
+I’ve surfed for Perls, found what Fortran’s for, <br/>
+Got that Java stuff down cold. <br/>
+Though the chance that I’d write COBOL code <br/>
+is a SNOBOL’s chance in Hell. <br/>
+And I basically hate hieroglyphs, <br/>
+so I won’t use APL. <br/></p>
+<p>Now, God must know all these languages, <br/>
+and a few I haven’t named. <br/>
+But the Lord made sure, when each sparrow falls, <br/>
+that its flesh will be reclaimed. <br/>
+And the Lord could not count grains of sand <br/>
+with a 32-bit word. <br/>
+Who knows where we would go to <br/>
+if Lisp weren’t what he preferred? <br/></p>
+<p>And God wrote in Lisp code <br/>
+Every creature great and small. <br/>
+Don’t search the disk drive for man.c, <br/>
+When the listing’s on the wall. <br/>
+And when I watch the lightning burn <br/>
+Unbelievers to a crisp, <br/>
+I know God had six days to work, <br/>
+So he wrote it all in Lisp. <br/></p>
+<p>Yes, God had a deadline. <br/>
+So he wrote it all in Lisp. <br/></p>
+</blockquote>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Common Lisp –– 夢想與現實的交匯]]></title>
+    <link href="http://lisp.tw//2013/02/17/cl-dream-and-the-truth/"/>
+    <id>http://lisp.tw//2013/02/17/cl-dream-and-the-truth/</id>
+    <published>2013-02-16T19:30:20.000Z</published>
+    <updated>2013-02-19T05:05:08.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：<a href="https://twitter.com/garfield_xue">薛宏</a>
+原發表日期：2008/11/22
+<span class="image-copyright"><a href="http://www.ibiblio.org/">http://www.ibiblio.org/</a></span>
+</span></p>
+<img src="/images/mccarthy.jpg" title="John McCarthy.">
+
+<span id="more"></span>
+
+<blockquote>
+<p>Greenspun’s Tenth Rule:
+Any sufficiently complicated C or Fortran program contains an ad hoc informally-specified bug-ridden slow implementation of half of Common Lisp.</p>
+</blockquote>
+<p>观察 Common Lisp (CL) 大概有半年多时间了，或者说是仰望，从没想过自己在短期内会使用，因为怕泛泛的自己玷污了这个传说中只有顶级黑客才能使用的利器。更没有想到的是，居然会在正式的工作中使用，是的，我可以很自豪地说，上周我有两个整天的时间都在使用 CL 编程！</p>
+<p>公司要搞软件的自动测试。之前的做法是用自然语言（日语）写测试式样书，然后根据式样书手工测试。现在的想法是能够自动从式样书生成自动测试脚本。那式样书的写法就需要改变，不能用自然语言，而要使用计算机容易处理的所谓形式语言（formal language）。这样的话又需要开发这个形式语言的编译器，工程浩大！那时，我脑中浮现出四个大字 – DSEL（Domain Specific Embedded Language）。其主要的特点就是把领域专用的小型形式语言嵌入到一种通用的编程语言中，毕竟编程语言也是一种形式语言。这样做的好处是可以利用宿主语言的很多特性，编译器也不需要了，而且还很容易扩展和维护。然而，不是所有的语言都适合做宿主语言的，因为这要求语言具有可编程的语法，目前几乎所有的主流语言都没有这个功能（将来可能也不会有）。我所知道的，适合做宿主语言的有：Lisp（可以说没有语法），Smalltalk（infix 版本的 Lisp），Haskell（可定义特定优先级和结合性的算符）以及 Ruby（另一个 Smalltalk）。在我用日语介绍了一下所谓DSEL的概念后，貌似大家都不怎么明白。我急了，换用英语（之间甚至夹杂了中文。。。），可还是没有人明白我说的是啥意思，可能是我表达能力太弱了吧:(最后说，可以给我三天时间做一个 prototype。</p>
+<p>第一天把 <a href="http://gigamonkeys.com/book/">Practical Common Lisp</a> 大概翻了一遍，一些基本特性倒是都知道，看 SICP 的时候写过些 scheme，所以主要是看了 macro那一章，因为那是构建 DSEL 的关键，还有就是 CL 的对象系统CLOS。第二天装了 Emacs，slime，paredit，看了个录像，简单配置了一下键绑定，然后就开始 hacking 了。</p>
+<p>结果是，用三个 macro 构成了用来写式样书的 DSEL，用 CLOS 构建了易扩展的对象体系（多分派真是好用，而且不但可以基于型别，还能基于任意的判别式分派），外加后端代码生成，一共 40 行CL代码！CL rocks！</p>
+<p>记得大二的时候第一次看到 Lisp 代码（好像是一个算分形的），和所有人一样，怎么这么多括号！然而，现在我知道，那些括号才是 CL 的强大的真正原因！可能还有很多人不知道，如果你有那么一点点好奇心，想知道为啥那些高级黑客对 CL 宗教信仰般的热爱，以及那么强大的Lisp，为啥在 50 年间（是的，Lisp 是第二古老的语言，只比 Fortran 年轻，如果不算汇编的话）始终没能成为主流语言，或许能从以下两片文章里得到些启发，至少当时我是如此。</p>
+<h2><a href="http://www.paulgraham.com/avg.html">Beating the Averages</a></h2>
+<p>作者和 Morris（是的，就是搞出第一个蠕虫病毒的那个家伙）在 1995 用 Lisp 搞了个 C2C 平台，在打败了所有竞争对手后，被 Yahoo 收购，成为现在 Yahoo Store 的雏形。当得知 Yahoo 收购消息后，作者做的第一件事就是招了几十个程序员，因为谁也无法相信这样强大的 C2C 平台只是由四个 Lisp 黑客构建的。文章中，作者提出编程语言的表达能力是有区别的，而程序员每天写的代码量却和使用的语言基本无关，所以如果你使用的语言表达能力是别人的30倍，你的开发时间将是别人的 30 分之一！这就是很多竞争对手都认为作者拥有秘密武器–每次他们发布了新的功能，作者都可以在第一时间做到同样的事，作者的秘密武器就是 Lisp。文章还揭示了为啥 Lisp 没有成为主流语言的原因–编程语言不仅是工具，还是程序员思考问题的方式，改变思考方式不是一件容易的事！然而，作者的成功正是利用了这一点。
+如果你喜欢这篇文章，可以考虑购买 <a href="http://book.douban.com/subject/4912556/">Hacker and Painter</a> 一书，是作者散文的合集，其中大部分可以在上面的网站上在线阅读。</p>
+<h2><a href="http://www.defmacro.org/ramblings/lisp.html">The Nature of Lisp</a></h2>
+<p>这篇文章中，作者以广为人知的 XML 为引子，首先问为啥 XML 能作为一种通用的数据描述语言，因为 XML 具有树状结构，而几乎所有的信息都可以用某种树状结构来表现。接着作者启发道，程序能不能用 XML 表示呢？其实是可以的，因为几乎所有的编译器把源文件变成一种叫抽象语法树（AST）的东西，所以 XML 可以表现几乎所有的语言的语法！接着作者用 Ant 的例子引出 Executable XML 的概念。而后开始转到 Lisp 上，说其实 Lisp 和 XML 是同一个东西，所不同的是 Lisp 早发明 30 年，而且比较简洁。然而，Executable XML 的实现是需要借助其他语言的，用 SAX 或者 DOM 接口操纵 XML。而 Lisp 可以用 macro 直接操纵自己的语法树，这才是 Lisp 的威力所在！</p>
+<p>Lisp 和 XML 一样可以表达几乎任何语言的语法，用 macro 可以很方便地模拟语言的语义，Lisp 可以变成你想要的任何语言！Lisp, one language to rule them all! Lisp 编程就是构建一层层的DSEL，直到抽象层次升高到可以直接描述问题领域。Lisp is not a language, but a language to build languages, it’s meta-language!</p>
+<p>为啥 MIT 的人工智能会那么强？因为他们从 60 年代开始，在所有其他人都还在使用 Fortran 和汇编的时候，已经开始用 Lisp 编程了！<a href="http://garfield-jarod.spaces.live.com/blog/cns!7B2D7CA0008D25E4!706.entry?&amp;_c02_vws=1">GEB</a> 中提到，大脑的底层是神经元，在这个层面是完全无法理解智能的（至于存不存在的话是哲学问题），慢慢地升高层次，当突破某个临界点后，突然间，智能就出现了！所以，几乎所有的 AI 程序都是用Lisp 写的，就是因为如果你无法构建高级的抽象，永远在神经元层次编程的话，可能就永远写不出AI程序了。对，我说的是“可能”，我所知道的有两种例外：
+1。你的大脑就是一个 Lisp 编译器，你用 Lisp 思考，大脑帮你编译成别的语言，可能在 Lisp 发明之前的 AI 程序就是这么写的。这可能也就是冯诺依曼为啥只用汇编的原因，因为他的脑袋瓜实在是太厉害了，因为他不是人类:)</p>
+<p>2。你在无意识中已经开发了一个 Lisp 解释器。参见文章开头的 Greenspun’s Tenth Rule:)</p>
+<p><a href="http://lisp.tw/2013/02/17/god-wrote-in-lisp-code/">God wrote in lisp code!</a></p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[了解 Lisp 的文化]]></title>
+    <link href="http://lisp.tw//2013/02/16/lisp-culture/"/>
+    <id>http://lisp.tw//2013/02/16/lisp-culture/</id>
+    <published>2013-02-16T04:08:53.000Z</published>
+    <updated>2013-02-19T14:42:27.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：Lisp Taiwan
+<span class="image-copyright"><a href="http://globalnerdy.com/">http://globalnerdy.com/</a></span>
+</span></p>
+<img src="/images/doing-wrong.jpg" title="Portrait of John McCarthy.">
+
+<span id="more"></span>
+
+<h2>從風格一窺 Lisp 文化</h2>
+<h3>Tutorial on Good Lisp Programming Style by Peter Norvig</h3>
+<p>閱讀<a href="http://norvig.com" rel="author">作者: Peter Norvig</a> 所寫的：</p>
+<p><a href="http://norvig.com/luv-slides.ps">教程：好的 Lisp 編程風格 (.ps)</a></p>
+<h2><a href="http://gclsg.lisp.tw/">Google Common Lisp 風格指南 (GCLSG)</a></h2>
+<p><span class="meta-tag alignright">文件</span></p>
+<p><strong>節錄：</strong></p>
+<p>本指南推荐了格式化及风格化的选择，目的在于使你的代码更容易被其他人理解。针对我们在 Google 开发的内部应用及免费软件函式库，在改动之前你得先遵循这些准则。但是要注意的是，每个项目有自己的一套规则及惯例，违反或覆写了这些通用的准则；比如速度导向的 QPX 低费率搜索引擎就与 QRes 订位系统有着大相迳庭的风格。</p>
+<p><a href="http://fare.tunes.org/" rel="author">作者: François-René Rideau</a></p>
+<h2>從社群一窺 Lisp 文化</h2>
+<p>Reddit: <a href="http://www.reddit.com/r/lisp">r/lisp</a></p>
+<p>StackOverflow: <a href="http://stackoverflow.com/questions/tagged/common-lisp">common-lisp</a></p>
+<h2>從郵件組一窺 Lisp 文化</h2>
+<h3>Mailing List</h3>
+<p><a href="https://groups.google.com/forum/?fromgroups#!forum/lisp-cn">lisp-cn 郵件組</a></p>
+<p><a href="https://groups.google.com/forum/?fromgroups#!forum/comp.lang.lisp">comp.lang.lisp 郵件組</a></p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[編程語言中的 Ducati]]></title>
+    <link href="http://lisp.tw//2013/02/16/ducati-of-programming-language/"/>
+    <id>http://lisp.tw//2013/02/16/ducati-of-programming-language/</id>
+    <published>2013-02-15T18:01:12.000Z</published>
+    <updated>2013-02-19T05:05:10.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+原文：<a href="http://www.defmacro.org/ramblings/lisp-ducati.html">Lisp – The Ducati Of Programming Languages</a>
+譯者：<a href="https://twitter.com/garfield_xue">薛宏</a>
+原發表日期：2007/12/1
+<span class="image-copyright"><a href="http://willy08.deviantart.com/">http://willy08.deviantart.com/</a></span>
+</span></p>
+<img src="/images/ducati.jpg" title="Valentino Rossi and his Ducati, 2007.">
+
+<span id="more"></span>
+
+<h2>介绍</h2>
+<p>2003 年一个夏天的傍晚，我和一群朋友坐在纽约一个咖啡馆的阳台上。东海岸的潮湿气流还没有到来，我们一边享受着暖暖的清风，一边看着路上经过车辆闪烁的车灯。坐在我旁边的是一个不认识的家伙，他是一个朋友的朋友。他身着摩托服，大腿上放着头盔。为了打破沉默，我问了我想到的第一个问题：“骑摩托是什么感觉？”我对此很感兴趣，但并不期待得到什么新鲜的答案。我不能向别人形容开车的感觉，又怎么能期待别人向我描述骑摩托的感觉呢？实践胜千言。但他的回答让我惊奇。</p>
+<!--more-->
+
+<p>“当你开车的时候”，他说，“你的思想和机器之间是不连续的。你可以通过仪表观察它，但你不能真正的感知它，除非它是辆摩托。如果你想加速，你加入一些汽油，但是你需要等待一定的时间后汽车才会有所反应。而对于摩托，这段时间非常短，以至于你更本不会察觉。你想做什么，你马上可以做到。摩托变成了你身体的一部分，一种有机的延伸。你可能需要一辆法拉利才能达到这种人车合一的境界。”</p>
+<p>当时我就决心以后要学开摩托（首先我需要一些空闲的时间并且想办法不让我妈知道）。我花了几天的时间思考关于人机合一的哲学，直到有另外一些新的想法，然后这段对话便渐渐地淡忘了。</p>
+<h2>Common Lisp</h2>
+<p>学习 Haskell 就像挑战一条新的攀岩道，是一种非常慢，具有挑战性，十分紧张刺激，但却十分愉悦的过程。当我最终到达一个阶段可以休息的时候，我感到很快乐。为了防止我不可逆转的以 Hindley-Milner <a href="#1">[1]</a> 的方式思考问题，我决定离开 Haskell 一阵，在接下来的几个星期里用 Common Lisp编程。</p>
+<p>有一天吃饭的时候，我和一个朋友谈起我正在做的一些事。他一直无法理解我对那些“怪异”语言的偏爱（很少有人会理解）。“那么用 Common Lisp 编程到底是什么感觉？”，他问。忽然间，那个三年前的比喻从我脑海的最深处蹦了出来，“就像骑摩托”，我说。</p>
+<p>Common Lisp的编译器不仅仅是个工具，当你获得一些关键的知识后，她就成为了你思想的延续。你思考你想做什么，不一会儿你便做到了。你的大脑感觉不到延迟。用 Common Lisp 编程是一种非常流畅的过程，以至于你很难把电脑想象成一个外在的实体。Common Lisp 是编程语言中的 Ducati <a href="#2">[2]</a>。</p>
+<h2>Haskell</h2>
+<p>当我朋友听到这个比喻后，有接着问了第二个问题。“如果 Lisp 是 Ducati，那 Haskell是什么呢？” 我很高兴他问了这个问题，对于我这样的 Haskell 新手，思考这个问题有助于我解决我心中最后的疑惑。</p>
+<p>经过一些思考，我发现这个比喻并不能很好的适用于 Haskell。用 Haskell 编程并不像开车，缺少那种流畅性。Lisp 能让你即时地把思想变为程序，而 Haskell 却是用另一种方法提高你的编程效率。她强迫你仔细地思考和改善解决问题过程中的每一个步骤。缺少流畅性换来的是程序整体架构上的完善。你需要花很多力气才能写出丑陋的 Haskell 程序 <a href="#3">[3]</a>。</p>
+<p>你要先学哪一个，Lisp 或者 Haskell？这是由你性格决定的。不过有一点是确定的，如果你想成为一个好的程序员，最终这两个你都必须学。</p>
+<hr class="end"></hr>
+
+
+<p><a id="1">[1]:</a> Hindley-Milner 是一种进行类型推导的常用算法，Haskell 之所以是 Haskell，其非常弹性的类型系统是很重要的原因之一。</p>
+<p><a id="2">[2]:</a> Ducati 貌似是摩托里面的老大。</p>
+<p><a id="3">[3]:</a> 这段话我可是深有体会吖，我写的那个 Ball Clock 程序，也就二三十行，加起来却花了我十几个小时（相比 Python 版，我只用了 5 分钟，当然这和我刚学 Haskell 有关，但还是能够说明一些的问题的），有时候一两个小时就在那看着屏幕，发现代码实在是太丑陋了，写不下去了，只能从头来过。但最后的成果确是很令我欣慰的:)</p>
+<p><strong>註：</strong> 作者所寫的 Ball Clock: <a href="http://the-little-haskeller.blogspot.tw/">Solve Ball Clock Puzzle in Python and Haskell</a></p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
+    <category scheme="http://lisp.tw//tags/Haskell/" term="Haskell"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Hello, World!]]></title>
+    <link href="http://lisp.tw//2013/02/14/hello-world/"/>
+    <id>http://lisp.tw//2013/02/14/hello-world/</id>
+    <published>2013-02-14T03:11:11.000Z</published>
+    <updated>2013-02-19T05:05:09.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>Welcome to Lisp Taiwan.</strong></p>
+]]></content>
+  </entry>
+</feed>

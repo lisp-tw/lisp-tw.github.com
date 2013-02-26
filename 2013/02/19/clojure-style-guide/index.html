@@ -1,0 +1,636 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Clojure 风格指南 | Lisp Taiwan λ</title>
+  <meta name="author" content="Lisp Taiwan">
+  
+  <meta name="description" content="Lisp Taiwan 致力於分享及彙整 Lisp 相關資料與知識。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Clojure 风格指南"/>
+  <meta property="og:site_name" content="Lisp Taiwan λ"/>
+
+  
+    <meta property="og:image" content="http://lisp.tw/images/800px-Rich_Hickey.jpg" />
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="http://feeds.feedburner.com/LispTaiwan" title="Lisp Taiwan λ" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38473108-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+
+<body>
+<!--[if lt IE 8]>
+    <p>您正在使用一個<strong>過時的</strong>瀏覽器。請<a href="http://browsehappy.com/">升級您的瀏覽器</a>或是<a href="http://www.google.com/chromeframe/?redirect=true">試用 Google Chrome 內嵌框架</a>來改善您的瀏覽體驗。</p>
+<![endif]-->
+  <header id="header" class="inner"><div class="alignleft">
+  <h1 class="font-effect-fire-animation"><a href="/">Lisp Taiwan λ</a></h1>
+  <h2><a href="/">Sharing and Collecting knowledge of Lisp</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首頁</a></li>
+    
+      <li><a href="/archives">彙整</a></li>
+    
+      <li><a href="/dialects">實現</a></li>
+    
+      <li><a href="/books">書籍</a></li>
+    
+      <li><a href="/lispers">關注</a></li>
+    
+      <li><a href="/docs">文件</a></li>
+    
+      <li><a href="/tools">工具</a></li>
+    
+      <li><a href="/about">關於</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-02-18T16:16:00.000Z"><a href="/2013/02/19/clojure-style-guide/">Feb 19 2013</a></time>
+      
+      
+  
+    <h1 class="title">Clojure 风格指南</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><span class="meta-info">
+原文：<a href="https://github.com/bbatsov/clojure-style-guide">Clojure Style Guide</a>
+譯者：<a href="https://github.com/JuanitoFatas/clojure-style-guide">JuanitoFatas</a>
+<span class="image-copyright"><a href="http://en.wikipedia.org/">http://en.wikipedia.org/</a></span>
+</span></p>
+<img src="/images/800px-Rich_Hickey.jpg" title="Rich Hickey – the inventor of the Clojure programming language">
+
+<span id="more"></span>
+
+<h1>Clojure 风格指南</h1>
+<p>这篇 Clojure 风格指南向你推荐现实世界中的最佳实践，Clojure 程序员如何写出可被别的 Clojure 程序员维护的代码。一份风格指南反映出现实世界中的用法，并带有一个理想，避免已经公认是危险的事物被人继续使用，不管看起来是多么的好。</p>
+<p>本指南依照相关规则分成数个小节。我尽力在规则之后说明理由（如果省略的话，我相信理由是显而易见的）。</p>
+<p>我没有想到所有的规则 —– 他们大致上是基于，我作为一个专业软体工程师的广泛生涯，从 Clojure 社群成员所得到的反馈及建议，和数个高度评价的 Clojure 编程资源，像是 <a href="http://www.clojurebook.com/">&quot;Clojure Programming&quot;</a> 以及 <a href="http://joyofclojure.com/">&quot;The Joy of Clojure&quot;</a>。</p>
+<p>本指南仍在完善中 –– 缺少某些章节，某些不完整，某些规则缺少例子，某些规则例子演示不够清楚。在完稿时，将会解决这些议题 –– 现在就先记在心上就好。</p>
+<p>你可以使用 <a href="https://github.com/TechnoGate/transmuter">Transmuter</a> 来产生本指南的一份 PDF 或 HTML 复本。</p>
+<h2>目录</h2>
+<ul>
+<li><a href="#-1">组织源代码与排版</a></li>
+<li><a href="#-2">语法</a></li>
+<li><a href="#-3">命名</a></li>
+<li><a href="#-4">复合类型</a></li>
+<li><a href="#mutation">Mutation</a></li>
+<li><a href="#-6">字串</a></li>
+<li><a href="#-7">异常</a></li>
+<li><a href="#-8">宏</a></li>
+<li><a href="#-9">注解</a><ul>
+<li><a href="#-10">注释</a></li>
+</ul>
+</li>
+<li><a href="#-11">基本原则</a></li>
+</ul>
+<h2><a href="#-1" id="-1">组织源代码与排版</a></h2>
+
+<blockquote>
+<p>几乎每人都深信，每一个除了自己的风格都又丑又难读。<br/>
+把 &quot;除了自己的&quot; 拿掉，他们或许是对的...<br/>
+-- Jerry Coffin (论缩排)</p>
+</blockquote>
+<ul>
+<li><p>每个缩排层级使用两个空格。不要使用 Hard Tabs。</p>
+<pre><code class="lang-clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> something</div><div class="line">  <span class="list">(<span class="title">something-else</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad - 四个空格</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> something</div><div class="line">    <span class="list">(<span class="title">something-else</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>垂直排列函数参数。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> even?</div><div class="line">        <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> even?</div><div class="line">  <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>排列 <code>let</code> 的绑定与 map 的关键字。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">let</span></span> <span class="collection">[thing1 <span class="string">"some stuff"</span></div><div class="line">      thing2 <span class="string">"other stuff"</span>]</span></div><div class="line">  <span class="collection">{<span class="attribute">:thing1</span> thing1</div><div class="line">   <span class="attribute">:thing2</span> thing2}</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">let</span></span> <span class="collection">[thing1 <span class="string">"some stuff"</span></div><div class="line">  thing2 <span class="string">"other stuff"</span>]</span></div><div class="line">  <span class="collection">{<span class="attribute">:thing1</span> thing1</div><div class="line">  <span class="attribute">:thing2</span> thing2}</span>)</span></div></code></pre>
+</li>
+<li><p>针对没有文档字串的 <code>defn</code>，选择性忽略函数名与参数向量之间的新行。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="collection">[x]</span></div><div class="line">  <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[x]</span></div><div class="line">  <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="collection">[x]</span> <span class="list">(<span class="title">bar</span> x)</span>)</span></div></code></pre>
+</li>
+<li><p>选择性忽略短的参数向量与函数体之间的新行。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[x]</span></div><div class="line">  <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; 短的函数这样写很好</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> goo <span class="collection">[x]</span> <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; 多参数的函数这样写很好</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="list">([<span class="title">x</span>] <span class="list">(<span class="title">bar</span> x)</span>)</span></div><div class="line">  <span class="list">([<span class="title">x</span> y]</div><div class="line">    <span class="list">(<span class="title"><span class="built_in">if</span></span> <span class="list">(<span class="title">predicate?</span> x)</span></div><div class="line">      <span class="list">(<span class="title">bar</span> x)</span></div><div class="line">      <span class="list">(<span class="title">baz</span> x)</span>)</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="collection">[x]</span> <span class="list">(<span class="title"><span class="built_in">if</span></span> <span class="list">(<span class="title">predicate?</span> x)</span></div><div class="line">        <span class="list">(<span class="title">bar</span> x)</span></div><div class="line">        <span class="list">(<span class="title">baz</span> x)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>缩排多行的文档字串。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="string">"Hello there. This is</div><div class="line">  a multi-line docstring."</span></div><div class="line">  <span class="collection">[]</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo</div><div class="line">  <span class="string">"Hello there. This is</div><div class="line">a multi-line docstring."</span></div><div class="line">  <span class="collection">[]</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>使用 Unix 风格的行编码(BSD/Solaris/Linux/OSX 的用户不用担心，，Windows 用户要格外小心。)</p>
+<ul>
+<li><p>如果你使用 Git ，你也许会想加入下面这个配置，来保护你的项目被 Windows 的行编码侵入：</p>
+<pre><code class="lang-bash"><div class="line">$ git config --global core.autocrlf <span class="literal">true</span></div></code></pre>
+</li>
+</ul>
+</li>
+<li><p>若有任何文字在左括号、中括号、大括号前（<code>(</code>, <code>[</code>, <code>{</code>），或是在右括号、中括号、大括号之后（<code>)</code>, <code>]</code>, <code>}</code>），将文字与括号用一个空格分开。反过来说，在左括号后、右括号前不要有空格。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">foo</span> <span class="list">(<span class="title">bar</span> baz)</span> quux)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title">foo</span><span class="list">(<span class="title">bar</span> baz)</span>quux)</span></div><div class="line"><span class="list">(<span class="title">foo</span> <span class="list">( <span class="title">bar</span> baz )</span> quux)</span></div></code></pre>
+</li>
+<li><p>不要在循序的复合类型的字面常量语法里使用逗号。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">[1 2 3]</div><div class="line">(1 2 3)</div><br><div class="line">;; bad</div><div class="line">[1, 2, 3]</div><div class="line">(1, 2, 3)</div></code></pre>
+</li>
+<li><p>明智的使用逗号与断行来加强 map 的可读性。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">{:name "Bruce Wayne" :alter-ego "Batman"}</div><br><div class="line">;; good and arguably a bit more readable</div><div class="line">{:name "Bruce Wayne"</div><div class="line"> :alter-ego "Batman"}</div><br><div class="line">;; good and arguably more compact</div><div class="line">{:name "Bruce Wayne", :alter-ego "Batman"}</div></code></pre>
+</li>
+<li><p>将所有尾随括号放在同一行。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> something</div><div class="line">  <span class="list">(<span class="title">something-else</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> something</div><div class="line">  <span class="list">(<span class="title">something-else</span>)</span></div><div class="line">)</span></div></code></pre>
+</li>
+<li><p>顶层形式用空行间隔开来。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">def</span></span> x ...)</span></div><br><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo ...)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">def</span></span> x ...)</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo ...)</span></div></code></pre>
+</li>
+<li><p>函数或宏定义中间不要放空行。</p>
+</li>
+<li>可行的场合下，避免每行超过 80 字符。</li>
+<li>避免尾随的空白。</li>
+<li>一个文件、一个命名空间。</li>
+<li><p>每个命名空间用 <code>ns</code> 形式开始，加上 <code>refer</code>、<code>require</code>、<code>use</code>  以及 <code>import</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="list">(<span class="title"><span class="built_in">ns</span></span> examples.ns</div><div class="line">  <span class="list">(:<span class="title">refer-clojure</span> <span class="attribute">:exclude</span> <span class="collection">[next replace remove]</span>)</span></div><div class="line">  <span class="list">(:<span class="title">require</span> <span class="list">(<span class="title">clojure</span> <span class="collection">[string <span class="attribute">:as</span> string]</span></div><div class="line">                     <span class="collection">[set <span class="attribute">:as</span> set]</span>)</span></div><div class="line">            <span class="collection">[clojure.java.shell <span class="attribute">:as</span> sh]</span>)</span></div><div class="line">  <span class="list">(:<span class="title"><span class="built_in">use</span></span> <span class="list">(<span class="title">clojure</span> zip xml)</span>)</span></div><div class="line">  <span class="list">(:<span class="title"><span class="built_in">import</span></span> java.util.Date</div><div class="line">           java.text.SimpleDateFormat</div><div class="line">           <span class="list">(<span class="title">java.util.concurrent</span> Executors</div><div class="line">                                 LinkedBlockingQueue)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>避免单段的命名空间。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">ns</span></span> example.ns)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">ns</span></span> example)</span></div></code></pre>
+</li>
+<li><p>避免使用过长的命名空间（也就是超过 5 段）</p>
+</li>
+<li><p>函数避免超过 10 行代码。多数函数应小于 5 行。</p>
+</li>
+<li><p>参数列表避免超过 3 个或 4 个位置参数（positional parameters）。</p>
+</li>
+</ul>
+<h2><a href="#-2" id="-2">语法</a></h2>
+
+<ul>
+<li>避免使用操作命名空间的函数，像是：<code>require</code> 与 <code>refer</code>。他们在 REPL 之外完全用不到。</li>
+<li>使用 <code>declare</code> 来启用 forward references。</li>
+<li><p>偏好像是 <code>map</code> 与 <code>loop/recur</code> 的高阶函数。</p>
+</li>
+<li><p>函数体内偏好使用 pre 函数与 post 条件来检查。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[x]</span></div><div class="line">  <span class="collection">{<span class="attribute">:pre</span> <span class="collection">[<span class="list">(<span class="title"><span class="built_in">pos?</span></span> x)</span>]</span>}</span></div><div class="line">  <span class="list">(<span class="title">bar</span> x)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[x]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">if</span></span> <span class="list">(<span class="title"><span class="built_in">pos?</span></span> x)</span></div><div class="line">    <span class="list">(<span class="title">bar</span> x)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">throw</span></span> <span class="list">(<span class="title">IllegalArgumentException</span> <span class="string">"x must be a positive number!"</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>不要在函数内定义变量。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; very bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">def</span></span> x<span class="number"> 5</span>)</span></div><div class="line">  ...)</span></div></code></pre>
+</li>
+<li><p>不要用局域绑定遮蔽 <code>clojure.core</code> 内的名称。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; bad - you're forced to used clojure.core/map fully qualified inside</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> foo <span class="collection">[map]</span></div><div class="line">  ...)</span></div></code></pre>
+</li>
+<li><p>使用 <code>seq</code> 作为终止条件来测试序列是否为空（这个技巧有时候称为 <em>nil punning</em>）。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> print-seq <span class="collection">[s]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">when</span></span> <span class="list">(<span class="title"><span class="built_in">seq</span></span> s)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">prn</span></span> <span class="list">(<span class="title"><span class="built_in">first</span></span> s)</span>)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">recur</span></span> <span class="list">(<span class="title"><span class="built_in">rest</span></span> s)</span>)</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> print-seq <span class="collection">[s]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">when-not</span></span> <span class="list">(<span class="title"><span class="built_in">empty?</span></span> s)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">prn</span></span> <span class="list">(<span class="title"><span class="built_in">first</span></span> s)</span>)</span></div><div class="line">    <span class="list">(<span class="title"><span class="built_in">recur</span></span> <span class="list">(<span class="title"><span class="built_in">rest</span></span> s)</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>when</code> 取代 <code>(if ... (do ...)</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> pred</div><div class="line">  <span class="list">(<span class="title">foo</span>)</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">if</span></span> pred</div><div class="line">  <span class="list">(<span class="title"><span class="built_in">do</span></span></div><div class="line">    <span class="list">(<span class="title">foo</span>)</span></div><div class="line">    <span class="list">(<span class="title">bar</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>if-let</code> 取代 <code>let</code> + <code>if</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">if-let</span></span> <span class="collection">[result <span class="attribute">:foo</span>]</span></div><div class="line">  <span class="list">(<span class="title">something-with</span> result)</span></div><div class="line">  <span class="list">(<span class="title">something-else</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">let</span></span> <span class="collection">[result <span class="attribute">:foo</span>]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">if</span></span> result</div><div class="line">    <span class="list">(<span class="title">something-with</span> result)</span></div><div class="line">    <span class="list">(<span class="title">something-else</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>when-let</code> 取代 <code>let</code> + <code>when</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when-let</span></span> <span class="collection">[result <span class="attribute">:foo</span>]</span></div><div class="line">  <span class="list">(<span class="title">do-something-with</span> result)</span></div><div class="line">  <span class="list">(<span class="title">do-something-more-with</span> result)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">let</span></span> <span class="collection">[result <span class="attribute">:foo</span>]</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">when</span></span> result</div><div class="line">    <span class="list">(<span class="title">do-something-with</span> result)</span></div><div class="line">    <span class="list">(<span class="title">do-something-more-with</span> result)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>if-not</code> 取代 <code>(if (not ...) ...)</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">if-not</span></span> <span class="list">(<span class="title">pred</span>)</span></div><div class="line">  <span class="list">(<span class="title">foo</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">if</span></span> <span class="list">(<span class="title"><span class="built_in">not</span></span> pred)</span></div><div class="line">  <span class="list">(<span class="title">foo</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>when-not</code> 取代 <code>(when (not ...) ...)</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when-not</span></span> pred</div><div class="line">  <span class="list">(<span class="title">foo</span>)</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">when</span></span> <span class="list">(<span class="title"><span class="built_in">not</span></span> pred)</span></div><div class="line">  <span class="list">(<span class="title">foo</span>)</span></div><div class="line">  <span class="list">(<span class="title">bar</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>用 <code>not=</code> 取代 <code>(not (= ...))</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">not=</span></span> foo bar)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">not</span></span> <span class="list">(<span class="title"><span class="built_in">=</span></span> foo bar)</span>)</span></div></code></pre>
+</li>
+<li><p>偏好 <code>%</code> 胜于 <code>%1</code> 在只有一个参数的函数字面常量。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">#(Math/round %)</div><br><div class="line">;; bad</div><div class="line">#(Math/round %1)</div></code></pre>
+</li>
+<li><p>偏好 <code>%1</code> 胜于 <code>%</code> 在超过一个参数的函数字面常量。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">#(Math/pow %1 %2)</div><br><div class="line">;; bad</div><div class="line">#(Math/pow % %2)</div></code></pre>
+</li>
+<li><p>不要在不必要的情况用匿名函数包装函数。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> even? <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="list">(<span class="title"><span class="built_in">even?</span></span> %)</span> <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>若函数体由一个以上形式组成，不要使用函数的字面常量语法。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">(fn [x]</div><div class="line"> (println x)</div><div class="line"> (* x 2))</div><br><div class="line">;; bad (you need an explicit do form)</div><div class="line">#(do (println %)</div><div class="line">    (* % 2))</div></code></pre>
+</li>
+<li><p><code>complement</code> 与使用匿名函数相比，喜好使用前者。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> <span class="list">(<span class="title"><span class="built_in">complement</span></span> some-pred?)</span> coll)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="list">(<span class="title"><span class="built_in">not</span></span> <span class="list">(<span class="title">some-pred?</span> %)</span>)</span> coll)</span></div></code></pre>
+<p>这个规则应该在函数有明确的反函数时忽略（如：<code>even?</code> 与 <code>odd?</code>）。</p>
+</li>
+<li><p>在可以产生更简洁代码的情况时利用 <code>comp</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> #<span class="list">(<span class="title">capitalize</span> <span class="list">(<span class="title">trim</span> %)</span>)</span> <span class="collection">[<span class="string">"top "</span> <span class="string">" test "</span>]</span>)</span></div><br><div class="line"><span class="comment">;; better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> <span class="list">(<span class="title"><span class="built_in">comp</span></span> capitalize trim)</span> <span class="collection">[<span class="string">"top "</span> <span class="string">" test "</span>]</span>)</span></div></code></pre>
+</li>
+<li><p>在可以产生更简洁代码的情况时利用 <code>partial</code> 。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> #<span class="list">(<span class="title"><span class="built_in">+</span></span><span class="number"> 5</span> %)</span> <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div><br><div class="line"><span class="comment">;; (arguably) better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> <span class="list">(<span class="title"><span class="built_in">partial</span></span> +<span class="number"> 5</span>)</span> <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>偏好使用 threading macros <code>-&gt;</code> （thread-first）及 <code>-&gt;&gt;</code> （thread-last）来简化嵌套形式。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">-&gt;</span> <span class="collection">[1<span class="number"> 2</span><span class="number"> 3</span>]</span></div><div class="line">    reverse</div><div class="line">    <span class="list">(<span class="title"><span class="built_in">conj</span></span><span class="number"> 4</span>)</span></div><div class="line">    prn)</span></div><br><div class="line"><span class="comment">;; not as good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">prn</span></span> <span class="list">(<span class="title"><span class="built_in">conj</span></span> <span class="list">(<span class="title"><span class="built_in">reverse</span></span> <span class="collection">[1<span class="number"> 2</span><span class="number"> 3</span>]</span>)</span><span class="number"></div><div class="line">           4</span>)</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">-&gt;&gt;</span> <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span></div><div class="line">     <span class="list">(<span class="title"><span class="built_in">filter</span></span> even?)</span></div><div class="line">     <span class="list">(<span class="title"><span class="built_in">map</span></span> <span class="list">(<span class="title"><span class="built_in">partial</span></span> *<span class="number"> 2</span>)</span>)</span>)</span></div><br><div class="line"><span class="comment">;; not as good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">map</span></span> <span class="list">(<span class="title"><span class="built_in">partial</span></span> *<span class="number"> 2</span>)</span></div><div class="line">     <span class="list">(<span class="title"><span class="built_in">filter</span></span> even? <span class="list">(<span class="title"><span class="built_in">range</span></span><span class="number"> 1</span><span class="number"> 10</span>)</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>当连锁调用 Java interop 的方法时，偏好 <code>..</code> 胜于 <code>-&gt;</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">-&gt;</span> <span class="list">(<span class="title">System/getProperties</span>)</span> <span class="list">(<span class="title">.get</span> <span class="string">"os.name"</span>)</span>)</span></div><br><div class="line"><span class="comment">;; better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">..</span></span> System getProperties <span class="list">(<span class="title"><span class="built_in">get</span></span> <span class="string">"os.name"</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>在 <code>cond</code> 与 <code>condp</code> 使用 <code>:else</code> 作为最后的测试表达式。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">(cond</div><div class="line">  (&lt; n 0) "negative"</div><div class="line">  (&gt; n 0) "positive"</div><div class="line">  :else "zero"))</div><br><div class="line">;; bad</div><div class="line">(cond</div><div class="line">  (&lt; n 0) "negative"</div><div class="line">  (&gt; n 0) "positive"</div><div class="line">  true "zero"))</div></code></pre>
+</li>
+<li><p>当谓词与表达式不变时，偏好用 <code>condp</code> 来取代 <code>cond</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">cond</span></span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 10</span>)</span> <span class="attribute">:ten</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 20</span>)</span> <span class="attribute">:twenty</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 30</span>)</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:else</span> <span class="attribute">:dunno</span>)</span></div><br><div class="line"><span class="comment">;; much better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">condp</span></span> = x<span class="number"></div><div class="line">  10</span> <span class="attribute">:ten</span><span class="number"></div><div class="line">  20</span> <span class="attribute">:twenty</span><span class="number"></div><div class="line">  30</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:dunno</span>)</span></div></code></pre>
+</li>
+<li><p>当测试表达式是编译期时间常量时，偏好使用 <code>case</code> 取代 <code>cond</code> 或 <code>condp</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">cond</span></span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 10</span>)</span> <span class="attribute">:ten</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 20</span>)</span> <span class="attribute">:twenty</span></div><div class="line">  <span class="list">(<span class="title"><span class="built_in">=</span></span> x<span class="number"> 30</span>)</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:else</span> <span class="attribute">:dunno</span>)</span></div><br><div class="line"><span class="comment">;; better</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">condp</span></span> = x<span class="number"></div><div class="line">  10</span> <span class="attribute">:ten</span><span class="number"></div><div class="line">  20</span> <span class="attribute">:twenty</span><span class="number"></div><div class="line">  30</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:dunno</span>)</span></div><br><div class="line"><span class="comment">;; best</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">case</span></span> x<span class="number"></div><div class="line">  10</span> <span class="attribute">:ten</span><span class="number"></div><div class="line">  20</span> <span class="attribute">:twenty</span><span class="number"></div><div class="line">  30</span> <span class="attribute">:forty</span></div><div class="line">  <span class="attribute">:dunno</span>)</span></div></code></pre>
+</li>
+<li><p>适当的时机下使用 <code>set</code> 作为谓词。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">remove</span></span> #<span class="list">(<span class="title"><span class="built_in">=</span></span> %<span class="number"> 0</span>)</span> <span class="collection">[0<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span>]</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">remove</span></span> #<span class="collection">{0}</span> <span class="collection">[0<span class="number"> 1</span><span class="number"> 2</span><span class="number"> 3</span><span class="number"> 4</span><span class="number"> 5</span>]</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">count</span></span> <span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="list">(<span class="title"><span class="built_in">or</span></span> <span class="list">(<span class="title"><span class="built_in">=</span></span> % \a)</span></div><div class="line">                    <span class="list">(<span class="title"><span class="built_in">=</span></span> % \e)</span></div><div class="line">                    <span class="list">(<span class="title"><span class="built_in">=</span></span> % \i)</span></div><div class="line">                    <span class="list">(<span class="title"><span class="built_in">=</span></span> % \o)</span></div><div class="line">                    <span class="list">(<span class="title"><span class="built_in">=</span></span> % \u)</span>)</span></div><div class="line">               <span class="string">"mary had a little lamb"</span>)</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">count</span></span> <span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="collection">{\a \e \i \o \u}</span> <span class="string">"mary had a little lamb"</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>使用 <code>(inc x)</code> &amp; <code>(dec x)</code> 而不是 <code>(+ x 1)</code> and <code>(- x 1)</code>。</p>
+</li>
+<li><p>使用 <code>(pos? x)</code>, <code>(neg? x)</code> &amp; <code>(zero? x)</code> 而不是 <code>(&gt; x 0)</code>,
+<code>(&lt; x 0)</code> &amp; <code>(= x 0)</code>。</p>
+</li>
+<li><p>使用包装好的 Java interop 形式。</p>
+<pre><code class="lang-Clojure"><div class="line">;;; object creation</div><div class="line">;; good</div><div class="line">(java.util.ArrayList. 100)</div><br><div class="line">;; bad</div><div class="line">(new java.util.ArrayList 100)</div><br><div class="line">;;; static method invocation</div><div class="line">;; good</div><div class="line">(Math/pow 2 10)</div><br><div class="line">;; bad</div><div class="line">(. Math pow 2 10)</div><br><div class="line">;;; instance method invocation</div><div class="line">;; good</div><div class="line">(.substring "hello" 1 3)</div><br><div class="line">;; bad</div><div class="line">(. "hello" substring 1 3)</div><br><div class="line">;;; static field access</div><div class="line">;; good</div><div class="line">Integer/MAX_VALUE</div><br><div class="line">;; bad</div><div class="line">(. Integer MAX_VALUE)</div><br><div class="line">;;; instance field access</div><div class="line">;; good</div><div class="line">(.someField some-object)</div><br><div class="line">;; bad</div><div class="line">(. some-object some-field)</div></code></pre>
+</li>
+</ul>
+<h2><a href="#-3" id="-3">命名</a></h2>
+
+<blockquote>
+<p>程式设计的真正难题是替事物命名及无效的缓存。 <br/>
+-- Phil Karlton</p>
+</blockquote>
+<ul>
+<li>遇到给命名空间取名时，偏好下列两种架构：<ul>
+<li><code>project.module</code></li>
+<li><code>organization.project.module</code></li>
+</ul>
+</li>
+<li>多段的命名空间，使用 <code>lisp-case</code> 。</li>
+<li>函数与变量名使用 <code>lisp-case</code>。</li>
+<li>协议、记录、结构及类型使用驼峰形式（专有缩略词保持大写：HTTP、RFC、XML）</li>
+<li>谓词方法的名字（返回布尔值的方法）以问号结尾（例：<code>even?</code>）。</li>
+<li>STM 事务里不安全的函数、宏的名字以惊叹号结尾（例：<code>reset!</code>）。</li>
+<li><p>conversation 函数使用 <code>-&gt;</code> 取代 <code>to</code>。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> f-&gt;c ...)</span></div><br><div class="line"><span class="comment">;; not so good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> f-to-c ...)</span></div></code></pre>
+</li>
+<li><p>使用 <code>*earmuffs*</code> 耳套（星号）给将会重新绑定的东西（也就是动态的）。</p>
+</li>
+<li>常量不要使用特殊的表示法；除非特别说明，假设一切都是常量。</li>
+<li>Use <code>_</code> for destructuring targets and formal arguments names whose
+value will be ignored by the code at hand.</li>
+<li>惯用名遵循 <code>clojure.core</code> 的范例，如 <code>pred</code> 与 <code>coll</code>。<ul>
+<li>函数：<ul>
+<li><code>f</code>, <code>g</code>, <code>h</code> - 函数输入</li>
+<li><code>n</code> - 整数输入（通常是大小）</li>
+<li><code>index</code> - 整数索引</li>
+<li><code>x</code>, <code>y</code> - 数字</li>
+<li><code>s</code> - 字串输入</li>
+<li><code>coll</code> - 复合类型</li>
+<li><code>pred</code> - 谓词闭包</li>
+<li><code>&amp; more</code> - 可变输入</li>
+</ul>
+</li>
+<li>宏：<ul>
+<li><code>expr</code> - 表达式</li>
+<li><code>body</code> - 宏的主体</li>
+<li><code>binding</code> - 宏的绑定向量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2><a href="#-4" id="-4">复合类型</a></h2>
+
+<blockquote>
+<p>单数据结构与百个函数，好过十个函数与数据结构 <br/>
+-- Alan J. Perlis</p>
+</blockquote>
+<ul>
+<li>避免使用列表来储存通用的数据（除非列表正是你所需要的）。</li>
+<li><p>哈希键偏好使用关键字。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">{:name "Bruce" :age 30}</div><br><div class="line">;; bad</div><div class="line">{"name" "Bruce" "age" 30}</div></code></pre>
+</li>
+<li><p>在允许的场合下，偏好使用复合类型的字面常量语法。但在定义集合时，当数值为编译期时间常量时，仅使用字面常量语法。</p>
+<pre><code class="lang-Clojure"><div class="line">;; good</div><div class="line">[1 2 3]</div><div class="line">#{1 2 3}</div><div class="line">(hash-set (func1) (func2)) ; values determined at runtime</div><br><div class="line">;; bad</div><div class="line">(vector 1 2 3)</div><div class="line">(hash-set 1 2 3)</div><div class="line">#{(func1) (func2)} ; will throw runtime exception if (func1) = (func2)</div></code></pre>
+</li>
+<li><p>在任何情况下避免通过索引来访问复合类型的成员。</p>
+</li>
+<li><p>在允许的场合下，偏好使用作为关键字的函数来从 map 取出数值。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="list">(<span class="title"><span class="built_in">def</span></span> m <span class="collection">{<span class="attribute">:name</span> <span class="string">"Bruce"</span> <span class="attribute">:age</span><span class="number"> 30</span>}</span>)</span></div><br><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(:<span class="title"><span class="built_in">name</span></span> m)</span></div><br><div class="line"><span class="comment">;; bad - 太罗嗦</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">get</span></span> m <span class="attribute">:name</span>)</span></div><br><div class="line"><span class="comment">;; bad - 有 NullPointerException 之虞</span></div><div class="line"><span class="list">(<span class="title">m</span> <span class="attribute">:name</span>)</span></div></code></pre>
+</li>
+<li><p>利用多数复合类型是其元素的函数这个事实。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">filter</span></span> #<span class="collection">{\a \e \o \i \u}</span> <span class="string">"this is a test"</span>)</span></div><br><div class="line"><span class="comment">;; 差劲 - 烂到不敢给你看</span></div></code></pre>
+</li>
+<li><p>利用关键字可以当作复合类型的函数这个事实。</p>
+<pre><code class="lang-Clojure"><div class="line">((juxt :a :b) {:a "ala" :b "bala"})</div></code></pre>
+</li>
+<li><p>避免使用过渡的复合类型，除非在攸关性能的部分代码使用。</p>
+</li>
+<li><p>避免使用 Java 的 collections。</p>
+</li>
+<li><p>除了 interop 与攸关性能的代码（大量处理原生类型的代码）外，避免使用 Java 的数组。</p>
+</li>
+</ul>
+<h2><a href="#mutation" id="mutation">Mutation</a></h2>
+
+<h3>Refs</h3>
+<ul>
+<li>考虑看看将所有带有 <code>io!</code> 宏的 IO 调用包起来，来避免在事务中不小心调用到这些代码。</li>
+<li>无论何时都避免使用 <code>ref-set</code> 。</li>
+<li>试著使事务的大小（封装在事务里的工作量）越小越好。</li>
+<li>避免有短期、长期与同一个 Ref 互动的事务。</li>
+</ul>
+<h3>Agents</h3>
+<ul>
+<li>仅针对 CPU 绑定或不阻塞 IO、其他线程的动作使用 <code>send</code> 。</li>
+<li>给看起来可能会阻塞、睡眠或阻碍线程的动作使用 <code>send-off</code> 。</li>
+</ul>
+<h3>原子</h3>
+<ul>
+<li>避免在 STM 事务里更新原子。</li>
+<li>无论何时都避免使用 <code>reset!</code> 。</li>
+</ul>
+<h2><a href="#-6" id="-6">字串</a></h2>
+
+<ul>
+<li><p>偏好使用 <code>clojure.string</code> 里定义的字串操作函数，而不是 Java interop，或是自己写。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title">clojure.string/upper-case</span> <span class="string">"bruce"</span>)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title">.toUpperCase</span> <span class="string">"bruce"</span>)</span></div></code></pre>
+</li>
+</ul>
+<h2><a href="#-7" id="-7">异常</a></h2>
+
+<ul>
+<li>重用现有的异常类型。符合语言习惯的 Clojure 代码，当真的抛出异常时，会抛出标准类型的异常（如 <code>java.lang.IllegalArgumentException</code>、<code>java.lang.UnsupportedOperationException</code>、<code>java.lang.IllegalStateException</code>、<code>java.io.IOException</code>）。</li>
+<li>偏好使用 <code>with-open</code> 胜于 <code>finally</code>。</li>
+</ul>
+<h2><a href="#-8" id="-8">宏</a></h2>
+
+<ul>
+<li>不要在函数可以办到的情况下使用宏。</li>
+<li>先撰写宏的用途的示例子，再开始撰写宏。</li>
+<li>不管是什么时候，只要可能的话，将复杂的宏拆成较小的函数。</li>
+<li>宏应该仅作为提供语法糖的功能，其核心为清晰的函数。这么做会改善可组合性 (composability)。</li>
+<li>偏好引用形式语法胜于手动构造列表</li>
+</ul>
+<h2><a href="#-9" id="-9">注解</a></h2>
+
+<blockquote>
+<p>良好的代码是最佳的文档。当你要加一个注释时，扪心自问，<br/>
+&quot;如何改善代码让它不需要注释？&quot; 改善代码然后记录下来使它更简洁。 <br/>
+-- Steve McConnell</p>
+</blockquote>
+<ul>
+<li><p>撰写本身即文档的代码并忽略本节。我是认真的！</p>
+</li>
+<li><p>至少用四个分号来写标题注解。</p>
+</li>
+<li><p>用三个分号来写顶层级别的注解。</p>
+</li>
+<li><p>使用两个分号来给一段代码写注解，分号放在代码之前。</p>
+</li>
+<li><p>使用一个分号来写加注式的注解。</p>
+</li>
+<li><p>分号与文字之间至少有一个空格。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;;;; Frob Grovel</span></div><br><div class="line"><span class="comment">;;; This section of code has some important implications:</span></div><div class="line"><span class="comment">;;;   1. Foo.</span></div><div class="line"><span class="comment">;;;   2. Bar.</span></div><div class="line"><span class="comment">;;;   3. Baz.</span></div><br><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> fnord <span class="collection">[zarquon]</span></div><div class="line">  <span class="comment">;; If zob, then veeblefitz.</span></div><div class="line">  <span class="list">(<span class="title">quux</span> zot</div><div class="line">        mumble             <span class="comment">; Zibblefrotz.</span></div><div class="line">        frotz)</span>)</span></div></code></pre>
+</li>
+<li><p>注解是完整的句子时，应该将第一个字大写，并用一个句号结束注解。普遍来说，使用正确的标点符号。句与句之间用一个空白隔开。</p>
+</li>
+<li><p>避免多余的注解。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">inc</span></span> counter)</span> <span class="comment">; increments counter by one</span></div></code></pre>
+</li>
+<li><p>持续更新注解。过时的注解比没有注解还糟糕。</p>
+</li>
+<li><p>当你需要注解一个特定的形式时，偏好使用 <code>#_</code> 读取宏胜于一般的注解。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="comment">;; good</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">+</span></span> foo #_<span class="list">(<span class="title">bar</span> x)</span> delta)</span></div><br><div class="line"><span class="comment">;; bad</span></div><div class="line"><span class="list">(<span class="title"><span class="built_in">+</span></span> foo</div><div class="line">   <span class="comment">;; (bar x)</span></div><div class="line">   delta)</span></div></code></pre>
+</li>
+</ul>
+<blockquote>
+<p>好代码就像是好的笑话 - 它不需要解释 <br/>
+-- Russ Olsen</p>
+</blockquote>
+<ul>
+<li>避免撰写注解来解释糟糕的代码。重构代码使其一目了然 （要嘛就做，要嘛不做 –― 不要只是试试看。–– Yoda）</li>
+</ul>
+<h3><a href="#-10" id="-10">注释</a></h3>
+
+<ul>
+<li>注释通常会直接写在相关代码的那行后面。</li>
+<li>注释关键字后面接著一个冒号与空格，接著是描述问题的说明。</li>
+<li>如果描述问题需要多行时，之后的行需与第一行对齐。</li>
+<li><p>将注释打上名字缩写与日期标签，这样之后才可轻松识别出来。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> some-fun</div><div class="line">  <span class="collection">[]</span></div><div class="line">  <span class="comment">;; FIXME: This has crashed occasionally since v1.2.3. It may</span></div><div class="line">  <span class="comment">;;        be related to the BarBazUtil upgrade. (xz 13-1-31)</span></div><div class="line">  <span class="list">(<span class="title">baz</span>)</span>)</span></div></code></pre>
+</li>
+<li><p>在问题简单到任何文档都会显得冗余的情况下，可在最后一行留下注释。这种用途是个例外，而不是个规则。</p>
+<pre><code class="lang-Clojure"><div class="line"><span class="list">(<span class="title"><span class="built_in">defn</span></span> bar</div><div class="line">  <span class="collection">[]</span></div><div class="line">  <span class="list">(<span class="title">sleep</span><span class="number"> 100</span>)</span>)</span> <span class="comment">; OPTIMIZE</span></div></code></pre>
+</li>
+<li>使用 <code>TODO</code> 来标记之后应被加入的未实现功能或特色。</li>
+<li>使用 <code>FIXME</code> 来标记一个需要修复的代码。</li>
+<li>使用 <code>OPTIMIZE</code> 来标记可能影响性能的缓慢或效率低落的代码。</li>
+<li>使用 <code>HACK</code> 来标记代码异味，其中包含了可疑的编码实践以及应该需要重构。</li>
+<li>使用 <code>REVIEW</code> 来标记任何需要审视及确认正常动作的地方。举例来说： <code>REVIEW: 我们确定用户现在是这么做的吗？</code></li>
+<li>如果你觉得适当的话，使用其他习惯的注解关键字，但记得把它们记录在项目的 <code>README</code> 或类似的地方。</li>
+</ul>
+<h3><a href="#-11" id="-11">基本原则</a></h3>
+
+<ul>
+<li>用函数式风格来编程。适当的避免 mutation。</li>
+<li>保持一致。在理想的世界里，与这些准则保持一致。</li>
+<li>使用常识。</li>
+</ul>
+<h1>贡献</h1>
+<p>在本指南所写的每个东西都不是定案。这只是我渴望想与同样对 Clojure 编程风格有兴趣的大家一起工作，以致于最终我们可以替整个 Clojure 社群创造一个有益的资源。</p>
+<p>欢迎开票或发送一个带有改进的更新请求。在此提前感谢你的帮助！</p>
+<h1>口耳相传</h1>
+<p>一份社群策动的风格指南，对一个社群来说，只是让人知道有这个社群。微博转发这份指南，分享给你的朋友或同事。我们得到的每个注解、建议或意见都可以让这份指南变得更好一点。而我们想要拥有的是最好的指南，不是吗？</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/譯文/">譯文</a>, <a href="/categories/譯文/Clojure/">Clojure</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Clojure/">Clojure</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+<div class="search">
+  <form action="http://google.com/search" method="get" accept-charset="utf-8">
+    <input type="text" name="q" results="0" placeholder="搜尋">
+    <input type="hidden" name="q" value="site:lisp.tw/">
+  </form>
+</div>
+
+
+<div class="widget twitter">
+  <h3 class="title">推文</h3>
+  <ul id="tweets"></ul>
+</div>
+
+<script type="text/javascript">
+var twitter_stream = ['LispTaiwan', 5, false];
+var moment_js_path = '/js/moment.min.js';
+</script>
+<script src="/js/twitter.js"></script>
+
+
+
+<div class="widget links">
+  <h3 class="title">連結</h3>
+  <ul class="entry">
+  	<li>
+  		<a href="http://cliki.net/" target="_blank">CLiki – Common Lisp 維基</a>
+  	</li>
+		<li>
+			<a href="http://planet.lisp.org/" target="_blank">Planet Lisp</a>
+		</li>
+		<li>
+			<a href="http://wiki.alu.org/" target="_blank">Association of Lisp Users – ALU</a>
+		</li>
+		<li>
+			<a href="http://www.reddit.com/r/lisp" target="_blank">Reddit Lisp Tag"</a>
+		</li>
+		<li>
+			<a href="https://github.com/languages/Common%20Lisp" target="_blank">Common Lisp GitHub</a>
+		</li>
+  </ul>
+</div>
+
+
+<div class="widget tag">
+  <h3 class="title">分類</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/譯文/Clojure/">Clojure</a><small>1</small></li>
+  
+    <li><a href="/categories/譯文/Common-Lisp/">Common-Lisp</a><small>3</small></li>
+  
+    <li><a href="/categories/名言佳句/Lisp/">Lisp</a><small>3</small></li>
+  
+    <li><a href="/categories/名言佳句/">名言佳句</a><small>1</small></li>
+  
+    <li><a href="/categories/譯文/">譯文</a><small>5</small></li>
+  
+  </ul>
+</div>
+
+
+
+<div class="widget tag">
+  <h3 class="title">標籤</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Clojure/">Clojure</a><small>1</small></li>
+  
+    <li><a href="/tags/Common-Lisp/">Common Lisp</a><small>6</small></li>
+  
+    <li><a href="/tags/Erlang/">Erlang</a><small>1</small></li>
+  
+    <li><a href="/tags/Haskell/">Haskell</a><small>2</small></li>
+  
+    <li><a href="/tags/Java/">Java</a><small>1</small></li>
+  
+    <li><a href="/tags/Lisp/">Lisp</a><small>6</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 Lisp Taiwan
+  
+
+	<ul class="inline">
+		<li><a href="http://www.facebook.com/groups/471543112900436/"><i class="icon-facebook"></i>Facebook</a></li>
+		<li><a href="http://twitter.com/lisptaiwan"><i class="icon-twitter"></i>Twitter</a></li>
+		<li><a href="http://feeds.feedburner.com/LispTaiwan"><i class="icon-rss"></i>RSS</a></li>
+	</ul>
+</div>
+<div class="clearfix"></div>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'lisptw';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
