@@ -4,13 +4,88 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-02-26T09:31:37.368Z</updated>
+  <updated>2013-02-28T05:13:40.377Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
     <email><![CDATA[lisptw@gmail.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[PAIP 書中 52 個重要的課題]]></title>
+    <link href="http://lisp.tw//2013/02/28/paip-52-lessons/"/>
+    <id>http://lisp.tw//2013/02/28/paip-52-lessons/</id>
+    <published>2013-02-28T04:33:35.000Z</published>
+    <updated>2013-02-28T04:44:16.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+編譯自：<a href="http://norvig.com/Lisp-retro.html">http://norvig.com/Lisp-retro.html</a>
+作者：Lisp Taiwan
+<span class="image-copyright"><a href="http://norvig.com/">http://norvig.com/</a></span>
+</span></p>
+<img src="/images/paip-big-cover.jpg" title="PAIP Book Cover">
+
+<span id="more"></span>
+
+<p>由 <a href="http://norvig.com/elsewhere.html">Peter Norvig</a> 所寫的 <a href="http://norvig.com/paip.html">Paradigms of Artificial Intelligence Programming: Case Studies in Common Lisp</a> (PAIP)，作者總結此書裡 52 個重要的課題：</p>
+<ol>
+<li>Use anonymous functions. [p. 20]</li>
+<li>Create new functions (closures) at run time. [p. 22]</li>
+<li>Use the most natural notation available to solve a problem. [p. 42]</li>
+<li>Use the same data for several programs. [p. 43]</li>
+<li>Be specific. Use abstractions. Be concise. Use the provided tools. Don&#39;t be obscure. Be consistent. [p. 49]</li>
+<li>Use macros (if really necessary). [p. 66]</li>
+<li>There are 20 or 30 major data types; familiarize yourself with them. [p. 81]</li>
+<li>Whenever you develop a complex data structure, develop a corresponding consistency checker. [p. 90]</li>
+<li>To solve a problem, describe it, specify it in algorithmic terms, implement it, test it, debug and analyze it. Expect this 1. to be an iterative process. [p. 110]</li>
+<li>AI programming is largely exploratory programming; the aim is often to discover more about the problem area. [p. 119]</li>
+<li>A general problem solver should be able to solve different problems. [p. 132]</li>
+<li>We must resist the temptation to belive that all thinking follows the computational model. [p. 147]</li>
+<li>The main object of this book is to cause the reader to say to him or herself &quot;I could have written that&quot;. [p. 152]</li>
+<li>If we left out the prompt, we could write a complete Lisp interpreter using just four symbols. Consider what we would have 1. to do to write a Lisp (or Pascal, or Java) interpreter in Pascal (or Java). [p. 176]</li>
+<li>Design patterns can be used informally, or can be abstracted into a formal function, macro, or data type (often involving 1. higher-order functions). [p. 177]</li>
+<li>Use data-driven programming, where pattern/action pairs are stored in a table. [p. 182]</li>
+<li>Sometimes &quot;more is less&quot;: its easier to produce more output than just the right output. [p. 231]</li>
+<li>Lisp is not inherently less efficient than other high-level languages 1. Richard Fateman. [p. 265]</li>
+<li>First develop a working program. Second, instrument it. Third, replace the slow parts. [p. 265]</li>
+<li>The expert Lisp programmer eventually develops a good &quot;efficiency model&quot;. [p. 268]</li>
+<li>There are four general techniques for speeding up an algorithm: caching, compiling, delaying computation, and indexing. [p. 269]</li>
+<li>We can write a compiler as a set of macros. [p. 277]</li>
+<li>Compilation and memoization can yield 100-fold speed-ups. [p. 307]</li>
+<li>Low-level efficiency concerns can yield 40-fold speed-ups. [p. 315]</li>
+<li>For efficiency, use declarations, avoid generic functions, avoid complex argument lists, avoid unnecessary consing, use 1. the right data structure. [p. 316]</li>
+<li>A language that doesn&#39;t affect the way you think about programming is not worth knowing 1. Alan Perlis. [p. 348]</li>
+<li>Prolog relies on three important ideas: a uniform data base, logic variables, and automatic backtracking. [p. 349]</li>
+<li>Prolog is similar to Lisp on the main points. [p. 381]</li>
+<li>Object orientation = Objects + Classes + Inheritance 1. Peter Wegner [p. 435]</li>
+<li>Instead of prohibiting global state (as functional programming does), object-oriented programming breaks up the unruly mass of global state and encapsulates it into small, manageable pieces, or objects. [p. 435]</li>
+<li>Depending on your definition, CLOS is or is not object-oriented. It doesn&#39;t support encapsulation. [p. 454]</li>
+<li>Prolog may not provide exactly the logic you want [p. 465], nor the efficiency you want [p. 472]. Other representation schemes are possible.</li>
+<li>Rule-based translation is a powerful idea, however sometimes you need more efficiency, and need to give up the simplicity of a rule-based system [p. 509].</li>
+<li>Translating inputs to a canonical form is often a good strategy [p. 510].</li>
+<li>An &quot;Expert System&quot; goes beyond a simple logic programming system: it provides reasoning with uncertainty, explanations, and flexible flow of control [p. 531].</li>
+<li>Certainty factors provide a simple way of dealing with uncertainty, but there is general agreement that probabilities provide a more solid foundation [p. 534].</li>
+<li>The strategy you use to search for a sequence of good moves can be important [p. 615].</li>
+<li>You can compare two different strategies for a task by running repeated trials of the two [p. 626].</li>
+<li>It pays to precycle [p. 633].</li>
+<li>Memoization can turn an inefficient program into an efficient one [p. 662].</li>
+<li>It is often easier to deal with preferences among competing interpretations of inputs, rather than trying to strictly rule one interpretation in or out [p 670].</li>
+<li>Logic programs have a simple way to express grammars [p. 685].</li>
+<li>Handling quantifiers in natural languiage can be tricky [p. 696].</li>
+<li>Handling long-distance dependencies in natural language can be tricky [p. 702].</li>
+<li>Understanding how a Scheme interpreter works can give you a better appreciation of how Lisp works, and thus make you a better programmer [p. 753].</li>
+<li>The truly amazing, wonderful thing about call/cc is the ability to return to a continuation point more than once. [p. 771].</li>
+<li>The first Lisp interpreter was a result of a programmer ignoring his boss&#39;s advice. [p. 777].</li>
+<li>Abelson and Sussman (1985) is probably the best introduction to computer science ever written [p. 777].</li>
+<li>The simplest compiler need not be much more complex than an interpreter [p. 784].</li>
+<li>An extraordinary feature of ANSI Common Lisp is the facility for handling errors [p. 837].</li>
+<li>If you can understand how to write and when to use once-only, then you truly understand macros [p. 853].</li>
+<li>A word to the wise: don&#39;t get carried away with macros [p. 855].</li>
+</ol>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/PAIP/" term="PAIP"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[2013 年 Lisp 中国地区爱好者第二次技术沙龙/聚会]]></title>
     <link href="http://lisp.tw//2013/02/26/lisp.org.cn-2013-meetup/"/>
