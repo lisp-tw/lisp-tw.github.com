@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-02-28T07:12:30.587Z</updated>
+  <updated>2013-03-10T09:40:14.352Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -16,9 +16,10 @@
     <link href="http://lisp.tw//2013/02/28/interpreter-howto-yingwang0/"/>
     <id>http://lisp.tw//2013/02/28/interpreter-howto-yingwang0/</id>
     <published>2013-02-28T05:56:56.000Z</published>
-    <updated>2013-02-28T07:12:05.000Z</updated>
+    <updated>2013-02-28T07:19:21.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 原文：<a href="http://blog.sina.com.cn/s/blog_5d90e82f01018ge9.html">王垠 – 怎样写一个解释器</a>
+原發表日期：2012/08/01
 <span class="image-copyright"><a href="http://eopl3.com">http://eopl3.com</a></span>
 </span></p>
 <img src="/images/eopl3.jpg" title="Essentials of Programming Language 3rd Edition, Book Cover">

@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lisp.tw//docs/index.html</loc>
+    <lastmod>2013-03-10T09:39:43.000Z</lastmod>
+  </url>
+  <url>
+    <loc>http://lisp.tw//getting_started/index.html</loc>
+    <lastmod>2013-03-10T08:53:16.000Z</lastmod>
+  </url>
+  <url>
+    <loc>http://lisp.tw//dialects/index.html</loc>
+    <lastmod>2013-03-10T08:47:26.000Z</lastmod>
+  </url>
+  <url>
     <loc>http://lisp.tw//2013/02/28/interpreter-howto-yingwang0/</loc>
-    <lastmod>2013-02-28T07:12:05.000Z</lastmod>
+    <lastmod>2013-02-28T07:19:21.000Z</lastmod>
   </url>
   <url>
     <loc>http://lisp.tw//2013/02/28/paip-52-lessons/</loc>
@@ -51,14 +63,6 @@
   <url>
     <loc>http://lisp.tw//lispers/index.html</loc>
     <lastmod>2013-02-16T04:51:53.000Z</lastmod>
-  </url>
-  <url>
-    <loc>http://lisp.tw//docs/index.html</loc>
-    <lastmod>2013-02-16T04:50:18.000Z</lastmod>
-  </url>
-  <url>
-    <loc>http://lisp.tw//dialects/index.html</loc>
-    <lastmod>2013-02-16T04:46:14.000Z</lastmod>
   </url>
   <url>
     <loc>http://lisp.tw//books/index.html</loc>
