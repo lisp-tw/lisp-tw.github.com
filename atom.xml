@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Lisp Taiwan λ]]></title>
+  <title><![CDATA[Lisp Taiwan 入]]></title>
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-04-05T08:37:05.755Z</updated>
+  <updated>2013-04-05T17:42:24.719Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -1018,7 +1018,7 @@ value will be ignored by the code at hand.</li>
     <link href="http://lisp.tw//2013/02/17/god-wrote-in-lisp-code/"/>
     <id>http://lisp.tw//2013/02/17/god-wrote-in-lisp-code/</id>
     <published>2013-02-16T19:39:43.000Z</published>
-    <updated>2013-02-19T14:41:37.000Z</updated>
+    <updated>2013-04-05T17:41:41.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 作者：<a href="https://twitter.com/garfield_xue">薛宏</a>
 原發表日期：2008/2/7
@@ -1151,7 +1151,7 @@ So he wrote it all in Lisp. <br/></p>
     <link href="http://lisp.tw//2013/02/17/cl-dream-and-the-truth/"/>
     <id>http://lisp.tw//2013/02/17/cl-dream-and-the-truth/</id>
     <published>2013-02-16T19:30:20.000Z</published>
-    <updated>2013-02-19T05:05:08.000Z</updated>
+    <updated>2013-04-05T17:41:40.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 作者：<a href="https://twitter.com/garfield_xue">薛宏</a>
 原發表日期：2008/11/22
@@ -1223,7 +1223,7 @@ Any sufficiently complicated C or Fortran program contains an ad hoc informally-
     <link href="http://lisp.tw//2013/02/16/ducati-of-programming-language/"/>
     <id>http://lisp.tw//2013/02/16/ducati-of-programming-language/</id>
     <published>2013-02-15T18:01:12.000Z</published>
-    <updated>2013-02-19T05:05:10.000Z</updated>
+    <updated>2013-04-05T17:41:35.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 原文：<a href="http://www.defmacro.org/ramblings/lisp-ducati.html">Lisp – The Ducati Of Programming Languages</a>
 譯者：<a href="https://twitter.com/garfield_xue">薛宏</a>
