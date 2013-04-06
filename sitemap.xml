@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lisp.tw//getting_started/index.html</loc>
+    <lastmod>2013-04-06T08:39:08.000Z</lastmod>
+  </url>
+  <url>
     <loc>http://lisp.tw//2013/04/06/asdf-notes/</loc>
     <lastmod>2013-04-06T07:30:24.000Z</lastmod>
   </url>
@@ -15,10 +19,6 @@
   <url>
     <loc>http://lisp.tw//2013/02/17/god-wrote-in-lisp-code/</loc>
     <lastmod>2013-04-06T07:17:39.000Z</lastmod>
-  </url>
-  <url>
-    <loc>http://lisp.tw//getting_started/index.html</loc>
-    <lastmod>2013-04-05T08:36:58.000Z</lastmod>
   </url>
   <url>
     <loc>http://lisp.tw//docs/index.html</loc>
