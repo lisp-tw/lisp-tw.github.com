@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://lisp.tw//getting_started/index.html</loc>
-    <lastmod>2013-04-06T08:41:26.000Z</lastmod>
+    <loc>http://lisp.tw//2013/04/06/asdf-notes/</loc>
+    <lastmod>2013-04-06T11:08:31.000Z</lastmod>
   </url>
   <url>
-    <loc>http://lisp.tw//2013/04/06/asdf-notes/</loc>
-    <lastmod>2013-04-06T07:30:24.000Z</lastmod>
+    <loc>http://lisp.tw//getting_started/index.html</loc>
+    <lastmod>2013-04-06T08:41:26.000Z</lastmod>
   </url>
   <url>
     <loc>http://lisp.tw//2013/02/17/cl-dream-and-the-truth/</loc>
