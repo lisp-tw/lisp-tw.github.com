@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-04-07T08:31:28.991Z</updated>
+  <updated>2013-04-07T08:37:19.927Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -16,7 +16,7 @@
     <link href="http://lisp.tw//2013/04/07/european-cl-meeting-2013-madrid/"/>
     <id>http://lisp.tw//2013/04/07/european-cl-meeting-2013-madrid/</id>
     <published>2013-04-07T07:03:20.000Z</published>
-    <updated>2013-04-07T08:30:57.000Z</updated>
+    <updated>2013-04-07T08:36:40.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 作者：Lisp Taiwan
 <span class="image-copyright"><a href="http://worldbestplaces.com">http://worldbestplaces.com</a></span>
@@ -54,7 +54,6 @@
 <li>Erik Huelsmann，荷蘭</li>
 </ul>
 <p>在 JVM 上開發與佈署 Common Lisp 應用</p>
-<p>Creating and deploying Common Lisp applications on the JVM</p>
 <ul>
 <li>Andreas Koestler, Accenture，澳洲</li>
 </ul>
