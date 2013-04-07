@@ -4,13 +4,119 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-04-06T11:08:36.899Z</updated>
+  <updated>2013-04-07T08:31:28.991Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
     <email><![CDATA[lisptw@gmail.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[歐洲 2013 年 6 月 Common Lisp 聚會 (ECLM '13)]]></title>
+    <link href="http://lisp.tw//2013/04/07/european-cl-meeting-2013-madrid/"/>
+    <id>http://lisp.tw//2013/04/07/european-cl-meeting-2013-madrid/</id>
+    <published>2013-04-07T07:03:20.000Z</published>
+    <updated>2013-04-07T08:30:57.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：Lisp Taiwan
+<span class="image-copyright"><a href="http://worldbestplaces.com">http://worldbestplaces.com</a></span>
+</span></p>
+<img src="/images/madrid-nightlife.jpg" title="Madrid at night">
+
+<span id="more"></span>
+
+<blockquote>
+<p>How often do you attend a small conference where attendees are building nuclear defense systems, running intensive care wards, designing aeroplane engines, analysing Lute tablature, developing cancer drugs, writing FIFA&#39;s legal contracts, and designing their own microchips? Surely this describes few tech events other than Arthur &amp; Edi&#39;s European Common Lisp Meeting :-). <br>
+<a href="http://lisp-univ-etc.blogspot.ch/2012/07/lisp-hackers-luke-gorrie-his-eclm-video.html">Luke Gorrie</a></p>
+</blockquote>
+<p>由 <a href="https://twitter.com/alemmens">Arthur Lemmens</a> 與 <a href="http://weitz.de/">Edi Weitz</a> 主辦，</p>
+<p><a href="http://weitz.de/eclm2013/">『歐洲 2013 年 6 月 2 日 Common Lisp 聚會 （ECLM 2013）』</a>開始報名啦！</p>
+<h2>議程：</h2>
+<p>2013年6月2日（星期日）一整天滿滿的演講，禮拜六與日可參加選擇性的晚宴。</p>
+<p>目前星期日已經有的演講主題如下：</p>
+<ul>
+<li>Michael Eisfeld，<a href="http://www.e3p.de/">Eisfeld Ingenieure AG</a>，德國</li>
+</ul>
+<p>從零開始打造 ConED —— 一個概念性的工程編輯器</p>
+<ul>
+<li>R. Matthew Emerson，<a href="http://www.clozure.com/">Clozure Associates</a>，美國</li>
+</ul>
+<p>Clozure CL 的 Objective-C Bridge 的設計與使用</p>
+<ul>
+<li>Sven Emtell，DoReMIR Music Research AB，瑞典</li>
+</ul>
+<p>ScoreCleaner —— 一個標記音樂的軟體</p>
+<ul>
+<li>Wes Henderson, Wukix, Inc.，美國</li>
+</ul>
+<p>使用 mocl 來開發 iOS 與 Android 應用程式</p>
+<ul>
+<li>Erik Huelsmann，荷蘭</li>
+</ul>
+<p>在 JVM 上開發與佈署 Common Lisp 應用</p>
+<p>Creating and deploying Common Lisp applications on the JVM</p>
+<ul>
+<li>Andreas Koestler, Accenture，澳洲</li>
+</ul>
+<p>使用 Lisp 來做數位最佳化</p>
+<ul>
+<li>Janusz Podrazik, Opusmodus Ltd.，義大利</li>
+</ul>
+<p>作曲儀器 –– Opusmodus 的設計與功能</p>
+<ul>
+<li>SISCOG，葡萄牙</li>
+</ul>
+<p>待宣布</p>
+<ul>
+<li>加上閃電秀！（5-10分鐘簡短的演講）</li>
+</ul>
+<h2><a href="http://www-sop.inria.fr/members/Manuel.Serrano/conferences/els13.html">ELS &#39;13</a></h2>
+<p>同時 2013/6/3-2013/6/4 將舉辦 European Lisp Symposium 2013，在同樣的地方舉行（見下段聚會地點）。有意願要參加的，加入這個郵件組：<a href="http://common-lisp.net/cgi-bin/mailman/listinfo/eclm">ECLM 郵件組</a></p>
+<h2>聚會地點</h2>
+<p><strong>Madrid TRYP Ambassador HOTEL</strong></p>
+<img src="/images/tryp.jpg">
+
+<p><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.tw/maps?hl=zh-TW&amp;safe=off&amp;q=Madrid+TRYP+Ambassador+HOTEL&amp;ie=UTF8&amp;hq=TRYP+Ambassador+HOTEL&amp;hnear=%E8%A5%BF%E7%8F%AD%E7%89%99%E9%A6%AC%E5%BE%B7%E9%87%8C%E8%87%AA%E6%B2%BB%E5%8D%80%E9%A6%AC%E5%BE%B7%E9%87%8C&amp;ll=40.419562,-3.709707&amp;spn=0.006295,0.013017&amp;t=m&amp;brcurrent=3,0x0:0x0,0&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.tw/maps?hl=zh-TW&amp;safe=off&amp;q=Madrid+TRYP+Ambassador+HOTEL&amp;ie=UTF8&amp;hq=TRYP+Ambassador+HOTEL&amp;hnear=%E8%A5%BF%E7%8F%AD%E7%89%99%E9%A6%AC%E5%BE%B7%E9%87%8C%E8%87%AA%E6%B2%BB%E5%8D%80%E9%A6%AC%E5%BE%B7%E9%87%8C&amp;ll=40.419562,-3.709707&amp;spn=0.006295,0.013017&amp;t=m&amp;brcurrent=3,0x0:0x0,0&amp;source=embed" style="color:#0000FF;text-align:left">檢視較大的地圖</a></small></p>
+<h2><a href="http://weitz.de/eclm2013/#prices">費用</a></h2>
+<p>ECLM 2013 門票（2013/6/2）：70 歐元。（兩次休息時間有小點心可吃）</p>
+<p>活動結束後會有晚宴，參加費用為 70 歐元。</p>
+<p>按慣例前一天晚上(2013/6/1)同樣會有晚餐聚會可參加，參加費用同樣是 70 歐元。</p>
+<p>晚餐吃什麼會儘快公布！</p>
+<h2>如何報名？</h2>
+<p><a href="http://eclm.agharta.de/">目前已有來自 13 個國家的 25 人報名！</a></p>
+<p>到<a href="http://eclm.agharta.de/login.html">報名網站</a>註冊並登入即完成報名。</p>
+<h3>繳費</h3>
+<ol>
+<li>銀行轉帳</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="label">Bank:</span> ING, Amstelplein <span class="number">1</span>, <span class="number">1096</span> HA Amsterdam</div><div class="line">BIC (SWIFT): INGBNL2A</div><div class="line"><span class="label">IBAN:</span> NL97 INGB <span class="number">0005830593</span></div><div class="line">Account holder: Stichting Common Lisp Foundation</div></code></pre></td></tr></table></figure>
+
+<ol>
+<li>用 Paypal 支付</li>
+</ol>
+<p><strong>會多出5%手續費</strong></p>
+<p>註冊並登入完畢後，在報名網站你的名字後方，可用 Paypal 付款。</p>
+<p>付款記得要提供你完整的個人資訊，以供辨識之用，付款後至少要 3-4 個工作天處理你的報名（或者更久...取決於你從何處匯款），但不用緊張 :)。</p>
+<p>等待報名程序完成前可加入 <a href="http://common-lisp.net/cgi-bin/mailman/listinfo/eclm">ECLM 郵件組</a></p>
+<h2>報名截止日期</h2>
+<p><strong>2013/05/15</strong></p>
+<p><strong>2013年5月15日</strong></p>
+<hr class="end"></hr>
+
+<p><em>我們期待在馬德里與您相見，</em></p>
+<p><em>Arthur Lemmens 與 Edi Weitz 敬上</em></p>
+<p>以前舉辦過的 ECLM 資訊：</p>
+<ul>
+<li><a href="http://weitz.de/eclm2005/">Amsterdam, 2005</a></li>
+<li><a href="http://weitz.de/eclm2006/">Hamburg, 2006</a></li>
+<li><a href="http://weitz.de/eclm2008/">Amsterdam, 2008</a></li>
+<li><a href="http://weitz.de/eclm2009/">Hamburg, 2009</a></li>
+<li><a href="http://weitz.de/eclm2011/">Amsterdam, 2011</a></li>
+</ul>
+]]></content>
+    <category scheme="http://lisp.tw//tags/meeting/" term="meeting"/>
+    <category scheme="http://lisp.tw//tags/common-lisp/" term="common lisp"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[ASDF 筆記 –– Common Lisp 系統定義設施]]></title>
     <link href="http://lisp.tw//2013/04/06/asdf-notes/"/>

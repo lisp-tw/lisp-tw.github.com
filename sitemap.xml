@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lisp.tw//2013/04/07/european-cl-meeting-2013-madrid/</loc>
+    <lastmod>2013-04-07T08:30:57.000Z</lastmod>
+  </url>
+  <url>
+    <loc>http://lisp.tw//dialects/index.html</loc>
+    <lastmod>2013-04-07T06:59:03.000Z</lastmod>
+  </url>
+  <url>
     <loc>http://lisp.tw//2013/04/06/asdf-notes/</loc>
     <lastmod>2013-04-06T11:08:31.000Z</lastmod>
   </url>
@@ -23,10 +31,6 @@
   <url>
     <loc>http://lisp.tw//docs/index.html</loc>
     <lastmod>2013-03-10T09:39:43.000Z</lastmod>
-  </url>
-  <url>
-    <loc>http://lisp.tw//dialects/index.html</loc>
-    <lastmod>2013-03-10T08:47:26.000Z</lastmod>
   </url>
   <url>
     <loc>http://lisp.tw//2013/02/28/interpreter-howto-yingwang0/</loc>
