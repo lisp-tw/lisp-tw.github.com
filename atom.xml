@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-04-20T14:43:06.184Z</updated>
+  <updated>2013-04-20T14:51:35.420Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -1125,7 +1125,7 @@ value will be ignored by the code at hand.</li>
     <link href="http://lisp.tw//2013/02/17/functional-programming-for-the-rest-of-us/"/>
     <id>http://lisp.tw//2013/02/17/functional-programming-for-the-rest-of-us/</id>
     <published>2013-02-17T08:11:58.000Z</published>
-    <updated>2013-04-20T14:30:25.000Z</updated>
+    <updated>2013-04-20T14:51:20.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 原文：<a href="http://www.defmacro.org/ramblings/fp.html">Functional Programming For The Rest of Us</a>
 譯者：<a href="#" title="电邮: lihaitao 在 gmail.com">lihaitao</a>
