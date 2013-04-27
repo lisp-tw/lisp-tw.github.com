@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-04-27T02:13:19.021Z</updated>
+  <updated>2013-04-27T03:04:09.571Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -16,7 +16,7 @@
     <link href="http://lisp.tw//2013/04/27/overworldly-common-lisp/"/>
     <id>http://lisp.tw//2013/04/27/overworldly-common-lisp/</id>
     <published>2013-04-27T01:04:41.000Z</published>
-    <updated>2013-04-27T02:12:50.000Z</updated>
+    <updated>2013-04-27T03:03:39.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 作者：<a href="http://tianchunbinghe.blog.163.com/">田春</a>
 出處：程序員雜誌，2010 年 8 月刊。
@@ -33,7 +33,7 @@
 <h2>Lisp 與 AI 的關係</h2>
 <p>很多人都誤以為 Lisp 是一種用於人工智能（AI）領域的專用語言，或者是所謂的“智能語言”。這種看法是錯誤的。從語言特性的角度來看，無論古典 Lisp 還是 Common Lisp 在語言層面上都與 AI 沒有直接關係。將 Lisp 用於編寫 AI 程序基本上都是一種傳統。Lisp 的語言發明人 John McCarthy 博士是一個 AI 研究者，他在最初的 Lisp 論文裡將 Lisp 語言定義成一種可以便利地描述遞歸算法的基於符號表達式的形式化語言。當時正處於 AI 發展的初期，AI 研究還處在狀態空間搜索階段，而遞歸在這類算法裡必不可少的。但從語言特性的角度來講，Lisp 語言是完全通用的，語言結構和其他語言一樣，由變量和函數構成，可以將確定的輸入經過計算轉化成確定的輸出。</p>
 <h2>Common Lisp 語言與具體實現</h2>
-<p>需要重點指出的是，Common Lisp 僅代表該語言的標準文本和語言規範。具體實現了 Common Lisp 規範的編程系統另有不同的名字，並且數量眾多。目前主流的 Common Lisp 實現有 CMUCommon Lisp、SBCommon Lisp、Common Lispozure Common Lisp、ECommon Lisp、Common LispISP、LispWorks、Allegro Common Lisp 和 ABCommon Lisp 等。所有商業 Common Lisp 實現的清單和進一步信息都可以在 Common Lispiki 站點上查到，地址是 <a href="http://Common">http://Common</a> Lispiki.net/Common%20Lisp%20implementation 。</p>
+<p>需要重點指出的是，Common Lisp 僅代表該語言的標準文本和語言規範。具體實現了 Common Lisp 規範的編程系統另有不同的名字，並且數量眾多。目前主流的 Common Lisp 實現有 CMUCommon Lisp、SBCommon Lisp、Common Lispozure Common Lisp、ECommon Lisp、Common LispISP、LispWorks、Allegro Common Lisp 和 ABCommon Lisp 等。所有商業 Common Lisp 實現的清單和進一步信息都可以在 CLiki 站點上查到，地址是 <a href="http://cliki.net/Common%20Lisp%20implementation">http://cliki.net/Common%20Lisp%20implementation</a> 。</p>
 <h2>LISt Processing 列表處理</h2>
 <p>Lisp 語言以列表處理而得名。LISP = LISt Process。Lisp 中的列表（list）相當於數據結構中的廣義表，是一種非常靈活的通用數據結構。早期的 Lisp 只有列表和符號這兩種數據類型，通過將列表以不同的方式連接在一起可以得到各種樹和圖結構，從而用於表達 AI 算法。</p>
 <p>列表處理目前用於宏代碼，處理作為數據的程序表達式。列表處理會產生 runtime consing 問題，因此很少出現在性能高度優化的 Lisp 代碼中。一般採用的數據結構是數組、向量、哈希表、結構體、類等。</p>
@@ -53,11 +53,11 @@
 </ol>
 <h2>宏（Macro）</h2>
 <p>Common Lisp 的宏（Macro）是獨一無二的。宏在本質上是 Common Lisp 編譯器所提供的定製接口，用於轉換程序中特定的表達式。每一個宏函數在編譯期接受一個列表形式的代碼塊作為參數，然後輸出另一個列表形式的代碼塊。雖然一個 Common Lisp 程序最終功能仍然是由函數（包括語言提供的和用戶定義的）和少量內置的控制結構（稱為特殊形式，special form）所構成的，但宏所提供的轉換能力起到了下列作用：第一，簡化程序的書寫，消除代碼中重複的模式；第二，將部分計算從運行期轉移到編譯期，從而提高程序的性能；第三，領域相關語言（domain-specific language）支持。</p>
-<h2>面向對象支持 –––– Common LispOS 和 MOP</h2>
-<p>Common Lisp 的面向對象支持獨樹一幟。Common Lisp Object System（Common LispOS）是最後添加到 Common Lisp 語言標準中的特性之一，它和其他主流語言的 OO 系統最大的區別在於並非基於“消息傳遞（message passing）”，而是採用了一種全新的基於“廣義函數（generic function）”的設計。概括地說，在 Common LispOS 中，一個類（class）僅擁有成員變量（稱為 slot），而成員函數並不從屬於特定的類，而是從屬於同名的廣義函數。</p>
-<p>Common LispOS 的另一項重大特色是對元編程（meta programming）的支持。Common LispOS 本身是分層設計的；第一層提供最常用的基於宏的 OO 接口，帶有易於理解的語法；第二層提供了基於函數的接口通向 OO 系統的心臟，適用於開發複雜軟件和編程環境的那一類程序員；而第三層則提供了用於編寫用戶自己的 OO 語言的必要接口，通過這些接口可以修改對象系統的幾乎所有方面。上層適用相鄰的下層提供的接口來實現的。這種分層的設計建立在一種稱為 Meta-Object Protocol（MOP）的思想之上，該思想理論上可用於任何編程語言的 OO 實現。遺憾的是，直到 1994 年 ANSI Common Lisp 標準定案，MOP 也沒能成為語言標準的一部分，上述三層 Common LispOS 接口只有第一層被定義在語言標準中。不過當今幾乎所有的 Common Lisp 實現都以 The Art of Meta-Object Protocol 一書中所描述的 MOP 接口為基礎實現了全部的 Common LispOS 接口，具體實現之間的差異很小，並且可以通過第三方的兼容層做到完全一致，在事實上並不影響程序員對它們的使用。</p>
+<h2>面向對象支持 ──── CLOS 和 MOP</h2>
+<p>Common Lisp 的面向對象支持獨樹一幟。Common Lisp Object System（CLOS）是最後添加到 Common Lisp 語言標準中的特性之一，它和其他主流語言的 OO 系統最大的區別在於並非基於“消息傳遞（message passing）”，而是採用了一種全新的基於“廣義函數（generic function）”的設計。概括地說，在 CLOS 中，一個類（class）僅擁有成員變量（稱為 slot），而成員函數並不從屬於特定的類，而是從屬於同名的廣義函數。</p>
+<p>CLOS 的另一項重大特色是對元編程（meta programming）的支持。CLOS 本身是分層設計的；第一層提供最常用的基於宏的 OO 接口，帶有易於理解的語法；第二層提供了基於函數的接口通向 OO 系統的心臟，適用於開發複雜軟件和編程環境的那一類程序員；而第三層則提供了用於編寫用戶自己的 OO 語言的必要接口，通過這些接口可以修改對象系統的幾乎所有方面。上層適用相鄰的下層提供的接口來實現的。這種分層的設計建立在一種稱為 Meta-Object Protocol（MOP）的思想之上，該思想理論上可用於任何編程語言的 OO 實現。遺憾的是，直到 1994 年 ANSI Common Lisp 標準定案，MOP 也沒能成為語言標準的一部分，上述三層 CLOS 接口只有第一層被定義在語言標準中。不過當今幾乎所有的 Common Lisp 實現都以 The Art of Meta-Object Protocol 一書中所描述的 MOP 接口為基礎實現了全部的 CLOS 接口，具體實現之間的差異很小，並且可以通過第三方的兼容層做到完全一致，在事實上並不影響程序員對它們的使用。</p>
 <h2>異常處理系統</h2>
-<p>自從 C++ 發明以來，try…catch 風格的異常處理機制開始風靡編程語言設計領域。如果沒有接觸更高級別的異常處理機制，程序員很容易誤以為 try…catch 機制已經是編程語言錯誤處理的最高境界了，但其實山外有山，Common Lisp 提供了更強的相關特性。1994 年的 ANSI Common Lisp 標準中增加了一種稱為 Common Lisp Condition System（Common LispCS）的新特性。在 Common LispCS 中，程序運行中可能拋出類似異常的範疇統稱為 condition，其本身是一個 Common LispOS 定義的類。它的子類包括 error、warning 等在內，構成了一個完善的層次體系。</p>
+<p>自從 C++ 發明以來，try…catch 風格的異常處理機制開始風靡編程語言設計領域。如果沒有接觸更高級別的異常處理機制，程序員很容易誤以為 try…catch 機制已經是編程語言錯誤處理的最高境界了，但其實山外有山，Common Lisp 提供了更強的相關特性。1994 年的 ANSI Common Lisp 標準中增加了一種稱為 Common Lisp Condition System（CLCS）的新特性。在 CLCS 中，程序運行中可能拋出類似異常的範疇統稱為 condition，其本身是一個 CLOS 定義的類。它的子類包括 error、warning 等在內，構成了一個完善的層次體系。</p>
 <p>Common Lisp 最低級別的異常處理是相當於 try…catch 的不可重入異常處理機制，對應操作符是 <code>handler-case</code> 和 <code>handler-bind</code>。</p>
 <p>Common Lisp 還支持可重入的異常處理機制，也就是說，當程序運行過程中某個表達式拋出特定類型的 condition 時，特定的異常處理代碼可以被觸發，然後程序可以回到出錯的那一點上繼續運行。這不但完美地解決了其他語言裡使用 try…catch 語句塊時的粒度控制問題，還使得代碼邏輯更為流暢。這種機制用 Common Lisp 的術語，稱為 restart。對應的操作符是 <code>restart-case</code> 和 <code>restart-bind</code> 。</p>
 <h2>Common Lisp 程序的運行方式</h2>
