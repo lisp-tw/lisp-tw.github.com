@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-04-27T03:04:09.571Z</updated>
+  <updated>2013-04-27T03:05:00.489Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -16,7 +16,7 @@
     <link href="http://lisp.tw//2013/04/27/overworldly-common-lisp/"/>
     <id>http://lisp.tw//2013/04/27/overworldly-common-lisp/</id>
     <published>2013-04-27T01:04:41.000Z</published>
-    <updated>2013-04-27T03:03:39.000Z</updated>
+    <updated>2013-04-27T03:04:41.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 作者：<a href="http://tianchunbinghe.blog.163.com/">田春</a>
 出處：程序員雜誌，2010 年 8 月刊。
@@ -28,7 +28,7 @@
 <span id="more"></span>
 
 <h1>超凡脫俗的極限 文/田春</h1>
-<p>嚴格來講，Lisp 並不算是新語言，因為 Lisp 是人類歷史上第二古老的高級程序設計語言————僅次於 Fortran。但另一方面，Lisp 語言在過去的 50 年裡經歷了複雜的發展過程，最初的簡陋語法得以擴展，大量全新的語言特性被 Lisp 語言工作者們所發明，如今這門語言已完美地融合了各種最先進的語言特性和所有可能的編程風格，成為一種全新的 Lisp 語言。</p>
+<p>嚴格來講，Lisp 並不算是新語言，因為 Lisp 是人類歷史上第二古老的高級程序設計語言────僅次於 Fortran。但另一方面，Lisp 語言在過去的 50 年裡經歷了複雜的發展過程，最初的簡陋語法得以擴展，大量全新的語言特性被 Lisp 語言工作者們所發明，如今這門語言已完美地融合了各種最先進的語言特性和所有可能的編程風格，成為一種全新的 Lisp 語言。</p>
 <p>今天的 Lisp 語言家族由正統的標準方言 Common Lisp、簡化的算法語言 Scheme，以及諸如 Emacs Lisp（elisp）和 Autolisp 這樣的嵌入式 Lisp 語言和腳本語言所組成。對工業級別的通用編程來說，Common Lisp 是程序員的最佳的選擇。本文將重點介紹 Common Lisp 語言，先從消除人們對該語言的誤解著手，然後描述與其他編程語言的主要區別。文中所有使用 “Lisp” 的場合表示所描述的特性是所有 Lisp 語言家族的一般特性。</p>
 <h2>Lisp 與 AI 的關係</h2>
 <p>很多人都誤以為 Lisp 是一種用於人工智能（AI）領域的專用語言，或者是所謂的“智能語言”。這種看法是錯誤的。從語言特性的角度來看，無論古典 Lisp 還是 Common Lisp 在語言層面上都與 AI 沒有直接關係。將 Lisp 用於編寫 AI 程序基本上都是一種傳統。Lisp 的語言發明人 John McCarthy 博士是一個 AI 研究者，他在最初的 Lisp 論文裡將 Lisp 語言定義成一種可以便利地描述遞歸算法的基於符號表達式的形式化語言。當時正處於 AI 發展的初期，AI 研究還處在狀態空間搜索階段，而遞歸在這類算法裡必不可少的。但從語言特性的角度來講，Lisp 語言是完全通用的，語言結構和其他語言一樣，由變量和函數構成，可以將確定的輸入經過計算轉化成確定的輸出。</p>
