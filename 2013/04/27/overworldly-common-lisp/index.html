@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>超凡脫俗的極限 文/田春 | Lisp Taiwan 入</title>
+  <meta name="author" content="Lisp Taiwan">
+  
+  <meta name="description" content="Lisp Taiwan 致力於分享及彙整 Lisp 相關資料與知識。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="超凡脫俗的極限 文/田春"/>
+  <meta property="og:site_name" content="Lisp Taiwan 入"/>
+
+  
+    <meta property="og:image" content="http://lisp.tw/images/programmer-2010-aug.jpg" />
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="http://feeds.feedburner.com/LispTaiwan" title="Lisp Taiwan 入" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38473108-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+
+<body>
+<!--[if lt IE 9]>
+    <p>您正在使用一個<strong>過時的</strong>瀏覽器。請<a href="http://browsehappy.com/">升級您的瀏覽器</a>或是<a href="http://www.google.com/chromeframe/?redirect=true">試用 Google Chrome 內嵌框架</a>來改善您的瀏覽體驗。</p>
+<![endif]-->
+  <header id="header" class="inner"><div class="alignleft">
+  <h1 class="font-effect-fire-animation"><a href="/">Lisp Taiwan 入</a></h1>
+  <h2><a href="/">Sharing and Collecting knowledge of Lisp</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首頁</a></li>
+    
+      <li><a href="/archives">彙整</a></li>
+    
+      <li><a href="/getting_started">新手</a></li>
+    
+      <li><a href="/dialects">實現</a></li>
+    
+      <li><a href="/books">書籍</a></li>
+    
+      <li><a href="/lispers">關注</a></li>
+    
+      <li><a href="/docs">文件</a></li>
+    
+      <li><a href="/tools">工具</a></li>
+    
+      <li><a href="/about">關於</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-04-27T01:04:41.000Z"><a href="/2013/04/27/overworldly-common-lisp/">Apr 27 2013</a></time>
+      
+      
+  
+    <h1 class="title">超凡脫俗的極限 文/田春</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><span class="meta-info">
+作者：<a href="http://tianchunbinghe.blog.163.com/">田春</a>
+出處：程序員雜誌，2010 年 8 月刊。
+<span class="image-copyright"><a href="http://tianchunbinghe.blog.163.com/">http://tianchunbinghe.blog.163.com/</a></span>
+</span></p>
+<img src="/images/programmer-2010-aug.jpg" title="Programmer 2010 Aug.">
+
+<span id="more"></span>
+
+<h1>超凡脫俗的極限 文/田春</h1>
+<p>嚴格來講，Lisp 並不算是新語言，因為 Lisp 是人類歷史上第二古老的高級程序設計語言————僅次於 Fortran。但另一方面，Lisp 語言在過去的 50 年裡經歷了複雜的發展過程，最初的簡陋語法得以擴展，大量全新的語言特性被 Lisp 語言工作者們所發明，如今這門語言已完美地融合了各種最先進的語言特性和所有可能的編程風格，成為一種全新的 Lisp 語言。</p>
+<p>今天的 Lisp 語言家族由正統的標準方言 Common Lisp（以下簡稱 CL）、簡化的算法語言 Scheme，以及諸如 Emacs Lisp（elisp）和 Autolisp 這樣的嵌入式 Lisp 語言和腳本語言所組成。對工業級別的通用編程來說，CL 是程序員的最佳的選擇。本文將重點介紹 CL 語言，先從消除人們對該語言的誤解著手，然後描述與其他編程語言的主要區別。文中所有使用 “Lisp” 的場合表示所描述的特性是所有 Lisp 語言家族的一般特性。</p>
+<h2>Lisp 與 AI 的關係</h2>
+<p>很多人都誤以為 Lisp 是一種用於人工智能（AI）領域的專用語言，或者是所謂的“智能語言”。這種看法是錯誤的。從語言特性的角度來看，無論古典 Lisp 還是 CL 在語言層面上都與 AI 沒有直接關係。將 Lisp 用於編寫 AI 程序基本上都是一種傳統。Lisp 的語言發明人 John McCarthy 博士是一個 AI 研究者，他在最初的 Lisp 論文裡將 Lisp 語言定義成一種可以便利地描述遞歸算法的基於符號表達式的形式化語言。當時正處於 AI 發展的初期，AI 研究還處在狀態空間搜索階段，而遞歸在這類算法裡必不可少的。但從語言特性的角度來講，Lisp 語言是完全通用的，語言結構和其他語言一樣，由變量和函數構成，可以將確定的輸入經過計算轉化成確定的輸出。</p>
+<h2>CL 語言與具體實現</h2>
+<p>需要重點指出的是，CL 僅代表該語言的標準文本和語言規範。具體實現了 CL 規範的編程系統另有不同的名字，並且數量眾多。目前主流的 CL 實現有 CMUCL、SBCL、Clozure CL、ECL、CLISP、LispWorks、Allegro CL 和 ABCL 等。所有商業 CL 實現的清單和進一步信息都可以在 CLiki 站點上查到，地址是 <a href="http://cliki.net/Common%20Lisp%20implementation">http://cliki.net/Common%20Lisp%20implementation</a> 。</p>
+<h2>LISt Processing 列表處理</h2>
+<p>Lisp 語言以列表處理而得名。LISP = LISt Process。Lisp 中的列表（list）相當於數據結構中的廣義表，是一種非常靈活的通用數據結構。早期的 Lisp 只有列表和符號這兩種數據類型，通過將列表以不同的方式連接在一起可以得到各種樹和圖結構，從而用於表達 AI 算法。</p>
+<p>列表處理目前用於宏代碼，處理作為數據的程序表達式。列表處理會產生 runtime consing 問題，因此很少出現在性能高度優化的 Lisp 代碼中。一般採用的數據結構是數組、向量、哈希表、結構體、類等。</p>
+<h2>中序表達式和括號的用途</h2>
+<p>對初學者來說，也許一段 Lisp 程序與其他常見語言的最根本區別在於中序表達式的使用，以及大量小括號所包圍的列表。中序表達式可以徹底避免運算符優先級，例如 C 語言的表達式 <code>1+2*3</code> 在 Lisp 中將寫成 <code>(+ 1 (* 2 3))</code> ，其中的 <code>+</code> 和 <code>*</code> 都是普通函數的名稱，和其他用戶定義的函數沒有區別。值得注意的是，小括號的使用並不是必須的，只是 Lisp 讀取器的一種標識，完全可以定製。如果用戶喜歡用中括號甚至後序表達式來描述 Lisp 程序，也是有可能的，相關的方法請查詢 CL 的 <code>get-macro-character</code> 和 <code>set-macro-character</code> 函數。</p>
+<p>CL 是唯一的允許程序員控制從源代碼到目標程序的所有方面的編程語言。典型的 Lisp 代碼的處理分為三個階段：讀取、編譯、加載以及執行，其中每個階段都允許程序員介入。在讀取階段，用戶可以設置特殊的讀取宏，用簡潔的形式讀取用戶自定義的對象；在編譯階段，通過定義宏可以執行任意代碼來生成被編譯器所讀取的代碼；在程序加載階段，附加的代碼有機會被執行，例如全局變量的初始化；而在最終的程序執行階段，Lisp 系統還仍然有機會繼續編譯和加載程序的其餘部分，例如補丁，因為包括 <code>compile</code> 和 <code>load</code> 在內的函數是語言規範的一部分。</p>
+<h2>Common Lisp 與函數式編程</h2>
+<p>函數式編程（Functional Programming）是繼命令式編程和面向對象編程之後的另一個重大的編程風格創新。在採用函數式編程風格所寫成的程序裡，所有對函數的使用均不依賴於副作用，確定的函數參數總是產生確定的函數輸出。這樣帶來的好處是，代碼邏輯易於分析和理解。儘管所有支持函數的編程語言都允許程序員在函數的代碼中刻意不產生副作用，但要在整個程序中實現完全的函數式編程卻並不容易，通常要依賴於特殊的語言特性。</p>
+<p>嚴格來講，CL 並不是純函數式編程語言，儘管最早的函數式程序是用 Lisp 語言寫的。CL 在語言層面支持當今所有主要的編程風格，局部代碼裡甚至可以使用類似 GOTO 語句的語法。社區和主流教材所推薦的 CL 編程思路是這樣的：</p>
+<ol>
+<li><p>程序應當分層設計，每一層的代碼僅使用下層代碼所提供的接口；</p>
+</li>
+<li><p>從某一層以上，完全使用純函數式編程風格，下層的代碼仍然可以使用命令式風格；</p>
+</li>
+<li><p>將面向對象（OO）作為 CL 類型系統的擴展。</p>
+</li>
+</ol>
+<h2>宏（Macro）</h2>
+<p>CL 的宏（Macro）是獨一無二的。宏在本質上是 CL 編譯器所提供的定製接口，用於轉換程序中特定的表達式。每一個宏函數在編譯期接受一個列表形式的代碼塊作為參數，然後輸出另一個列表形式的代碼塊。雖然一個 CL 程序最終功能仍然是由函數（包括語言提供的和用戶定義的）和少量內置的控制結構（稱為特殊形式，special form）所構成的，但宏所提供的轉換能力起到了下列作用：第一，簡化程序的書寫，消除代碼中重複的模式；第二，將部分計算從運行期轉移到編譯期，從而提高程序的性能；第三，領域相關語言（domain-specific language）支持。</p>
+<h2>面向對象支持 –––– CLOS 和 MOP</h2>
+<p>CL 的面向對象支持獨樹一幟。Common Lisp Object System（CLOS）是最後添加到 CL 語言標準中的特性之一，它和其他主流語言的 OO 系統最大的區別在於並非基於“消息傳遞（message passing）”，而是採用了一種全新的基於“廣義函數（generic function）”的設計。概括地說，在 CLOS 中，一個類（class）僅擁有成員變量（稱為 slot），而成員函數並不從屬於特定的類，而是從屬於同名的廣義函數。</p>
+<p>CLOS 的另一項重大特色是對元編程（meta programming）的支持。CLOS 本身是分層設計的；第一層提供最常用的基於宏的 OO 接口，帶有易於理解的語法；第二層提供了基於函數的接口通向 OO 系統的心臟，適用於開發複雜軟件和編程環境的那一類程序員；而第三層則提供了用於編寫用戶自己的 OO 語言的必要接口，通過這些接口可以修改對象系統的幾乎所有方面。上層適用相鄰的下層提供的接口來實現的。這種分層的設計建立在一種稱為 Meta-Object Protocol（MOP）的思想之上，該思想理論上可用於任何編程語言的 OO 實現。遺憾的是，直到 1994 年 ANSI Common Lisp 標準定案，MOP 也沒能成為語言標準的一部分，上述三層 CLOS 接口只有第一層被定義在語言標準中。不過當今幾乎所有的 CL 實現都以 The Art of Meta-Object Protocol 一書中所描述的 MOP 接口為基礎實現了全部的 CLOS 接口，具體實現之間的差異很小，並且可以通過第三方的兼容層做到完全一致，在事實上並不影響程序員對它們的使用。</p>
+<h2>異常處理系統</h2>
+<p>自從 C++ 發明以來，try…catch 風格的異常處理機制開始風靡編程語言設計領域。如果沒有接觸更高級別的異常處理機制，程序員很容易誤以為 try…catch 機制已經是編程語言錯誤處理的最高境界了，但其實山外有山，CL 提供了更強的相關特性。1994 年的 ANSI Common Lisp 標準中增加了一種稱為 Common Lisp Condition System（CLCS）的新特性。在 CLCS 中，程序運行中可能拋出類似異常的範疇統稱為 condition，其本身是一個 CLOS 定義的類。它的子類包括 error、warning 等在內，構成了一個完善的層次體系。</p>
+<p>CL 最低級別的異常處理是相當於 try…catch 的不可重入異常處理機制，對應操作符是 <code>handler-case</code> 和 <code>handler-bind</code>。</p>
+<p>CL 還支持可重入的異常處理機制，也就是說，當程序運行過程中某個表達式拋出特定類型的 condition 時，特定的異常處理代碼可以被觸發，然後程序可以回到出錯的那一點上繼續運行。這不但完美地解決了其他語言裡使用 try…catch 語句塊時的粒度控制問題，還使得代碼邏輯更為流暢。這種機制用 CL 的術語，稱為 restart。對應的操作符是 <code>restart-case</code> 和 <code>restart-bind</code> 。</p>
+<h2>Common Lisp 程序的運行方式</h2>
+<p>計算機程序從源代碼到目標程序的運行方式可謂多種多樣。C 程序借助編譯器轉化成二進制可執行代碼，然後脫離編譯環境獨立運行，儘管有時需要訪問 C 開發平台所提供的運行時庫（runtime library）；Java 程序同樣需要經過編譯過程，但卻得到平台無關的字節碼，然後借助一個龐大的 JVM 環境執行；Perl 是最典型的腳本語言，但 Perl 程序無法編譯，每次需要用 Perl 解釋器來執行；Python 和 Ruby 則帶有交互環境，並且支持將程序編譯成可以快速加載的字節碼，但程序運行時仍然是依賴於語言平台。</p>
+<p>要說明的是，一種語言的具體實現和運行方式與其語言規範可以是完全無關的。CL 就是最明顯的例子。當今的主流 CL 平台可以將 CL 源代碼編譯成含有原生機器碼（native code）的快速加載文件（fasl 文件），然後多個 fasl 文件按一定順序加載到 CL 平台所在的進程中，再通過一個入口函數開始執行。</p>
+<p>CL 程序採用上述方式運行的根本原因在於，CL 平台是一個高度集成的交互式環境，內含整個語言實現的所有操作符，以及編譯器、調試器、文本編輯器等。從理論上講，一個用戶定義的函數和 CL 語言所提供的函數並沒有本質的區別，儘管並不推薦，但用戶確實可以沒有太大障礙地將 Lisp 語言的核心函數替換成自己的版本。因此，一個 CL 程序，本質上就是一個擴展了的完整 CL 語言系統。fasl 文件相當於一些二進制代碼和數據的片段，可以加載到 CL 平台所在的進程中，添加新的函數和變量，或是替換已有的定義。另外，幾乎所有 CL 平台都支持將一個已經加載了用戶 fasl 文件的 CL 環境導出到磁盤，成為一個 image 文件，然後下次可以通過直接加載這個 image 文件來加速 Lisp 應用程序的啟動過程。</p>
+<h2>補丁系統</h2>
+<p>CL 在語言級別支持任意粒度的補丁。</p>
+<p>假設一個 24x7 連續運行的服務程序，已經交付使用了，這時卻在程序的某個函數裡發現了一個 Bug。通過修改該程序的源代碼並且重新編譯出一個新版本的軟件交給用戶，是通常的解決辦法。但假如該服務程序足夠關鍵，以致於不能隨意地中止運行，那麼事情就變得麻煩了。幸運的是，CL 語言天生提供了對補丁的支持：只需將修改後的函數單獨放進一個源代碼文件，使用與目標平台相同的 CL 環境將其編譯成 fasl 文件，然後只把這個 fasl 文件交付給用戶就可以了。正在運行中的 Lisp 應用可以通過某種預先設計好的機制加載這個 fasl 文件（例如定期掃描某個補丁目錄或者通過某種預先設計好的遠程控制協議），然後那個函數的新版本就可以直接投入使用了！</p>
+<p>這種補丁特性對於開發 24x7 的工業強度 Lisp 應用具有極大的意義。目前有一些大型商業 Lisp 軟件正在採用類似的方法來維護其用於關鍵業務的基於 Lisp 的服務端程序。其中最典型的就是 ITA （剛剛被 Google 收購）的 QPX 航空票務系統。</p>
+<h2>結束語</h2>
+<p>CL 在 20 年前就已經產生的許多特性至今在編程語言領域裡仍是獨一無二的。作為一門大型通用編程語言，其語言標準規模宏大，卻又可以完美地融合為一個有機的整體，彼此相輔相成。作為一名已有 8 年學習和應用生涯的專業 CL 程序員（專業的意思是幾乎不使用其他語言編程），我至今沒能學全這門語言的所有特性，更不用說各種豐富的第三方語言擴展了。但這並不妨礙我寫出有用的 CL 程序，因為沒有哪個程序可以用到該語言的所有特性。</p>
+<p>每隔幾年都有新的編程語言被創造出來，也有更多的語言在逐漸淡出程序員的視線。隨著一門語言的消逝，使用該語言編寫的軟件也就無法繼續得以維護了，程序員學習該語言所花費的大量時間也大部分付諸東流。有一種思想認為，各種編程語言大同小異，商業軟件公司的程序員總是可以在幾天的時間裡迅速掌握一門新語言並開使用該語言來維護新接手的軟件。這種思路至少對於 CL 來說是完全錯誤的，對於像 Haskell、Prolog、甚至 Erlang 這些開拓創新的語言也是不合適的。作為一名以編程為職業的程序員，時間是如此寶貴，以致於絕對不能把寶貴的時間浪費在不斷地跟進各種草率設計的新語言上，而忽略了對編程語言本質和一般編程方法（算法、數據結構等）的理解。當今所有主流操作系統的底層都是用 C 語言寫成的，作為系統接口的 C 語言是使用所有其他語言的基礎，是必須充分掌握的；其他推薦學習的語言是 Prolog 和 Haskell，前者是邏輯型編程語言，後者是純函數型語言，均採用了超越傳統的編程思想，可以極大地提高對編程語言多樣性的認識，並對使用傳統語言有所幫助。</p>
+<p>CL 是最高級的編程語言，並且從目前看 CL 的這一地位將在較長的未來裡一直保持下去。對於追求卓越，敢於挑戰複雜事物的程序員來說，對 CL 的學習將是一次不可多得的思維創新之旅，有興趣的話不妨一試。</p>
+<h2>Common Lisp 參考書籍和推薦的學習計畫</h2>
+<p>目前流行的 Common Lisp 相關教材主要是國外人士在 20 世紀 90 年代標準化時期前後寫成的，由於 Common Lisp 語言的穩定性，這些教材至今仍然非常有用。近年來的 Common Lisp 新書則偏重於對流行第三方工具庫的介紹，將程序員推向更加實用的方向。</p>
+<p>對於 Comomn Lisp 語言規範所涉及的知識，有 4 本教材，推薦按給出的順序閱讀，所有這些教材都可以通過書名在 Google 上查到電子版：</p>
+<ul>
+<li><p>Common Lisp: An Interactive Approach（作者 Stuart C. Chapiro）</p>
+</li>
+<li><p>Common Lisp: The Language, Second Edition（作者 Guy L. Steele Jr.）</p>
+</li>
+<li><p>On Lisp: Advanced Techniques for Common Lisp（作者 Paul Graham）</p>
+</li>
+<li><p>Practical Common Lisp（作者 Peter Seibel）</p>
+</li>
+</ul>
+<p>上述 4 本書提供了一個循序漸進的系統化學習路線。其中第 3 本書已被翻譯成中文版，網上可以下載到，但沒能公開出版，有興趣的讀者可向通過雜誌社像我索取修訂中的最新中文版；第 4 本書我正在翻譯，預計今年底將由人民郵電出版社出版。</p>
+<p>本文中提及的所有內容均可以根據相關的函數和操作符名稱從 Common Lisp 語言標準中查詢其細節。CL 語言標準的一個 HTML 版本目前由 LispWorks 公司負責維護，其地址是 <a href="http://www.lispworks.com/documentation/common-lisp.html/">http://www.lispworks.com/documentation/common-lisp.html/</a></p>
+<p><strong>Lisp Taiwan 註</strong></p>
+<p>Practical Common Lisp 已翻譯完畢並出版。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Common-Lisp/">Common-Lisp</a>, <a href="/categories/Common-Lisp/轉載/">轉載</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Lisp/">Lisp</a>, <a href="/tags/Common-Lisp/">Common Lisp</a>, <a href="/tags/田春/">田春</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</div></div>
+    <aside id="sidebar" class="alignright">
+<div class="search">
+  <form action="http://google.com/search" method="get" accept-charset="utf-8">
+    <input type="text" name="q" results="0" placeholder="搜尋">
+    <input type="hidden" name="q" value="site:lisp.tw/">
+  </form>
+</div>
+
+
+<div class="widget twitter">
+  <h3 class="title">推文</h3>
+  <ul id="tweets"></ul>
+</div>
+
+<script type="text/javascript">
+var twitter_stream = ['LispTaiwan', 5, false];
+var moment_js_path = '/js/moment.min.js';
+</script>
+<script src="/js/twitter.js"></script>
+
+
+
+<div class="widget links">
+  <h3 class="title">連結</h3>
+  <ul class="entry">
+  	<li>
+  		<a href="http://cliki.net/" target="_blank">CLiki – Common Lisp 維基</a>
+  	</li>
+  	<li>
+  		<a href="http://common-lisp.net/" target="_blank">Common-Lisp.net</a>
+  	</li>
+		<li>
+			<a href="http://planet.lisp.org/" target="_blank">Planet Lisp</a>
+		</li>
+		<li>
+			<a href="http://wiki.alu.org/" target="_blank">Association of Lisp Users (ALU)</a>
+		</li>
+		<li>
+			<a href="http://www.reddit.com/r/lisp" target="_blank">Reddit Lisp Tag</a>
+		</li>
+		<li>
+			<a href="https://github.com/languages/Common%20Lisp" target="_blank">Common Lisp at GitHub</a>
+		</li>
+		<li>
+			<a href="http://www.lispworks.com/documentation/HyperSpec/Front/" target="_blank">Common Lisp HyperSpec</a>
+		</li>
+		<li>
+			<a href="http://lispjobs.wordpress.com/" target="_blank">Lisp Jobs!</a>
+		</li>
+  </ul>
+</div>
+
+
+<div class="widget tag">
+  <h3 class="title">分類</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Books/">Books</a><small>1</small></li>
+  
+    <li><a href="/categories/譯文/Clojure/">Clojure</a><small>1</small></li>
+  
+    <li><a href="/categories/Common-Lisp/">Common-Lisp</a><small>5</small></li>
+  
+    <li><a href="/categories/Scheme/Lisp/">Lisp</a><small>4</small></li>
+  
+    <li><a href="/categories/Scheme/">Scheme</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/Lisp/Tutorials/">Tutorials</a><small>1</small></li>
+  
+    <li><a href="/categories/meeting/">meeting</a><small>1</small></li>
+  
+    <li><a href="/categories/meetup/">meetup</a><small>1</small></li>
+  
+    <li><a href="/categories/名言佳句/">名言佳句</a><small>1</small></li>
+  
+    <li><a href="/categories/譯文/">譯文</a><small>2</small></li>
+  
+    <li><a href="/categories/Common-Lisp/轉載/">轉載</a><small>5</small></li>
+  
+  </ul>
+</div>
+
+
+
+<div class="widget tag">
+  <h3 class="title">標籤</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/ASDF/">ASDF</a><small>1</small></li>
+  
+    <li><a href="/tags/Clojure/">Clojure</a><small>1</small></li>
+  
+    <li><a href="/tags/Common-Lisp/">Common Lisp</a><small>9</small></li>
+  
+    <li><a href="/tags/Erlang/">Erlang</a><small>1</small></li>
+  
+    <li><a href="/tags/Haskell/">Haskell</a><small>2</small></li>
+  
+    <li><a href="/tags/Java/">Java</a><small>1</small></li>
+  
+    <li><a href="/tags/Lisp/">Lisp</a><small>10</small></li>
+  
+    <li><a href="/tags/PAIP/">PAIP</a><small>1</small></li>
+  
+    <li><a href="/tags/Scheme/">Scheme</a><small>1</small></li>
+  
+    <li><a href="/tags/common-lisp/">common lisp</a><small>1</small></li>
+  
+    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
+  
+    <li><a href="/tags/田春/">田春</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 Lisp Taiwan
+  
+
+	<ul class="inline">
+		<li><a href="http://www.facebook.com/groups/471543112900436/"><i class="icon-facebook"></i>Facebook</a></li>
+		<li><a href="http://twitter.com/lisptaiwan"><i class="icon-twitter"></i>Twitter</a></li>
+		<li><a href="http://feeds.feedburner.com/LispTaiwan"><i class="icon-rss"></i>RSS</a></li>
+	</ul>
+</div>
+<div class="clearfix"></div>
+</footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'lisptw';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>
