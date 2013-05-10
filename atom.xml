@@ -4,13 +4,27 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-05-10T04:11:24.498Z</updated>
+  <updated>2013-05-10T07:33:42.355Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
     <email><![CDATA[lisptw@gmail.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[簡短介紹 Common Lisp 最有趣的部份 / 田春]]></title>
+    <link href="http://lisp.tw//2013/05/10/common-lisp-most-interesting-parts/"/>
+    <id>http://lisp.tw//2013/05/10/common-lisp-most-interesting-parts/</id>
+    <published>2013-05-10T07:24:56.000Z</published>
+    <updated>2013-05-10T07:27:26.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：田春
+</span></p>
+<script async class="speakerdeck-embed" data-id="f3665ce06b900130f9cd123139183c09" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>]]></content>
+    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/田春/" term="田春"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Quicklisp 介紹]]></title>
     <link href="http://lisp.tw//2013/05/10/quicklisp-intro/"/>
@@ -89,8 +103,9 @@
     <link href="http://lisp.tw//2013/05/09/ansi-common-lisp/"/>
     <id>http://lisp.tw//2013/05/09/ansi-common-lisp/</id>
     <published>2013-05-09T03:13:35.000Z</published>
-    <updated>2013-05-09T03:18:11.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
+    <updated>2013-05-10T07:31:53.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info image-copyright"><a href="http://goodreads.com/">http://goodreads.com/</a></span></p>
+<img src="/images/acl-cover.jpg" title="ANSI Common Lisp 封面">]]></content>
     <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
     <category scheme="http://lisp.tw//tags/ANSI-Common-Lisp/" term="ANSI Common Lisp"/>
     <category scheme="http://lisp.tw//tags/Paul-Graham/" term="Paul Graham"/>
