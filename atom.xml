@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-05-10T03:49:31.676Z</updated>
+  <updated>2013-05-10T04:11:24.498Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -16,12 +16,12 @@
     <link href="http://lisp.tw//2013/05/10/quicklisp-intro/"/>
     <id>http://lisp.tw//2013/05/10/quicklisp-intro/</id>
     <published>2013-05-10T02:59:29.000Z</published>
-    <updated>2013-05-10T03:49:22.000Z</updated>
+    <updated>2013-05-10T04:11:09.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 作者：Lisp Taiwan
 <span class="image-copyright"><a href="http://quicklisp.org/">http://quicklisp.org/</a></span>
 </span></p>
-<img src="/images/quciklisp.png" title="Quicklisp, Common Lisp 軟件包管理工具">
+<img src="/images/quicklisp.png" title="Quicklisp, Common Lisp 軟件包管理工具">
 
 <span id="more"></span>
 
@@ -292,12 +292,12 @@
     <link href="http://lisp.tw//2013/04/06/asdf-notes/"/>
     <id>http://lisp.tw//2013/04/06/asdf-notes/</id>
     <published>2013-04-06T07:11:39.000Z</published>
-    <updated>2013-04-06T11:08:31.000Z</updated>
+    <updated>2013-05-10T04:02:39.000Z</updated>
     <content type="html"><![CDATA[<p><span class="meta-info">
 作者：<a href="https://twitter.com/JuanitoFatas">Juanito Fatas</a>
-<span class="image-copyright"><a href="http://fare.tunes.org/">http://fare.tunes.org/</a></span>
+<span class="image-copyright">Lisp Taiwan</span>
 </span></p>
-<img src="/images/fare4.jpg" width="400" title="François-René Rideau, ASDF 主要維護者">
+<img src="/images/asdf.png" width="400" title="系統定義設施">
 
 <span id="more"></span>
 
