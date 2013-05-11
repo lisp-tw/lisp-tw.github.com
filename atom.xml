@@ -4,13 +4,91 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-05-10T07:33:42.355Z</updated>
+  <updated>2013-05-11T07:49:37.932Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
     <email><![CDATA[lisptw@gmail.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[在 IBM 1130 模擬器上跑 Lisp 1.6!]]></title>
+    <link href="http://lisp.tw//2013/05/11/lisp-on-ibm-1130/"/>
+    <id>http://lisp.tw//2013/05/11/lisp-on-ibm-1130/</id>
+    <published>2013-05-10T17:38:29.000Z</published>
+    <updated>2013-05-11T07:49:20.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：Lisp Taiwan
+<span class="image-copyright"><a href="http://wikipedia.org">http://wikipedia.org</a></span>
+</span></p>
+<img src="/images/IBM_1130_concole.jpg" title="IBM 1130">
+
+<span id="more"></span>
+
+<h2>先講個故事</h2>
+<p><a href="http://en.wikipedia.org/wiki/Guy_L._Steele,_Jr.">Guy Steele</a> ── Common Lisp The Language 2nd 的作者、Java 語言規範制定者、Common Lisp 標準化委員會成員 ── 早在高中時代，年僅十七歲，就在 IBM 1130 機器上，用 Assembly Language 寫出了 LISP。</p>
+<p>故事是這樣子的，在 Guy Steele 就讀波士頓拉丁學校時，有個朋友帶他去了地下室，那裡有一台校友捐贈給學校的 IBM 1130。朋友給他展示了一段 5 行的 Fortran 程式，從此 Guy Steele 就對編程著迷了。接著在 1968 年的秋天，感恩節的連假期間，自學了 Fortran。又在聖誕節前後自學了 IBM 1130 的 Assembly。Guy Steele 與學校的朋友迷上了 IBM 1130，一有空就往 IBM 的辦公室跑，和那邊的員工聊天，並用微薄的零用錢，在市中心裡買計算機相關的刊物、也買一些 <a href="http://en.wikipedia.org/wiki/PL/I">PL/I</a> 的書。</p>
+<p>時間來到 1969 年的春天，在一次類似校外參訪的機遇下， Guy Steele 來到了 MIT，每週六早上去，那邊的大學生（黑客）會教你一些酷炫的新玩意。就在那，Guy Steele 感染了黑客氣息，也更熟悉了 IBM 1130、DEC 公司的 PDP-10，以及精進了編程技術。</p>
+<p>很快的他與幾個夥伴，跑到了 DEC 的辦公室，遞交了一份在 PDP-8 上實作 APL 的計畫（APL 是他在 1969 年春自己學的。）。雖然最後並沒有被 DEC 公司採納，但 Guy Steele 此時的編程實力已經不容小覷了。</p>
+<p>在 1970 年左右，精準的說是 1972 年 2 月 14 日， Guy Steele 在 IBM 1130 上實作了 LISP 1.6，這與他去 MIT 參訪有很大的關聯。他自己是這麼說的（大意）：“要不是在 MIT 看了許多精妙的 LISP 代碼，不然我也無法在 IBM 1130 上實作出 LISP”</p>
+<h2>模擬 IBM 1130</h2>
+<p>IBM 1130 在它所處的年代非常受歡迎，它是一款便宜的機種，也是因為便宜，它讓許多人體會到了，什麼是“個人電腦”的感覺。IBM 1130 在計算機歷史中佔有一席之地，有著一大堆愛好者。</p>
+<p>愛好者成立了 <a href="http://ibm1130.org/">http://ibm1130.org/</a></p>
+<p>上面提供了 IBM 1130 模擬器，以及其它你所需要的軟件，都在上面。以下我將敘述，如何在 Linux / Mac OSX 上模擬一個 IBM 1130，跑一個簡單的 Lisp 程式，並使用 LISP 1.6 的 REPL。</p>
+<h2>下載 IBM 1130 模擬器及 LISP 鏡像。</h2>
+<p>下載並解壓縮：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="variable">$ </span>mkdir ibm113<span class="number">0</span> && cd ibm113<span class="number">0</span></div><div class="line"><span class="variable">$ </span>curl -<span class="constant">O</span> <span class="symbol">http:</span>/<span class="regexp">/media.ibm1130.org/sim</span><span class="regexp">/ibm1130.zip -O http:/</span><span class="regexp">/media.ibm1130.org/lisp</span>.zip</div><div class="line"><span class="variable">$ </span>unzip <span class="string">'*.zip'</span></div></code></pre></td></tr></table></figure>
+
+<h2>編譯 IBM 1130 執行檔</h2>
+<p>需要安裝 GCC。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="variable">$ </span>make</div></code></pre></td></tr></table></figure>
+
+<p>注意，若是使用 linux 系的作業系統，make 之後會有錯誤：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="literal">undefined</span> reference to `<span class="javascript">clock_getres<span class="string">'</span></div></code></pre></td></tr></table></figure>
+
+<p>這個在 time.h 定義的 <code>clock_getres</code> 函數，需要連結 librt.so 這個 Runtime 連結庫。</p>
+<p>修改 makefile （MacOSX 無需修改），在 74 行最後加上 <code>-lrt</code> ：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="variable">${</span><span class="constant">BIN</span>}ibm113<span class="number">0</span> <span class="symbol">:</span> <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} <span class="variable">${</span>ibm1130_INC} <span class="variable">${</span><span class="constant">SIM_INC</span>}</div><div class="line">  <span class="variable">${</span><span class="constant">CC</span>} <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} -o <span class="variable">$@</span> -lrt</div></code></pre></td></tr></table></figure>
+
+<p>編譯成功就看到目錄下有個 IBM 1130 的可執行檔。</p>
+<h2>Factorial in IBM 1130 LISP 1.6</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="variable">$ </span>touch fact.job</div></code></pre></td></tr></table></figure>
+
+<p>用你喜愛的編輯器輸入：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="comment">//JOB</span></div><div class="line"><span class="comment">//XEQ LISP</span></div><div class="line">(SETQQ FACT (LAMBDA (N)</div><div class="line">             (COND</div><div class="line">               ((LESSP N <span class="number">2</span>) <span class="number">1</span>)</div><div class="line">               (T (TIMES N (FACT (SUB1 N)))))))</div><div class="line">(FACT <span class="number">5</span>)</div><div class="line">(QUIT)</div></code></pre></td></tr></table></figure>
+
+<p>關於 IBM 1130 的 LISP 1.6 的語法可查閱這兩個手冊：</p>
+<p><a href="/pdfs/IBM1130-LispUsersGuidePart1.PDF">IBM1130-LispUsersGuidePart1.pdf</a> &nbsp;
+<a href="/pdfs/IBM1130-LispUsersGuidePart2.PDF">IBM1130-LispUsersGuidePart2.pdf</a></p>
+<h3>運行 fact.job：</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div></code></pre></td><td class="code"><pre><code><div class="line">$ ./ibm1130 job fact</div><div class="line">IBM <span class="number">1130</span> simulator V3<span class="number">.8</span>-<span class="number">0</span></div><div class="line">PRT: creating <span class="keyword">new</span> <span class="keyword">file</span></div><div class="line">Loaded DMS V2M12 cold start card</div><br><div class="line"><span class="keyword">Wait</span>, IAR: <span class="number">0000002</span>A (<span class="number">4</span>c80 BSC  I  ,<span class="number">0028</span>   )</div><div class="line">sim&gt;</div></code></pre></td></tr></table></figure>
+
+<p>進到模擬器輸入 <code>quit</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="title">IBM</span> <span class="number">1130</span> simulator V3.<span class="number">8</span>-<span class="number">0</span></div><div class="line">PRT: creating new file</div><div class="line">Loaded DMS V2M12 cold start card</div><br><div class="line">Wait, IAR: 0000002A (4c80 BSC  I  ,<span class="number">0028</span>   )</div><div class="line">sim&gt; <span class="title">quit</span></div><div class="line">Goodbye</div></code></pre></td></tr></table></figure>
+
+<p>此時會產生一個 fact.lst 文件，打開看看程序運行的結果：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div><div class="line-number">16</div><div class="line-number">17</div><div class="line-number">18</div><div class="line-number">19</div><div class="line-number">20</div><div class="line-number">21</div><div class="line-number">22</div><div class="line-number">23</div><div class="line-number">24</div><div class="line-number">25</div><div class="line-number">26</div><div class="line-number">27</div><div class="line-number">28</div><div class="line-number">29</div><div class="line-number">30</div><div class="line-number">31</div><div class="line-number">32</div><div class="line-number">33</div><div class="line-number">34</div><div class="line-number">35</div><div class="line-number">36</div><div class="line-number">37</div><div class="line-number">38</div><div class="line-number">39</div><div class="line-number">40</div></code></pre></td><td class="code"><pre><code><div class="line">PAGE   <span class="number">1</span></div><br><div class="line"><span class="comment">// JOB    1234</span></div><br><div class="line">LOG DRIVE   CART SPEC   CART AVAIL  PHY DRIVE</div><div class="line">  <span class="number">0000</span>        <span class="number">1234</span>        <span class="number">1234</span>        <span class="number">0000</span></div><br><div class="line">V2 M12   ACTUAL <span class="number">32</span>K  CONFIG <span class="number">32</span>K</div><div class="line"></div><div class="line">PAGE   <span class="number">1</span></div><br><div class="line"><span class="comment">// JOB</span></div><br><div class="line">LOG DRIVE   CART SPEC   CART AVAIL  PHY DRIVE</div><div class="line">  <span class="number">0000</span>        <span class="number">1234</span>        <span class="number">1234</span>        <span class="number">0000</span></div><br><div class="line">V2 M12   ACTUAL <span class="number">32</span>K  CONFIG <span class="number">32</span>K</div><br><div class="line"><span class="comment">// XEQ LISP</span></div><br><div class="line"><span class="variable">**</span><span class="variable">**</span>* <span class="number">1130</span> LISP <span class="number">1.6</span> <span class="variable">**</span><span class="variable">**</span>* BOSTON LATIN SCHOOL <span class="variable">**</span><span class="variable">**</span>* LITHP ITH LITHTENING...</div><br><br><br><br><div class="line">(SETQQ FACT (LAMBDA (N) (COND ((LESSP N <span class="number">2</span>) <span class="number">1</span>) (T (TIMES N (FACT (SUB1 N)))))))</div><br><div class="line">(LAMBDA (N) (COND ((LESSP N <span class="number">2</span>) <span class="number">1</span>) (T (TIMES N (FACT (SUB1 N))))))</div><br><br><br><div class="line">(FACT <span class="number">7</span>)</div><br><div class="line"><span class="number">5040</span></div><br><br><br><div class="line">(QUIT)</div><br><div class="line"><span class="variable">**</span><span class="variable">**</span>* <span class="number">1130</span> LISP <span class="number">1.6</span> <span class="variable">**</span><span class="variable">**</span>* END OF RUN <span class="variable">**</span><span class="variable">**</span>* THO LONG, COME AGAIN THOON</div></code></pre></td></tr></table></figure>
+
+<p>注意到別嘗試太大的數字，IBM 1130 的整數最大只到 32768（2 的 15 次方）。</p>
+<h3>IBM 1130 LISP 1.6 REPL</h3>
+<p>一個宏的例子：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div></code></pre></td><td class="code"><pre><code><div class="line">$ ./ibm1130 job ilisp</div><br><div class="line">(SETQQ CONSCONS (MLAMBDA X (COND</div><div class="line">    ((<span class="keyword">NULL</span> X) NIL)</div><div class="line">    ((<span class="keyword">NULL</span> (CDR X)) (CAR X))</div><div class="line">    (T (LIST <span class="attribute">'CONS</span> (CAR X) (CONS <span class="attribute">'CONSCONS</span> (CDR X)))) )))</div><br><div class="line">(CONSCONS A B C)</div><br><div class="line">(A B . C)</div></code></pre></td></tr></table></figure>
+
+<p>輸入 <code>(QUIT)</code> 可離開 REPL。</p>
+<p>你可以把 LISP 1.6 手冊上的指令在 REPL 裡都試一遍，在 1970 年，就有這樣的交互式環境，程序可直譯＋編譯、宏、垃圾回收，太強大了！</p>
+<p>而這只是 Guy Steele 17 歲寫的小 Project...</p>
+<hr class="end"></hr>
+
+<p>備註：</p>
+<p>IBM 1130 的 LISP 實現源代碼 (Assembly)：</p>
+<p><a href="/pdfs/IBM1130LispPart1.PDF">IBM1130LispPart1.pdf</a> &nbsp;
+<a href="/pdfs/IBM1130LispPart2.PDF">IBM1130LispPart2.pdf</a></p>
+<p>所有的文件 Guy Steele 都以 CC 3.0 的授權釋出。</p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/IBM-1130/" term="IBM 1130"/>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/LISP-1.6/" term="LISP 1.6"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[簡短介紹 Common Lisp 最有趣的部份 / 田春]]></title>
     <link href="http://lisp.tw//2013/05/10/common-lisp-most-interesting-parts/"/>
