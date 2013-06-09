@@ -137,8 +137,8 @@ ol.inline > li {
   padding: 0;
 }
 body {
-  background: #f60;
-  color: #000;
+  background: #ecf0f1;
+  color: #333;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 18px;
   text-shadow: 0 0 1px transparent;
@@ -172,7 +172,7 @@ h3 {
 }
 a {
   text-decoration: none;
-  color: #258fb8;
+  color: #3498db;
 }
 a:hover {
   text-decoration: underline;
@@ -252,7 +252,7 @@ a:hover {
   margin-top: 10px;
 }
 #header h2 a:hover {
-  color: #258fb8;
+  color: #3498db;
 }
 #header #main-nav {
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -266,7 +266,7 @@ a:hover {
   margin-left: 30px;
 }
 #header #main-nav a:hover {
-  color: #258fb8;
+  color: #3498db;
 }
 article {
   -webkit-box-shadow: 1px 2px 3px #ddd;
@@ -290,7 +290,7 @@ article.link .icon:before {
 }
 article.link .title a:after {
   content: '\f08e';
-  color: #999;
+  color: #95a5a6;
   font: 12px FontAwesome;
   padding-left: 10px;
   vertical-align: super;
@@ -375,7 +375,7 @@ article header .icon {
   position: absolute;
   top: 20px;
   left: 20px;
-  color: #258fb8;
+  color: #3498db;
 }
 @media screen and (max-width: 600px) {
   article header .icon {
@@ -391,7 +391,7 @@ article header .icon:before {
   text-align: center;
 }
 article header time {
-  color: #999;
+  color: #95a5a6;
   font: 0.9em "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
   display: block;
@@ -401,10 +401,10 @@ article header .title {
   font-weight: normal;
 }
 article header .title a {
-  color: #000;
+  color: #333;
 }
 article header .title a:hover {
-  color: #258fb8;
+  color: #3498db;
   text-decoration: none;
 }
 article .entry {
@@ -518,7 +518,7 @@ article .entry iframe {
 article .entry .caption {
   display: block;
   margin-top: 5px;
-  color: #999;
+  color: #95a5a6;
   position: relative;
   font-size: 0.9em;
   padding-left: 25px;
@@ -561,17 +561,17 @@ article footer {
   margin-top: 15px;
   padding-top: 10px;
   border-top: 1px solid #ddd;
-  color: #999;
+  color: #95a5a6;
   font-size: 0.9em;
   line-height: 16px;
   position: relative;
   min-height: 16px;
 }
 article footer a {
-  color: #999;
+  color: #95a5a6;
 }
 article footer a:hover {
-  color: #258fb8;
+  color: #3498db;
   text-decoration: none;
 }
 article footer a:before {
@@ -614,7 +614,7 @@ article footer .addthis iframe {
 }
 .meta-tag,
 .meta-info {
-  color: #999;
+  color: #95a5a6;
 }
 .meta-info {
   font-size: 12px;
@@ -652,13 +652,13 @@ hr.end:after {
   display: block;
   padding: 5px 10px;
   background: #ddd;
-  color: #999;
+  color: #95a5a6;
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-shadow: 0 0 1px #fff;
   margin-bottom: 50px;
 }
 #pagination a:hover {
-  background: #258fb8;
+  background: #3498db;
   color: #fff;
   text-decoration: none;
   text-shadow: none;
@@ -674,7 +674,7 @@ hr.end:after {
   font-family: FontAwesome;
 }
 .archive-title {
-  color: #999;
+  color: #95a5a6;
   font-weight: normal;
   margin-bottom: 30px;
   text-shadow: 0 0 1px #fff;
@@ -761,14 +761,14 @@ hr.end:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #999;
+  color: #95a5a6;
 }
 #sidebar .search input:focus {
-  color: #000;
+  color: #333;
 }
 #sidebar .tag small {
   margin-left: 15px;
-  color: #999;
+  color: #95a5a6;
 }
 #sidebar .tag small:before {
   content: '(';
@@ -787,7 +787,7 @@ hr.end:after {
 #sidebar .twitter small {
   display: block;
   margin-top: 10px;
-  color: #999;
+  color: #95a5a6;
   line-height: 1;
 }
 #sidebar .tagcloud .entry {
@@ -797,7 +797,7 @@ hr.end:after {
   margin-right: 10px;
 }
 #footer {
-  color: #999;
+  color: #95a5a6;
   margin-bottom: 50px;
   font: 1em/1.6 "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-shadow: 0 0 1px #fff;
@@ -806,7 +806,7 @@ hr.end:after {
 .icon-twitter,
 .icon-rss {
   font: 24px FontAwesome;
-  color: #258fb8;
+  color: #3498db;
   margin-right: 3px;
 }
 .icon-facebook:before {
@@ -851,17 +851,17 @@ hr.end:after {
 }
 .entry .gist .gist-file .gist-meta {
   background: none;
-  color: #999;
+  color: #95a5a6;
   margin-top: 5px;
   padding: 0;
   text-shadow: 0 0 1px #fff;
   font-size: 100%;
 }
 .entry .gist .gist-file .gist-meta a {
-  color: #258fb8;
+  color: #3498db;
 }
 .entry .gist .gist-file .gist-meta a:visited {
-  color: #258fb8;
+  color: #3498db;
 }
 figure.highlight {
   background: #f8f8f8;
@@ -876,7 +876,7 @@ figure.highlight {
   position: relative;
 }
 figure.highlight figcaption {
-  color: #999;
+  color: #95a5a6;
   font-size: 0.9em;
   margin-bottom: 5px;
   text-shadow: 0 0 1px #fff;
@@ -895,7 +895,7 @@ figure.highlight table {
   border-spacing: 0;
 }
 figure.highlight .gutter {
-  color: #999;
+  color: #95a5a6;
   padding-right: 15px;
   border-right: 1px solid #ddd;
   text-align: right;

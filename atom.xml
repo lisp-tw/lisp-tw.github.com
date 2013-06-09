@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-06-09T13:40:11.207Z</updated>
+  <updated>2013-06-09T13:43:02.232Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -315,6 +315,44 @@ $ ln -s ~/src/foo/foo.asd
 ]]></content>
     <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
     <category scheme="http://lisp.tw//tags/ASDF/" term="ASDF"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Common Lisp –– 夢想與現實的交匯]]></title>
+    <link href="http://lisp.tw//2013/02/17/cl-dream-and-the-truth/"/>
+    <id>http://lisp.tw//2013/02/17/cl-dream-and-the-truth/</id>
+    <published>2013-02-16T19:30:20.000Z</published>
+    <updated>2013-04-06T07:19:56.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：<a href="https://twitter.com/garfield_xue">薛宏</a>
+原發表日期：2008/11/22
+<span class="image-copyright"><a href="http://www.ibiblio.org/">http://www.ibiblio.org/</a></span>
+</span></p>
+<img src="/images/mccarthy.jpg" title="John McCarthy.">
+
+<a name="more"></a>
+
+<blockquote>
+<p>Greenspun’s Tenth Rule:
+Any sufficiently complicated C or Fortran program contains an ad hoc informally-specified bug-ridden slow implementation of half of Common Lisp.</p>
+</blockquote>
+<p>观察 Common Lisp (CL) 大概有半年多时间了，或者说是仰望，从没想过自己在短期内会使用，因为怕泛泛的自己玷污了这个传说中只有顶级黑客才能使用的利器。更没有想到的是，居然会在正式的工作中使用，是的，我可以很自豪地说，上周我有两个整天的时间都在使用 CL 编程！</p>
+<p>公司要搞软件的自动测试。之前的做法是用自然语言（日语）写测试式样书，然后根据式样书手工测试。现在的想法是能够自动从式样书生成自动测试脚本。那式样书的写法就需要改变，不能用自然语言，而要使用计算机容易处理的所谓形式语言（formal language）。这样的话又需要开发这个形式语言的编译器，工程浩大！那时，我脑中浮现出四个大字 – DSEL（Domain Specific Embedded Language）。其主要的特点就是把领域专用的小型形式语言嵌入到一种通用的编程语言中，毕竟编程语言也是一种形式语言。这样做的好处是可以利用宿主语言的很多特性，编译器也不需要了，而且还很容易扩展和维护。然而，不是所有的语言都适合做宿主语言的，因为这要求语言具有可编程的语法，目前几乎所有的主流语言都没有这个功能（将来可能也不会有）。我所知道的，适合做宿主语言的有：Lisp（可以说没有语法），Smalltalk（infix 版本的 Lisp），Haskell（可定义特定优先级和结合性的算符）以及 Ruby（另一个 Smalltalk）。在我用日语介绍了一下所谓DSEL的概念后，貌似大家都不怎么明白。我急了，换用英语（之间甚至夹杂了中文。。。），可还是没有人明白我说的是啥意思，可能是我表达能力太弱了吧:(最后说，可以给我三天时间做一个 prototype。</p>
+<p>第一天把 <a href="http://gigamonkeys.com/book/">Practical Common Lisp</a> 大概翻了一遍，一些基本特性倒是都知道，看 SICP 的时候写过些 scheme，所以主要是看了 macro那一章，因为那是构建 DSEL 的关键，还有就是 CL 的对象系统CLOS。第二天装了 Emacs，slime，paredit，看了个录像，简单配置了一下键绑定，然后就开始 hacking 了。</p>
+<p>结果是，用三个 macro 构成了用来写式样书的 DSEL，用 CLOS 构建了易扩展的对象体系（多分派真是好用，而且不但可以基于型别，还能基于任意的判别式分派），外加后端代码生成，一共 40 行CL代码！CL rocks！</p>
+<p>记得大二的时候第一次看到 Lisp 代码（好像是一个算分形的），和所有人一样，怎么这么多括号！然而，现在我知道，那些括号才是 CL 的强大的真正原因！可能还有很多人不知道，如果你有那么一点点好奇心，想知道为啥那些高级黑客对 CL 宗教信仰般的热爱，以及那么强大的Lisp，为啥在 50 年间（是的，Lisp 是第二古老的语言，只比 Fortran 年轻，如果不算汇编的话）始终没能成为主流语言，或许能从以下两片文章里得到些启发，至少当时我是如此。</p>
+<h2><a href="http://www.paulgraham.com/avg.html">Beating the Averages</a></h2>
+<p>作者和 Morris（是的，就是搞出第一个蠕虫病毒的那个家伙）在 1995 用 Lisp 搞了个 C2C 平台，在打败了所有竞争对手后，被 Yahoo 收购，成为现在 Yahoo Store 的雏形。当得知 Yahoo 收购消息后，作者做的第一件事就是招了几十个程序员，因为谁也无法相信这样强大的 C2C 平台只是由四个 Lisp 黑客构建的。文章中，作者提出编程语言的表达能力是有区别的，而程序员每天写的代码量却和使用的语言基本无关，所以如果你使用的语言表达能力是别人的30倍，你的开发时间将是别人的 30 分之一！这就是很多竞争对手都认为作者拥有秘密武器–每次他们发布了新的功能，作者都可以在第一时间做到同样的事，作者的秘密武器就是 Lisp。文章还揭示了为啥 Lisp 没有成为主流语言的原因–编程语言不仅是工具，还是程序员思考问题的方式，改变思考方式不是一件容易的事！然而，作者的成功正是利用了这一点。
+如果你喜欢这篇文章，可以考虑购买 <a href="http://book.douban.com/subject/4912556/">Hacker and Painter</a> 一书，是作者散文的合集，其中大部分可以在上面的网站上在线阅读。</p>
+<h2><a href="http://www.defmacro.org/ramblings/lisp.html">The Nature of Lisp</a></h2>
+<p>这篇文章中，作者以广为人知的 XML 为引子，首先问为啥 XML 能作为一种通用的数据描述语言，因为 XML 具有树状结构，而几乎所有的信息都可以用某种树状结构来表现。接着作者启发道，程序能不能用 XML 表示呢？其实是可以的，因为几乎所有的编译器把源文件变成一种叫抽象语法树（AST）的东西，所以 XML 可以表现几乎所有的语言的语法！接着作者用 Ant 的例子引出 Executable XML 的概念。而后开始转到 Lisp 上，说其实 Lisp 和 XML 是同一个东西，所不同的是 Lisp 早发明 30 年，而且比较简洁。然而，Executable XML 的实现是需要借助其他语言的，用 SAX 或者 DOM 接口操纵 XML。而 Lisp 可以用 macro 直接操纵自己的语法树，这才是 Lisp 的威力所在！</p>
+<p>Lisp 和 XML 一样可以表达几乎任何语言的语法，用 macro 可以很方便地模拟语言的语义，Lisp 可以变成你想要的任何语言！Lisp, one language to rule them all! Lisp 编程就是构建一层层的DSEL，直到抽象层次升高到可以直接描述问题领域。Lisp is not a language, but a language to build languages, it’s meta-language!</p>
+<p>为啥 MIT 的人工智能会那么强？因为他们从 60 年代开始，在所有其他人都还在使用 Fortran 和汇编的时候，已经开始用 Lisp 编程了！<a href="http://garfield-jarod.spaces.live.com/blog/cns!7B2D7CA0008D25E4!706.entry?&amp;_c02_vws=1">GEB</a> 中提到，大脑的底层是神经元，在这个层面是完全无法理解智能的（至于存不存在的话是哲学问题），慢慢地升高层次，当突破某个临界点后，突然间，智能就出现了！所以，几乎所有的 AI 程序都是用Lisp 写的，就是因为如果你无法构建高级的抽象，永远在神经元层次编程的话，可能就永远写不出AI程序了。对，我说的是“可能”，我所知道的有两种例外：
+1。你的大脑就是一个 Lisp 编译器，你用 Lisp 思考，大脑帮你编译成别的语言，可能在 Lisp 发明之前的 AI 程序就是这么写的。这可能也就是冯诺依曼为啥只用汇编的原因，因为他的脑袋瓜实在是太厉害了，因为他不是人类:)</p>
+<p>2。你在无意识中已经开发了一个 Lisp 解释器。参见文章开头的 Greenspun’s Tenth Rule:)</p>
+<p><a href="http://lisp.tw/2013/02/17/god-wrote-in-lisp-code/">God wrote in lisp code!</a></p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[Clojure 风格指南]]></title>
@@ -1985,15 +2023,6 @@ So he wrote it all in Lisp. <br/></p>
     <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
   </entry>
   <entry>
-    <title type="html"><![CDATA[Hello, World!]]></title>
-    <link href="http://lisp.tw//2013/02/14/hello-world/"/>
-    <id>http://lisp.tw//2013/02/14/hello-world/</id>
-    <published>2013-02-14T03:11:11.000Z</published>
-    <updated>2013-02-19T05:05:09.000Z</updated>
-    <content type="html"><![CDATA[<p><strong>Welcome to Lisp Taiwan.</strong></p>
-]]></content>
-  </entry>
-  <entry>
     <title type="html"><![CDATA[怎樣寫一個解釋器 by 王垠]]></title>
     <link href="http://lisp.tw//2013/02/28/interpreter-howto-yingwang0/"/>
     <id>http://lisp.tw//2013/02/28/interpreter-howto-yingwang0/</id>
@@ -2480,6 +2509,15 @@ So he wrote it all in Lisp. <br/></p>
 ]]></content>
     <category scheme="http://lisp.tw//tags/Scheme/" term="Scheme"/>
     <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Hello, World!]]></title>
+    <link href="http://lisp.tw//2013/02/14/hello-world/"/>
+    <id>http://lisp.tw//2013/02/14/hello-world/</id>
+    <published>2013-02-14T03:11:11.000Z</published>
+    <updated>2013-02-19T05:05:09.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>Welcome to Lisp Taiwan.</strong></p>
+]]></content>
   </entry>
   <entry>
     <title type="html"><![CDATA[了解 Lisp 的文化]]></title>
@@ -3096,7 +3134,7 @@ continue on to Peter Seibel&#39;s excellent <a href="http://www.gigamonkeys.com/
 <p>系統：Mac OSX</p>
 <p>Common Lisp 實現：SBCL</p>
 <p><code>$</code> 號為命令行、<code>?</code> 為 Lisp REPL。</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -3156,43 +3194,5 @@ continue on to Peter Seibel&#39;s excellent <a href="http://www.gigamonkeys.com/
     <category scheme="http://lisp.tw//tags/Package-Manager/" term="Package Manager"/>
     <category scheme="http://lisp.tw//tags/quicklisp/" term="quicklisp"/>
     <category scheme="http://lisp.tw//tags/productivity/" term="productivity"/>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Common Lisp –– 夢想與現實的交匯]]></title>
-    <link href="http://lisp.tw//2013/02/17/cl-dream-and-the-truth/"/>
-    <id>http://lisp.tw//2013/02/17/cl-dream-and-the-truth/</id>
-    <published>2013-02-16T19:30:20.000Z</published>
-    <updated>2013-04-06T07:19:56.000Z</updated>
-    <content type="html"><![CDATA[<p><span class="meta-info">
-作者：<a href="https://twitter.com/garfield_xue">薛宏</a>
-原發表日期：2008/11/22
-<span class="image-copyright"><a href="http://www.ibiblio.org/">http://www.ibiblio.org/</a></span>
-</span></p>
-<img src="/images/mccarthy.jpg" title="John McCarthy.">
-
-<a name="more"></a>
-
-<blockquote>
-<p>Greenspun’s Tenth Rule:
-Any sufficiently complicated C or Fortran program contains an ad hoc informally-specified bug-ridden slow implementation of half of Common Lisp.</p>
-</blockquote>
-<p>观察 Common Lisp (CL) 大概有半年多时间了，或者说是仰望，从没想过自己在短期内会使用，因为怕泛泛的自己玷污了这个传说中只有顶级黑客才能使用的利器。更没有想到的是，居然会在正式的工作中使用，是的，我可以很自豪地说，上周我有两个整天的时间都在使用 CL 编程！</p>
-<p>公司要搞软件的自动测试。之前的做法是用自然语言（日语）写测试式样书，然后根据式样书手工测试。现在的想法是能够自动从式样书生成自动测试脚本。那式样书的写法就需要改变，不能用自然语言，而要使用计算机容易处理的所谓形式语言（formal language）。这样的话又需要开发这个形式语言的编译器，工程浩大！那时，我脑中浮现出四个大字 – DSEL（Domain Specific Embedded Language）。其主要的特点就是把领域专用的小型形式语言嵌入到一种通用的编程语言中，毕竟编程语言也是一种形式语言。这样做的好处是可以利用宿主语言的很多特性，编译器也不需要了，而且还很容易扩展和维护。然而，不是所有的语言都适合做宿主语言的，因为这要求语言具有可编程的语法，目前几乎所有的主流语言都没有这个功能（将来可能也不会有）。我所知道的，适合做宿主语言的有：Lisp（可以说没有语法），Smalltalk（infix 版本的 Lisp），Haskell（可定义特定优先级和结合性的算符）以及 Ruby（另一个 Smalltalk）。在我用日语介绍了一下所谓DSEL的概念后，貌似大家都不怎么明白。我急了，换用英语（之间甚至夹杂了中文。。。），可还是没有人明白我说的是啥意思，可能是我表达能力太弱了吧:(最后说，可以给我三天时间做一个 prototype。</p>
-<p>第一天把 <a href="http://gigamonkeys.com/book/">Practical Common Lisp</a> 大概翻了一遍，一些基本特性倒是都知道，看 SICP 的时候写过些 scheme，所以主要是看了 macro那一章，因为那是构建 DSEL 的关键，还有就是 CL 的对象系统CLOS。第二天装了 Emacs，slime，paredit，看了个录像，简单配置了一下键绑定，然后就开始 hacking 了。</p>
-<p>结果是，用三个 macro 构成了用来写式样书的 DSEL，用 CLOS 构建了易扩展的对象体系（多分派真是好用，而且不但可以基于型别，还能基于任意的判别式分派），外加后端代码生成，一共 40 行CL代码！CL rocks！</p>
-<p>记得大二的时候第一次看到 Lisp 代码（好像是一个算分形的），和所有人一样，怎么这么多括号！然而，现在我知道，那些括号才是 CL 的强大的真正原因！可能还有很多人不知道，如果你有那么一点点好奇心，想知道为啥那些高级黑客对 CL 宗教信仰般的热爱，以及那么强大的Lisp，为啥在 50 年间（是的，Lisp 是第二古老的语言，只比 Fortran 年轻，如果不算汇编的话）始终没能成为主流语言，或许能从以下两片文章里得到些启发，至少当时我是如此。</p>
-<h2><a href="http://www.paulgraham.com/avg.html">Beating the Averages</a></h2>
-<p>作者和 Morris（是的，就是搞出第一个蠕虫病毒的那个家伙）在 1995 用 Lisp 搞了个 C2C 平台，在打败了所有竞争对手后，被 Yahoo 收购，成为现在 Yahoo Store 的雏形。当得知 Yahoo 收购消息后，作者做的第一件事就是招了几十个程序员，因为谁也无法相信这样强大的 C2C 平台只是由四个 Lisp 黑客构建的。文章中，作者提出编程语言的表达能力是有区别的，而程序员每天写的代码量却和使用的语言基本无关，所以如果你使用的语言表达能力是别人的30倍，你的开发时间将是别人的 30 分之一！这就是很多竞争对手都认为作者拥有秘密武器–每次他们发布了新的功能，作者都可以在第一时间做到同样的事，作者的秘密武器就是 Lisp。文章还揭示了为啥 Lisp 没有成为主流语言的原因–编程语言不仅是工具，还是程序员思考问题的方式，改变思考方式不是一件容易的事！然而，作者的成功正是利用了这一点。
-如果你喜欢这篇文章，可以考虑购买 <a href="http://book.douban.com/subject/4912556/">Hacker and Painter</a> 一书，是作者散文的合集，其中大部分可以在上面的网站上在线阅读。</p>
-<h2><a href="http://www.defmacro.org/ramblings/lisp.html">The Nature of Lisp</a></h2>
-<p>这篇文章中，作者以广为人知的 XML 为引子，首先问为啥 XML 能作为一种通用的数据描述语言，因为 XML 具有树状结构，而几乎所有的信息都可以用某种树状结构来表现。接着作者启发道，程序能不能用 XML 表示呢？其实是可以的，因为几乎所有的编译器把源文件变成一种叫抽象语法树（AST）的东西，所以 XML 可以表现几乎所有的语言的语法！接着作者用 Ant 的例子引出 Executable XML 的概念。而后开始转到 Lisp 上，说其实 Lisp 和 XML 是同一个东西，所不同的是 Lisp 早发明 30 年，而且比较简洁。然而，Executable XML 的实现是需要借助其他语言的，用 SAX 或者 DOM 接口操纵 XML。而 Lisp 可以用 macro 直接操纵自己的语法树，这才是 Lisp 的威力所在！</p>
-<p>Lisp 和 XML 一样可以表达几乎任何语言的语法，用 macro 可以很方便地模拟语言的语义，Lisp 可以变成你想要的任何语言！Lisp, one language to rule them all! Lisp 编程就是构建一层层的DSEL，直到抽象层次升高到可以直接描述问题领域。Lisp is not a language, but a language to build languages, it’s meta-language!</p>
-<p>为啥 MIT 的人工智能会那么强？因为他们从 60 年代开始，在所有其他人都还在使用 Fortran 和汇编的时候，已经开始用 Lisp 编程了！<a href="http://garfield-jarod.spaces.live.com/blog/cns!7B2D7CA0008D25E4!706.entry?&amp;_c02_vws=1">GEB</a> 中提到，大脑的底层是神经元，在这个层面是完全无法理解智能的（至于存不存在的话是哲学问题），慢慢地升高层次，当突破某个临界点后，突然间，智能就出现了！所以，几乎所有的 AI 程序都是用Lisp 写的，就是因为如果你无法构建高级的抽象，永远在神经元层次编程的话，可能就永远写不出AI程序了。对，我说的是“可能”，我所知道的有两种例外：
-1。你的大脑就是一个 Lisp 编译器，你用 Lisp 思考，大脑帮你编译成别的语言，可能在 Lisp 发明之前的 AI 程序就是这么写的。这可能也就是冯诺依曼为啥只用汇编的原因，因为他的脑袋瓜实在是太厉害了，因为他不是人类:)</p>
-<p>2。你在无意识中已经开发了一个 Lisp 解释器。参见文章开头的 Greenspun’s Tenth Rule:)</p>
-<p><a href="http://lisp.tw/2013/02/17/god-wrote-in-lisp-code/">God wrote in lisp code!</a></p>
-]]></content>
-    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
-    <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
   </entry>
 </feed>
