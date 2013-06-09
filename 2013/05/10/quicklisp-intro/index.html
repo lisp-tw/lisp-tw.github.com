@@ -97,7 +97,7 @@
 </span></p>
 <img src="/images/quicklisp.png" title="Quicklisp, Common Lisp 軟件包管理工具">
 
-<span id="more"></span>
+<a name="more"></a>
 
 <p>由 <a href="http://www.xach.com/">Zach Beane</a> 所開發的 <a href="http://quicklisp.org/">Quicklisp</a> 是一個 Common Lisp 的函式庫管理工具，只需要幾個簡單的命令，就可以自動下載、安裝、載入超過 <a href="http://www.quicklisp.org/beta/releases.html">700+ 個軟件包</a>。如果要類比的話，Quicklisp 就像是 apt-get 之於 Ubuntu、Homebrew 之於 Mac、Gem 之於 Ruby、NPM 之於 Node.js。</p>
 <p>以前可能有人使用過 ASDF-INSTALL，但這個軟件已經<strong>沒有人再維護了，絕對不要再用了。</strong></p>
@@ -108,11 +108,21 @@
 <p>系統：Mac OSX</p>
 <p>Common Lisp 實現：SBCL</p>
 <p><code>$</code> 號為命令行、<code>?</code> 為 Lisp REPL。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="char">$ </span>curl -<span class="class">O</span> <span class="method">http:</span>//beta.quicklisp.org/quicklisp.lisp</div><div class="line"><span class="char">$ </span>sbcl --load quicklisp.lisp</div><div class="line">* (quicklisp-<span class="method">quickstart:</span>install)</div><div class="line">* (<span class="method">ql:</span>add-to-init-file)</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="char">$ </span>curl -<span class="class">O</span> <span class="method">http:</span>//beta.quicklisp.org/quicklisp.lisp
+<span class="char">$ </span>sbcl --load quicklisp.lisp
+* (quicklisp-<span class="method">quickstart:</span>install)
+* (<span class="method">ql:</span>add-to-init-file)
+</pre></td></tr></table></figure>
 
 <h2>安裝過了，再次加載？</h2>
 <p>如果你沒有執行上面的 <code>(ql:add-to-init-file)</code>，將會需要再每次啟動 Common Lisp 之後手動加載 Quicklisp。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="list">(<span class="title">load</span><span class="body"> <span class="string">"~/quicklisp/setup.lisp"</span>)</span></span></div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">load</span><span class="body"> <span class="string">"~/quicklisp/setup.lisp"</span>)</span></span>
+</pre></td></tr></table></figure>
 
 <p><strong>注意!!!!</strong></p>
 <p><strong>將路徑換成 quicklisp 所在的目錄，CMUCL 不支持解析 <code>~</code> 家目錄</strong></p>
@@ -152,6 +162,7 @@
 <p>Quicklisp 代碼放在 <a href="http://github.com/quicklisp/">GitHub</a></p>
 <h2>延伸閱讀</h2>
 <p><a href="http://www.quicklisp.org/beta/faq.html">Quciklisp FAQ</a></p>
+<p><a id="google-plus-author" href="https://plus.google.com/116526763595254359821?rel=author">Google</a></p>
 
       
     </div>
@@ -256,31 +267,43 @@ var moment_js_path = '/js/moment.min.js';
   <h3 class="title">分類</h3>
   <ul class="entry">
   
+    <li><a href="/categories/Common-Lisp/">Common Lisp</a><small>3</small></li>
+  
     <li><a href="/categories/Common-Lisp/Book/">Book</a><small>1</small></li>
   
-    <li><a href="/categories/Books/">Books</a><small>1</small></li>
+    <li><a href="/categories/轉載/">轉載</a><small>4</small></li>
   
-    <li><a href="/categories/譯文/Clojure/">Clojure</a><small>1</small></li>
-  
-    <li><a href="/categories/Common-Lisp/">Common-Lisp</a><small>7</small></li>
-  
-    <li><a href="/categories/Lisp/">Lisp</a><small>5</small></li>
-  
-    <li><a href="/categories/Scheme/">Scheme</a><small>1</small></li>
-  
-    <li><a href="/categories/Scheme/Lisp/Tutorials/">Tutorials</a><small>1</small></li>
-  
-    <li><a href="/categories/meeting/">meeting</a><small>1</small></li>
-  
-    <li><a href="/categories/meetup/">meetup</a><small>1</small></li>
-  
-    <li><a href="/categories/tools/">tools</a><small>1</small></li>
-  
-    <li><a href="/categories/名言佳句/">名言佳句</a><small>1</small></li>
+    <li><a href="/categories/轉載/Common-Lisp/">Common Lisp</a><small>3</small></li>
   
     <li><a href="/categories/譯文/">譯文</a><small>2</small></li>
   
-    <li><a href="/categories/Common-Lisp/轉載/">轉載</a><small>5</small></li>
+    <li><a href="/categories/譯文/Clojure/">Clojure</a><small>1</small></li>
+  
+    <li><a href="/categories/meeting/">meeting</a><small>1</small></li>
+  
+    <li><a href="/categories/轉載/Lisp/">Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/">Scheme</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/Lisp/">Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/Lisp/Tutorials/">Tutorials</a><small>1</small></li>
+  
+    <li><a href="/categories/Lisp/">Lisp</a><small>2</small></li>
+  
+    <li><a href="/categories/meetup/">meetup</a><small>1</small></li>
+  
+    <li><a href="/categories/名言佳句/">名言佳句</a><small>1</small></li>
+  
+    <li><a href="/categories/名言佳句/Lisp/">Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/Common-Lisp/轉載/">轉載</a><small>1</small></li>
+  
+    <li><a href="/categories/Books/">Books</a><small>1</small></li>
+  
+    <li><a href="/categories/Books/Common-Lisp/">Common Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/tools/">tools</a><small>1</small></li>
   
   </ul>
 </div>
@@ -291,45 +314,45 @@ var moment_js_path = '/js/moment.min.js';
   <h3 class="title">標籤</h3>
   <ul class="entry">
   
+    <li><a href="/tags/Common-Lisp/">Common Lisp</a><small>13</small></li>
+  
     <li><a href="/tags/ANSI-Common-Lisp/">ANSI Common Lisp</a><small>1</small></li>
+  
+    <li><a href="/tags/Paul-Graham/">Paul Graham</a><small>1</small></li>
+  
+    <li><a href="/tags/Lisp/">Lisp</a><small>12</small></li>
+  
+    <li><a href="/tags/book/">book</a><small>1</small></li>
   
     <li><a href="/tags/ASDF/">ASDF</a><small>1</small></li>
   
     <li><a href="/tags/Clojure/">Clojure</a><small>1</small></li>
   
-    <li><a href="/tags/Common-Lisp/">Common Lisp</a><small>13</small></li>
-  
-    <li><a href="/tags/Erlang/">Erlang</a><small>1</small></li>
+    <li><a href="/tags/田春/">田春</a><small>2</small></li>
   
     <li><a href="/tags/Haskell/">Haskell</a><small>2</small></li>
   
-    <li><a href="/tags/IBM-1130/">IBM 1130</a><small>1</small></li>
+    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
+  
+    <li><a href="/tags/common-lisp/">common lisp</a><small>1</small></li>
+  
+    <li><a href="/tags/Erlang/">Erlang</a><small>1</small></li>
   
     <li><a href="/tags/Java/">Java</a><small>1</small></li>
   
-    <li><a href="/tags/LISP-1.6/">LISP 1.6</a><small>1</small></li>
+    <li><a href="/tags/Scheme/">Scheme</a><small>1</small></li>
   
-    <li><a href="/tags/Lisp/">Lisp</a><small>12</small></li>
+    <li><a href="/tags/IBM-1130/">IBM 1130</a><small>1</small></li>
+  
+    <li><a href="/tags/LISP-1.6/">LISP 1.6</a><small>1</small></li>
   
     <li><a href="/tags/PAIP/">PAIP</a><small>1</small></li>
   
     <li><a href="/tags/Package-Manager/">Package Manager</a><small>1</small></li>
   
-    <li><a href="/tags/Paul-Graham/">Paul Graham</a><small>1</small></li>
-  
-    <li><a href="/tags/Scheme/">Scheme</a><small>1</small></li>
-  
-    <li><a href="/tags/book/">book</a><small>1</small></li>
-  
-    <li><a href="/tags/common-lisp/">common lisp</a><small>1</small></li>
-  
-    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
-  
-    <li><a href="/tags/productivity/">productivity</a><small>1</small></li>
-  
     <li><a href="/tags/quicklisp/">quicklisp</a><small>1</small></li>
   
-    <li><a href="/tags/田春/">田春</a><small>2</small></li>
+    <li><a href="/tags/productivity/">productivity</a><small>1</small></li>
   
   </ul>
 </div>

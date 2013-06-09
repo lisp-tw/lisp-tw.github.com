@@ -100,7 +100,7 @@
 </span></p>
 <img src="/images/fp-is-beautiful.png" title="Functional Programming is beautiful by Conrad Barski">
 
-<span id="more"></span>
+<a name="more"></a>
 
 <p><span class="image-copyright alignright meta-info"><a href="http://wadler.blogspot.sg/">http://wadler.blogspot.sg/</a></span></p>
 <h1>写给我们的函数式编程</h1>
@@ -136,12 +136,32 @@
 <h2>函数式编程</h2>
 <p>函数式编程是对阿隆左·丘奇理论的实践应用。但也并非全部 lambda 演算都被应用到了实践中，因为 lambda 演算不是被设计为在物理局限下工作的。因此，象面向对象的编程一样，函数式编程是一系列理念，而不是严格的教条。现在有很多种函数式编程语言，他们中的大多数以不同方式完成不同任务。在本文中我将就最广泛使用的源自函数式编程的思想作一解释，并将用 Java 语言举例。(的确，你可以用 Java 写出函数式的 程序如果你有显著的受虐倾向）。在下面的小节中，我将会把 Java 作为一种函数式语言，并对其稍加修改使它成为一种可用的函数式语言。现在开始吧。</p>
 <p>lambda 演算被设计用来探询关于计算的问题，所以函数式编程主要处理计算，并惊人地用函数来完成这一过程。函数是函数式编程的基本单位，函数几乎被用于一切，包括 最简单的计算，甚至变量都由计算取代。在函数式编程中，变量只是表达式的别名（这样我们就不必把所有东西打在一行里）。变量是不能更改的，所有变量只能被赋值一次。用 Java 的术语来说，这意味着所有单一变量都被声明为 <code>final</code>（或 C++ 的 <code>const</code>）。在函数式编程中没有非 <code>final</code> 的变量。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">final</span> <span class="keyword">int</span> i = <span class="number">5</span>;</div><div class="line"><span class="keyword">final</span> <span class="keyword">int</span> j = i + <span class="number">3</span>;</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="keyword">final</span> <span class="keyword">int</span> i = <span class="number">5</span>;
+<span class="keyword">final</span> <span class="keyword">int</span> j = i + <span class="number">3</span>;
+</pre></td></tr></table></figure>
 
 <p>因为函数式编程中所有变量都是 <code>final</code> 的，所以可以提出这样两个有趣的表述：没有必要总是写出关键字 <code>final</code>，没有必要把变量再称为变量。那么现在我们对 Java 作出两个修改：在我们的函数式 Java 中所有变量默认都是 final的，我们将变量（variable）称为符号（symbol）。</p>
 <p>就此你也许会质疑，用我们新创造的语言还能写出有些复杂度的程序吗？如果每个符号都是不可变更（non-mutalbe）的，那么就无法改变任何状态！其实事实并非完全如此。在阿隆左研究其 lambda 演算时，他并不想将某个状态维护一段时间以期未来对其进行修改。他关注的是对数据的操作（也通常被称为”演算体 caculating stuff”）。既然已被证明 lambda 演算与图灵机等价，它可以完成所有命令式编程语言能够完成的任务。那么，我们怎么才能做到呢？</p>
 <p>答案是函数式程序能保存状态，只是它并非通过变量而是使用函数来保存状态。状态保存在函数的参数中，保存在堆栈上。如果你要保存某个状态一段时间并时不时地对其进行一些修改，可以写个递归函数。举个例子，我们写个函数来翻转 Java 的字符串。记住，我们声明的每个变量默认都是 <code>final</code> 的。<a href="#5">[5]</a></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div></code></pre></td><td class="code"><pre><code><div class="line">String reverse(String arg) {</div><div class="line">  <span class="keyword">if</span>(arg.length == <span class="number">0</span>) {</div><div class="line">    <span class="keyword">return</span> arg;</div><div class="line">  }</div><div class="line">  <span class="keyword">else</span> {</div><div class="line">    <span class="keyword">return</span> reverse(arg.substring(<span class="number">1</span>, arg.length)) + arg.substring(<span class="number">0</span>,<span class="number">1</span>);</div><div class="line">  }</div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre>String reverse(String arg) {
+  <span class="keyword">if</span>(arg.length == <span class="number">0</span>) {
+    <span class="keyword">return</span> arg;
+  }
+  <span class="keyword">else</span> {
+    <span class="keyword">return</span> reverse(arg.substring(<span class="number">1</span>, arg.length)) + arg.substring(<span class="number">0</span>,<span class="number">1</span>);
+  }
+}
+</pre></td></tr></table></figure>
 
 <p>这个函数很慢因为它不断地调用自己<a href="#6">[6]</a>，它还也是个嗜内存魔因为要持续分配对象。不过它的确是在用函数式风格。你可能会问，怎么有人会这样写程序？好的，我这就慢慢讲来：</p>
 <h2>函数式编程的优点</h2>
@@ -157,7 +177,13 @@
 <p>函数式程序无需任何修改即可并发执行。不用担心死锁和临界区，因为你从未用锁！函数式程序里没有任何数据被同一线程修改两次，更不用说两个不同的线程了。这意味着可以不假思索地简单增加线程而不会引发折磨着并行应用程序的传统问题。</p>
 <p>事实既然如此，为什么并不是所有人都在需要高度并行作业的应用中采用函数式程序？嗯，他们正在这样做。爱立信公司设计了一种叫作 <a href="http://www.erlang.org/">Erlang</a> 的函数式语言并将它使用在需要极高抗错性和可扩展性的电信交换机上。还有很多人也发现了 Erlang 的优势并开始<a href="http://www.erlang.org/faq/faq.html#AEN50">使用它</a>。我们谈论的是电信通信控制系统，这与设计华尔街的典型系统相比对可靠性和可升级性要求高了得多。实际上，Erlang 系统并不可靠和易扩展，Java 才是。Erlang 系统只是坚如磐石。</p>
 <p>关于并行的故事还没有就此停止，即使你的程序本身就是单线程的，那么函数式程序的编译器仍然可以优化它使其运行于多个 CPU 上。请看下面这段代码：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line">String s1 = somewhatLongOperation1();</div><div class="line">String s2 = somewhatLongOperation2();</div><div class="line">String s3 = concatenate(s1, s2);</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>String s1 = somewhatLongOperation1();
+String s2 = somewhatLongOperation2();
+String s3 = concatenate(s1, s2);
+</pre></td></tr></table></figure>
 
 <p>在函数编程语言中，编译器会分析代码，辨认出潜在耗时的创建字符串 <code>s1</code> 和 <code>s2</code> 的函数，然后并行地运行它们。这在命令式语言中是不可能的，因为在那 里，每个函数都有可能修改了函数作用域以外的状态并且其后续的函数又会依赖这些修改。在函数式语言里，自动分析函数并找出适合并行执行的候选函数简单的像 自动进行的函数内联化！在这个意义上，函数式风格的程序是“不会过时的技术”（即使不喜欢用行业术语，但这回要破例一次）。硬件厂商已经无法让 CPU 运行得更快了，于是他们增加了处理器核心的速度并因并行而获得了四倍的速度提升。当然他们也顺便忘记提及我们的多花的钱只是用在了解决平行问题的软件上了。一小部分的命令式软件和 100% 的函数式软件都可以直接并行运行于这些机器上。</p>
 <h3>代码热部署</h3>
@@ -170,41 +196,236 @@
 <h2>高阶函数</h2>
 <p>我记得自己在了解了上面列出的种种优点后曾想：“那都是非常好的特性，可是如果我不得不用天生就不健全的语言编程，把一切变量声明为 <code>final</code> 产生的代码将是垃圾一堆。” 这其实是误解。在如 Java 这般的命令式语言环境里，将所有变量声明为 <code>final</code> 没有用，但是在函数式语言里不是这样。函数式语言提供了不同的抽象工具它会使你忘记你曾经习惯于修改变量。高阶函数就是这样一种工具。</p>
 <p>函数式语言中的函数不同于 Java 或 C 中的函数，而是一个超集——它有着 Java 函数拥有的所有功能，但还有更多。创建函数的方式和 C 中相似:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> add(<span class="keyword">int</span> i, <span class="keyword">int</span> j) {</div><div class="line">  <span class="keyword">return</span> i + j;</div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="keyword">int</span> add(<span class="keyword">int</span> i, <span class="keyword">int</span> j) {
+  <span class="keyword">return</span> i + j;
+}
+</pre></td></tr></table></figure>
 
 <p>这意味着有些东西和同样的 C 代码有区别。现在扩展我们的 Java 编译器使其支持这种记法。当我们输入上述代码后编译器会把它转换成下面的 Java 代码（别忘了，所有东西都是 <code>final</code> 的）：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">add_function_t</span> {</span></div><div class="line">  <span class="keyword">int</span> add(<span class="keyword">int</span> i, <span class="keyword">int</span> j) {</div><div class="line">    <span class="keyword">return</span> i + j;</div><div class="line">  }</div><div class="line">}</div><br><div class="line">add_function_t add = <span class="keyword">new</span> add_function_t();</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">class</span> <span class="title">add_function_t</span> {</span>
+  <span class="keyword">int</span> add(<span class="keyword">int</span> i, <span class="keyword">int</span> j) {
+    <span class="keyword">return</span> i + j;
+  }
+}
+
+add_function_t add = <span class="keyword">new</span> add_function_t();
+</pre></td></tr></table></figure>
 
 <p>这里的符号 <code>add</code> 并不是一个函数。这是一个有一个成员函数的很小的类。我们现在可以把 <code>add</code> 作为函数参数放入我们的代码中。还可以把它赋给另一个符号。我们在运行时创建的 <code>add_function_t</code> 的实例如果不再被使用就将会被垃圾回收掉。这些使得函数成为第一级的对象无异于整数或字符串。（作为参数）操作函数的函数被称为高阶函数。别让这个术语吓着你，这和 Java 的类别操作其它类别（把它们作为参数）没有什么区别。我们本可以把它们称为“高阶类”但没有人注意到这个，因为 Java 背后没有一个强大的学术社区。</p>
 <p>那么怎样，何时应该使用高阶函数呢？我很高兴你这样问。如果你不曾考虑类的层次，就可能写出了一整团堆砌的代码块。当你发现其中一些行的代码重复出 现，就把他们提取成函数（幸运的是这些依然可以在学校里学到）。如果你发现在那个函数里一些逻辑动作根据情况有变，就把他提取成高阶函数。糊涂了？下面是 一个来自我工作的实例：假如我的一些 Java 代码接受一条信息，用多种方式处理它然后转发到其他服务器。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    <span class="keyword">void</span> handleMessage(Message msg) {</div><div class="line">        <span class="comment">// ...</span></div><div class="line">        msg.setClientCode(<span class="string">"ABCD_123"</span>);</div><div class="line">        <span class="comment">// ...</span></div><br><div class="line">        sendMessage(msg);</div><div class="line">    }</div><br><div class="line">    <span class="comment">// ...</span></div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span>
+    <span class="keyword">void</span> handleMessage(Message msg) {
+        <span class="comment">// ...</span>
+        msg.setClientCode(<span class="string">"ABCD_123"</span>);
+        <span class="comment">// ...</span>
+
+        sendMessage(msg);
+    }
+
+    <span class="comment">// ...</span>
+}
+</pre></td></tr></table></figure>
 
 <p>现在假设要更改这个系统，现在我们要把信息转发到两个服务器而不是一个。除了客户端的代码一切都像刚才一样 —— 第二个服务器希望这是另一种格式。怎么处理这种情况？我们可以检查信息的目的地并相应修改客户端代码的格式，如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    <span class="keyword">void</span> handleMessage(Message msg) {</div><div class="line">        <span class="comment">// ...</span></div><div class="line">        <span class="keyword">if</span>(msg.getDestination().equals(<span class="string">"server1"</span>) {</div><div class="line">            msg.setClientCode(<span class="string">"ABCD_123"</span>);</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            msg.setClientCode(<span class="string">"123_ABC"</span>);</div><div class="line">        }</div><div class="line">        <span class="comment">// ...</span></div><br><div class="line">        sendMessage(msg);</div><div class="line">    }</div><br><div class="line">    <span class="comment">// ...</span></div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span>
+    <span class="keyword">void</span> handleMessage(Message msg) {
+        <span class="comment">// ...</span>
+        <span class="keyword">if</span>(msg.getDestination().equals(<span class="string">"server1"</span>) {
+            msg.setClientCode(<span class="string">"ABCD_123"</span>);
+        } <span class="keyword">else</span> {
+            msg.setClientCode(<span class="string">"123_ABC"</span>);
+        }
+        <span class="comment">// ...</span>
+
+        sendMessage(msg);
+    }
+
+    <span class="comment">// ...</span>
+}
+</pre></td></tr></table></figure>
 
 <p>然而这不是可扩展的方法，如果加入了更多的服务器，这个函数将线性增长，更新它会成为我的梦魇。面向对象的方法是把 MessageHandler 作为基类，在导出类中专业化客户代码操作：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div><div class="line-number">16</div><div class="line-number">17</div><div class="line-number">18</div><div class="line-number">19</div><div class="line-number">20</div><div class="line-number">21</div><div class="line-number">22</div><div class="line-number">23</div><div class="line-number">24</div><div class="line-number">25</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    <span class="keyword">void</span> handleMessage(Message msg) {</div><div class="line">        <span class="comment">// ...</span></div><div class="line">        msg.setClientCode(getClientCode());</div><div class="line">        <span class="comment">// ...</span></div><br><div class="line">        sendMessage(msg);</div><div class="line">    }</div><br><div class="line">    <span class="keyword">abstract</span> String getClientCode();</div><br><div class="line">    <span class="comment">// ...</span></div><div class="line">}</div><br><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandlerOne</span> <span class="keyword">extends</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    String getClientCode() {</div><div class="line">        <span class="keyword">return</span> <span class="string">"ABCD_123"</span>;</div><div class="line">    }</div><div class="line">}</div><br><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandlerTwo</span> <span class="keyword">extends</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    String getClientCode() {</div><div class="line">        <span class="keyword">return</span> <span class="string">"123_ABCD"</span>;</div><div class="line">    }</div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="code"><pre><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span>
+    <span class="keyword">void</span> handleMessage(Message msg) {
+        <span class="comment">// ...</span>
+        msg.setClientCode(getClientCode());
+        <span class="comment">// ...</span>
+
+        sendMessage(msg);
+    }
+
+    <span class="keyword">abstract</span> String getClientCode();
+
+    <span class="comment">// ...</span>
+}
+
+<span class="class"><span class="keyword">class</span> <span class="title">MessageHandlerOne</span> <span class="keyword">extends</span> <span class="title">MessageHandler</span> {</span>
+    String getClientCode() {
+        <span class="keyword">return</span> <span class="string">"ABCD_123"</span>;
+    }
+}
+
+<span class="class"><span class="keyword">class</span> <span class="title">MessageHandlerTwo</span> <span class="keyword">extends</span> <span class="title">MessageHandler</span> {</span>
+    String getClientCode() {
+        <span class="keyword">return</span> <span class="string">"123_ABCD"</span>;
+    }
+}
+</pre></td></tr></table></figure>
 
 <p>现在就可以对每一个服务器实例化一个适合的类。添加服务器的操作变得容易维护了。但对于这么一个简单的修改仍然要添加大量的代码。为了支持不同的客户代码我们创建了两个新的类型！现在我们用高阶函数完成同样的功能：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div><div class="line-number">16</div><div class="line-number">17</div><div class="line-number">18</div><div class="line-number">19</div><div class="line-number">20</div><div class="line-number">21</div><div class="line-number">22</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span></div><div class="line">    <span class="keyword">void</span> handleMessage(Message msg, Function getClientCode) {</div><div class="line">        <span class="comment">// ...</span></div><div class="line">        Message msg1 = msg.setClientCode(getClientCode());</div><div class="line">        <span class="comment">// ...</span></div><br><div class="line">        sendMessage(msg1);</div><div class="line">    }</div><br><div class="line">    <span class="comment">// ...</span></div><div class="line">}</div><br><div class="line">String getClientCodeOne() {</div><div class="line">    <span class="keyword">return</span> <span class="string">"ABCD_123"</span>;</div><div class="line">}</div><br><div class="line">String getClientCodeTwo() {</div><div class="line">    <span class="keyword">return</span> <span class="string">"123_ABCD"</span>;</div><div class="line">}</div><br><div class="line">MessageHandler handler = <span class="keyword">new</span> MessageHandler();</div><div class="line">handler.handleMessage(someMsg, getClientCodeOne);</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">class</span> <span class="title">MessageHandler</span> {</span>
+    <span class="keyword">void</span> handleMessage(Message msg, Function getClientCode) {
+        <span class="comment">// ...</span>
+        Message msg1 = msg.setClientCode(getClientCode());
+        <span class="comment">// ...</span>
+
+        sendMessage(msg1);
+    }
+
+    <span class="comment">// ...</span>
+}
+
+String getClientCodeOne() {
+    <span class="keyword">return</span> <span class="string">"ABCD_123"</span>;
+}
+
+String getClientCodeTwo() {
+    <span class="keyword">return</span> <span class="string">"123_ABCD"</span>;
+}
+
+MessageHandler handler = <span class="keyword">new</span> MessageHandler();
+handler.handleMessage(someMsg, getClientCodeOne);
+</pre></td></tr></table></figure>
 
 <p>没有创建新的类型和新的类别层次，只是传入合适的函数作为参数，完成了面向对象方式同样的功能，同时还有一些额外的优点。没有使自己囿于类的层次之中：可以在运行时传入函数并在任何时候以更高的粒度更少的代码修改他们。编译器高效地为我们生成了面向对象的“粘合”代码！除此之外，我们还获得了 所有函数式编程的其他好处。当然函数式语言提供的抽象不只这些，高阶函数只是一个开始：</p>
 <h2>Currying</h2>
 <p>我认识的大多数人都读过“四人帮”的那本<a href="http://book.douban.com/subject/1436745/">设计模式</a>，任何自重的程序员都会告诉你那本书是语言中立的，模式在软件工程中是通用的，和使用的语言无关。这个说法颇为高贵，故而不幸的是，有违现实。</p>
 <p>函数式编程极具表达能力。在函数式语言中，语言既已达此高度，设计模式就不再是必需，最终你将设计模式彻底消除而以概念编程。适配器（Adapter）模式就是这样的一个例子。（究竟适配器和 Facade 模式区别在哪里？可能有些人需要在这里再多费些篇章）。一旦语言有了叫作 <em>currying</em> 的技术，这一模式就可以被消除。</p>
 <p>适配器模式最有名的是被应用在 Java 的“默认”抽象单元 –– 类别上。在函数式编程里，模式被应用到函数。模式带有一个接口并将它转换成另一个对他人有用的接口。这有一个适配器模式的例子：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> pow(<span class="keyword">int</span> i, <span class="keyword">int</span> j);</div><div class="line"><span class="keyword">int</span> square(<span class="keyword">int</span> i)</div><div class="line">{</div><div class="line">    <span class="keyword">return</span> pow(i, <span class="number">2</span>);</div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="keyword">int</span> pow(<span class="keyword">int</span> i, <span class="keyword">int</span> j);
+<span class="keyword">int</span> square(<span class="keyword">int</span> i)
+{
+    <span class="keyword">return</span> pow(i, <span class="number">2</span>);
+}
+</pre></td></tr></table></figure>
 
 <p>上面的代码把一个整数幂运算接口转换成为了一个平方接口。在学术文章里，这个雕虫小技被叫作 currying (得名于逻辑学家 Haskell Curry，他曾将相关的数学理论形式化 )。因为在函数式编程中函数（反之如类别)被作为参数来回传递，currying 很频繁地被用来把函数调整为更适宜的接口。因为函数的接口是他的参数，使用 currying 可以减少参数的数目(如上例所示)。</p>
 <p>函数式语言内建了这一技术。不用手动地创建一个包装了原函数的函数，函数式语言可以为你代劳。同样地，扩展我们的语言，让他支持这个技术：</p>
-<pre><code><div class="line">square = <span class="keyword">int</span> <span class="built_in">pow</span>(<span class="keyword">int</span> i, <span class="number">2</span>);</div></code></pre>
+<pre><code>square = <span class="keyword">int</span> <span class="built_in">pow</span>(<span class="keyword">int</span> i, <span class="number">2</span>);
+</code></pre>
 <p>这将为我们自动创建出一个有一个参数的函数 <code>square</code>。他把第二个参数设置为 <code>2</code> 再调用函数 pow。这行代码会被编译为如下的 Java 代码：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">square_function_t</span> {</span></div><div class="line">    <span class="keyword">int</span> square(<span class="keyword">int</span> i) {</div><div class="line">        <span class="keyword">return</span> pow(i, <span class="number">2</span>);</div><div class="line">    }</div><div class="line">}</div><div class="line">square_function_t square = <span class="keyword">new</span> square_function_t();</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">class</span> <span class="title">square_function_t</span> {</span>
+    <span class="keyword">int</span> square(<span class="keyword">int</span> i) {
+        <span class="keyword">return</span> pow(i, <span class="number">2</span>);
+    }
+}
+square_function_t square = <span class="keyword">new</span> square_function_t();
+</pre></td></tr></table></figure>
 
 <p>正如你所见，通过简单地创建一个对原函数的包装，在函数式编程中，这就是 currying —— 快速简易创建包装的捷径。把精力集中在你的业务上，让编译器为你写出必要的代码！什么时候使用 currying？这很简单，任何时候你想要使用适配器模式（包装）时。</p>
 <h2>惰性求值</h2>
 <p>惰性（或延迟）求值这一技术可能会变得非常有趣一旦我们采纳了函数式哲学。在讨论并行时已经见过下面的代码片断：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line">String s1 = somewhatLongOperation1();</div><div class="line">String s2 = somewhatLongOperation2();</div><div class="line">String s3 = concatenate(s1, s2);</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>String s1 = somewhatLongOperation1();
+String s2 = somewhatLongOperation2();
+String s3 = concatenate(s1, s2);
+</pre></td></tr></table></figure>
 
 <p>在一个命令式语言中求值顺序是确定的，因为每个函数都有可能会变更或依赖于外部状态，所以就必须有序的执行这些函数：首先是
 <code>somewhatLongOperation1</code>，然后 <code>somewhatLongOperation2</code>，最后 <code>concatenate</code>，在函数式语言里就不尽然了。</p>
@@ -214,33 +435,63 @@
 <p>惰性求值有客观的优化潜力。惰性编译器看函数式代码就像数学家面对的代数表达式 -– 可以注销一部分而完全不去运行它，重新调整代码段以求更高的 效率，甚至重整代码以降低出错，所有确定性优化（guaranteeing optimizations）不会破坏代码。这是严格用形式原语描述程序的巨大优势 –– 代码固守着数学定律并可以数学的方式进行推理。</p>
 <h3>抽象控制结构</h3>
 <p>惰性求值提供了更高一级的抽象，它使得不可能的事情得以实现。例如，考虑实现如下的控制结构：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line">unless(stock.isEuropean()) {</div><div class="line">    sendToSEC(stock);</div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>unless(stock.isEuropean()) {
+    sendToSEC(stock);
+}
+</pre></td></tr></table></figure>
 
 <p>我们希望只在祖先不是欧洲人时才执行 <code>sendToSEC</code>。如何实现 <code>unless</code>？如果没有惰性求值，我们需要某种形式的宏（macro）系统，但 Haskell 这样的语言不需要它。把他实现为一个函数即可：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">void</span> unless(<span class="keyword">boolean</span> condition, List code) {</div><div class="line">    <span class="keyword">if</span>(!condition)</div><div class="line">        code;</div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="keyword">void</span> unless(<span class="keyword">boolean</span> condition, List code) {
+    <span class="keyword">if</span>(!condition)
+        code;
+}
+</pre></td></tr></table></figure>
 
 <p>注意如果条件为真代码将不被执行。我们不能在一个严格的语言中再现这种求值，因为 <code>unless</code> 调用之前会先对参数进行求值。</p>
 <h3>无穷数据结构</h3>
 <p>惰性求值允许定义无穷数据结构，对严格语言来说实现这个要复杂的多。考虑一个 Fibonacci 数列，显然我们无法在有限的时间内计算出或在有限的内存里保存一个无穷列表。在严格语言如 Java 中，只能定义一个能返回 Fibonacci 数列中特定成员的 Fibonacci 函数，在 Haskell 中，我们对其进一步抽象并定义一个关于 Fibonacci 数的无穷列表，因为作为一个惰性的语言，只有列表中实际被用到的部分才会被求值。这使得可以抽象出很多问题并从一个更高的层次重新审视他们。（例如，我们可以在一个无穷列表上使用表处理函数）。</p>
 <h3>缺点</h3>
 <p>当然从来不存在免费的午餐。惰性求值有很多的缺点，主要就在于，懒。有很多现实世界的问题需要严格求值。例如考虑下例：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line">System.out.println(”Please enter your name: “);</div><div class="line">System.in.readLine();</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>System.out.println(”Please enter your name: “);
+System.in.readLine();
+</pre></td></tr></table></figure>
 
 <p>在惰性求值的语言里，不能保证第一行会在第二行之前执行！那么我们就不能进行输入输出操作，不能有意义地使用原生接口（因为他们相互依赖其副作用必须被有序的调用），从而与整个世界隔离。如果引入允许特定执行顺序的原语又将失去数学地推理代码的诸多好处（为此将葬送函数式编程与其相关的所有优点）。幸运的是，并非丧失了一切，数学家为此探索并开发出了许多技巧来保证函数在一定设置下代码以特定的顺序执行。这样我们就赢得了两个世界。这些技术包括 continuation、monad 和 uniqueness typing（一致型别）。我只会在本文中解释 continuation，把 monad 和 uniqueness typing 留到将来的文章中。有趣的是，除了确保函数求值顺序，continuation 在很多别的情况下也很有用。这点等一会儿就会提到。</p>
 <h2>Continuations</h2>
 <p>Continuations 对于程序设计的意义，就像《达芬奇密码》对人类历史的意义：即对人类最大秘密的惊人揭示。也许不是，但他在概念上的突破性至少和揭示了负数的平方根意义等同。</p>
 <p>我们在学习函数时，只是学到了一半的事实，因为我们基于一个错误的假定:函数只能将结果返回到它的调用函数。在这个意思上 continuation 是广义的函数。函数不必要返回到其调用函数而可以返回到程序的任何地方。我们把 ”continuation” 作为参数传给一个函数，它指定了这个函数返回的位置。这个描述可能听起来更加复杂。看一下下面的代码：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> i = add(<span class="number">5</span>, <span class="number">10</span>);</div><div class="line"><span class="keyword">int</span> j = square(i);</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="keyword">int</span> i = add(<span class="number">5</span>, <span class="number">10</span>);
+<span class="keyword">int</span> j = square(i);
+</pre></td></tr></table></figure>
 
 <p>函数 add 在其被调用的位置将结果 <code>15</code> 赋给了 <code>i</code>，接下来 <code>i</code> 的值被用来调用 <code>square</code>。注意所有的惰性求值编译器都不能调整这几行代码因为第二行依赖着第一行的成功求值。下面用续延传递风格又称 CPS (Continuation Passing Style) 来重写这段代码，这里函数 <code>add</code> 会将结果返回到 <code>square</code> 而不是原来的调用函数。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line">int j = <span class="keyword">add</span>(<span class="number">5</span>, <span class="number">10</span>, square)<span class="comment">;</span></div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="keyword">int</span> j = add(<span class="number">5</span>, <span class="number">10</span>, square);
+</pre></td></tr></table></figure>
 
 <p>这个例子中 <code>add</code> 有了另一个参数 —— 一个 <code>add</code> 必须在它求值结束时用其返回值调用的函数。这里 <code>square</code> 是 <code>add</code> 的一个 continuation。这两种情况下，<code>j</code> 都将等于 <code>255</code>。</p>
 <p>这就是强制使惰性语言有序地求值两个表达式的第一个技巧。考虑下面这段（熟悉的）IO 代码：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line">System.out.println(<span class="string">"Please enter your name: "</span>);</div><div class="line">System.in.readLine();</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>System.out.println(<span class="string">"Please enter your name: "</span>);
+System.in.readLine();
+</pre></td></tr></table></figure>
 
 <p>这两行不相依赖所以编译器会自由的重新调整他们的执行顺序。然而，如果我们用 CPS 来重写这段代码，就会有一个依赖，编译器会因此而强制对这两行代码有序执行！</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line">System.out.println(<span class="string">"Please enter your name: "</span>, System.in.readLine);</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>System.out.println(<span class="string">"Please enter your name: "</span>, System.in.readLine);
+</pre></td></tr></table></figure>
 
 <p>这里 <code>println</code> 需要用自己的返回结果作为参数去调用 <code>readLine</code> 并将 <code>readLine</code> 返回值作为自己的返回值。这样就能确保这两行被有序执行而且 <code>readLine</code> 一定被执行（因为整个计算期望最后的结果为结果）。Java 的 <code>println</code> 返回 <code>void</code> 但如果它返回的是一个抽象值（<code>readLine</code> 所期待的），我们就解决了这个问题！当然这样的链接函数调用很快就会使代码难以读懂，不过这个可以避免。比 如我们可以给语言添加些语法糖，就可以简单的按顺序输入表达式，然后由编译器自动为我们链接这些函数调用。这样就可以如愿地使用期望的求值顺序并保留一切函数式编程的好处 （包括数学地对我们程序进行推理的能力）！如果还是有迷惑，记住函数是只有一个成员的类的实例。重写上述代码使得 <code>println</code> 和 <code>readLine</code> 成为类的实例，这样就对一切都清楚了。</p>
 <p>如果我在此结束本节，那将仅仅涉及到 continuation 最浅显的应用。用 CPS 重写整个程序，那里所有的函数都增加一个额外的 continuation 参数并把函数结果传给它。也可以通过简单地把函数当作 continuation 函数（总是返回到调用者的函数）的特殊实例来将程序转为 CPS 风格。这种转换很容易被自动化（事实上，许多编译器就是这么做的）。</p>
@@ -253,27 +504,125 @@
 <h2>模式匹配</h2>
 <p>模式匹配不是什么新的创新的特性。事实上，它和函数式编程的关系不大。把产生模式匹配归因于函数式编程的唯一的原因是函数式语言一度提供了模式匹配，然而现在的命令式语言还做不到。</p>
 <p>让我们用一个例子深入了解一下模式匹配。这是一个 Java 的 Fibonacci 函数：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> fib(<span class="keyword">int</span> n) {</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><br><div class="line">    <span class="keyword">return</span> fib(n - <span class="number">2</span>) + fib(n - <span class="number">1</span>);</div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="keyword">int</span> fib(<span class="keyword">int</span> n) {
+    <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;
+    <span class="keyword">if</span>(n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;
+
+    <span class="keyword">return</span> fib(n - <span class="number">2</span>) + fib(n - <span class="number">1</span>);
+}
+</pre></td></tr></table></figure>
 
 <p>让我们从 Java 衍生出的语言来支持模式匹配：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> fib(<span class="number">0</span>) {</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">}</div><div class="line"><span class="keyword">int</span> fib(<span class="number">1</span>) {</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">}</div><div class="line"><span class="keyword">int</span> fib(<span class="keyword">int</span> n) {</div><div class="line">    <span class="keyword">return</span> fib(n - <span class="number">2</span>) + fib(n - <span class="number">1</span>);</div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="keyword">int</span> fib(<span class="number">0</span>) {
+    <span class="keyword">return</span> <span class="number">1</span>;
+}
+<span class="keyword">int</span> fib(<span class="number">1</span>) {
+    <span class="keyword">return</span> <span class="number">1</span>;
+}
+<span class="keyword">int</span> fib(<span class="keyword">int</span> n) {
+    <span class="keyword">return</span> fib(n - <span class="number">2</span>) + fib(n - <span class="number">1</span>);
+}
+</pre></td></tr></table></figure>
 
 <p>两者有什么区别？编译器为我们实现了分支。这有什么大不了？的确没什么。有人注意到有大量的函数包括了复杂的 <code>swich</code> 语句（尤其是在函数式程序中）所以认为这种抽象形式很好。我们把一个函数定义分离成多个，然后把模式置于参数中（有点象重载）。当这个函数被调用时，编译 器使其比较参数和其运行时的定义然后选择其中正确的一个。这一般是通过选择可选的最特定的定义来完成。例如，<code>int fib(int n)</code> 可以以 <code>n</code> 等于 <code>1</code> 被调用，但是实际上 <code>fib(n)</code> 没有被调用，因为 <code>fib(1)</code> 更加特定。</p>
 <p>模式匹配通常要比我这个例子复杂，比如，高级模式匹配系统可以让我们这样做：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="keyword">int</span> f(<span class="keyword">int</span> n &lt; <span class="number">10</span>) { … }</div><div class="line"><span class="keyword">int</span> f(<span class="keyword">int</span> n) { … }</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="keyword">int</span> f(<span class="keyword">int</span> n &lt; <span class="number">10</span>) { … }
+<span class="keyword">int</span> f(<span class="keyword">int</span> n) { … }
+</pre></td></tr></table></figure>
 
 <p>模式匹配什么时候适用？情况太多了！每当你有一个嵌套着 <code>if</code> 的复杂的数据结构，这时就可以用模式匹配以更少的代码完成得更好。一个很好的例子闪现在我脑海，这就是所有 Win32 平台都提供了的标准的 WinProc 函数（即使它通常被抽象了）。通常模式匹配系统能检测集合也可以应付简单的值。例如，当传给函数一个数组后，就可以找出所有首元素为 <code>1</code> 第三个元素大于 <code>3</code> 的所有数组。</p>
 <p>模式匹配还有一个好处即如果需要增加或修改条件，那么不必对付一个巨大的函数。只需增加或修改适合的定义即可。这消除了“四人帮”（<a href="http://c2.com/cgi/wiki?GangOfFour">GoF</a>）书中的一大类设计模式。条件越复杂，模式匹配就越有用。一旦习惯了它，你就会担心没有了模式匹配的日子如何打发。</p>
 <h2>Closures</h2>
 <p>到此我们已经讨论了纯的函数式语言 –– 实现了 lambda 演算又不包括与丘奇形式系统矛盾的语言 –– 环境里的特性，可是还有很多在lambda 演算框架之外的函数语言的有用特征。虽然一个公理系统的实现可以让我们象数学表达式那样思考程序但它未必是实际可行的。许多语言选择去合并一些函数式的元素而 没有严格的坚持函数式的教条。很多象这样的语言（如 Common Lisp）不要求变量是 final 的 –– 可以即处对其修改。他们还不要求函数只依赖于其参数——允许函数访问外部状态。但这些语言也的确包含着函数式的特征 –– 如高阶函数，在非纯粹的函数 式语言里传递函数作为参数和限制在 lambda 演算系统中的作法有些不同，它需要一种常被称为词法闭包（lexical closure）的有趣特性。下面我给出几个例子。记住，这里变量不再是 final 的，函数可以引用其作用域外的变量：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div></code></pre></td><td class="code"><pre><code><div class="line">Function makePowerFn(<span class="keyword">int</span> power) {</div><div class="line">   <span class="keyword">int</span> powerFn(<span class="keyword">int</span> base) {</div><div class="line">       <span class="keyword">return</span> pow(base, power);</div><div class="line">   }</div><br><div class="line">   <span class="keyword">return</span> powerFn;</div><div class="line">}</div><br><div class="line">Function square = makePowerFn(<span class="number">2</span>);</div><div class="line">square(<span class="number">3</span>); <span class="comment">// returns 9</span></div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre>Function makePowerFn(<span class="keyword">int</span> power) {
+   <span class="keyword">int</span> powerFn(<span class="keyword">int</span> base) {
+       <span class="keyword">return</span> pow(base, power);
+   }
+
+   <span class="keyword">return</span> powerFn;
+}
+
+Function square = makePowerFn(<span class="number">2</span>);
+square(<span class="number">3</span>); <span class="comment">// returns 9</span>
+</pre></td></tr></table></figure>
 
 <p>函数 <code>make-power-fn</code> 返回了一个函数，它有一个参数，并对这个参数进行一定阶的幂运算。如果对 <code>square(3)</code> 求值会有什么结果？变量 <code>power</code> 不在 <code>powerFn</code> 的作用域中，因为 <code>makePowerFn</code> 已经返回它的栈桢而不复存在。那么 <code>square</code> 如何工作？一定是这个语言以某种方式将 <code>power</code> 的值保存了起来以便 <code>square</code> 使用。如果我们再新建一个函数 <code>cube</code>，用来计算参数的立方又会怎样？运行环境必须存储两个 <code>power</code> 的拷贝，每个我们用 <code>make-power-fn</code> 生成的函数都用一个拷贝。保存这些值的现象就被称为 closure。 closure 不只保存宿主函数的参数。例如，closure 可能会是这样：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div><div class="line-number">16</div><div class="line-number">17</div></code></pre></td><td class="code"><pre><code><div class="line">Function makeIncrementer() {</div><div class="line">   <span class="keyword">int</span> n = <span class="number">0</span>;</div><br><div class="line">   <span class="keyword">int</span> increment() {</div><div class="line">       <span class="keyword">return</span> ++n;</div><div class="line">   }</div><div class="line">}</div><br><div class="line">Function inc1 = makeIncrementer();</div><div class="line">Function inc2 = makeIncrementer();</div><br><div class="line">inc1(); <span class="comment">// returns 1;</span></div><div class="line">inc1(); <span class="comment">// returns 2;</span></div><div class="line">inc1(); <span class="comment">// returns 3;</span></div><div class="line">inc2(); <span class="comment">// returns 1;</span></div><div class="line">inc2(); <span class="comment">// returns 2;</span></div><div class="line">inc2(); <span class="comment">// returns 3;</span></div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre>Function makeIncrementer() {
+   <span class="keyword">int</span> n = <span class="number">0</span>;
+
+   <span class="keyword">int</span> increment() {
+       <span class="keyword">return</span> ++n;
+   }
+}
+
+Function inc1 = makeIncrementer();
+Function inc2 = makeIncrementer();
+
+inc1(); <span class="comment">// returns 1;</span>
+inc1(); <span class="comment">// returns 2;</span>
+inc1(); <span class="comment">// returns 3;</span>
+inc2(); <span class="comment">// returns 1;</span>
+inc2(); <span class="comment">// returns 2;</span>
+inc2(); <span class="comment">// returns 3;</span>
+</pre></td></tr></table></figure>
 
 <p>运行时已保存了 <code>n</code>，所以递增器可以访问它，而且运行时为每个递增器都保存了一个 <code>n</code> 的拷贝，即使这些拷贝本应在 <code>makeIncrementer</code> 返回时消失。这些代码被如何编译？closure 在底层是如何工作的？很幸运，我们可以去幕后看看。</p>
 <p>一点常识会很有帮助，首先会注意到的是局部变量的生命期不再由简单的作用域限定而是不确定的。那么显然可以由此得出结论它们不再被保存在栈上 —— 反之必须被保存在堆上<a href="#8">[8]</a>。这样一来，closure 的实现就象我们前面讨论的函数一样了，只是它还有一个指向周围变量的引用。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">some_function_t</span> {</span></div><div class="line">   SymbolTable parentScope;</div><br><div class="line">   <span class="comment">// ...</span></div><div class="line">}</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="class"><span class="keyword">class</span> <span class="title">some_function_t</span> {</span>
+   SymbolTable parentScope;
+
+   <span class="comment">// ...</span>
+}
+</pre></td></tr></table></figure>
 
 <p>当一个 closure 引用了一个不在其作用域的变量时，它会在其祖先作用域中查找这个引用。就是这样！Closure 将函数式和面向对象的世界紧密结合。当你创建了一个包含了一些状态的类并把它传到别处时，考虑一下 closure。Closure 就是这样在取出作用域中的变量的同时创建“成员变量”，所以你不必亲自去做这些！</p>
 <h2>下一步的计划？</h2>
@@ -394,31 +743,43 @@ var moment_js_path = '/js/moment.min.js';
   <h3 class="title">分類</h3>
   <ul class="entry">
   
+    <li><a href="/categories/Common-Lisp/">Common Lisp</a><small>3</small></li>
+  
     <li><a href="/categories/Common-Lisp/Book/">Book</a><small>1</small></li>
   
-    <li><a href="/categories/Books/">Books</a><small>1</small></li>
+    <li><a href="/categories/轉載/">轉載</a><small>4</small></li>
   
-    <li><a href="/categories/譯文/Clojure/">Clojure</a><small>1</small></li>
-  
-    <li><a href="/categories/Common-Lisp/">Common-Lisp</a><small>7</small></li>
-  
-    <li><a href="/categories/Lisp/">Lisp</a><small>5</small></li>
-  
-    <li><a href="/categories/Scheme/">Scheme</a><small>1</small></li>
-  
-    <li><a href="/categories/Scheme/Lisp/Tutorials/">Tutorials</a><small>1</small></li>
-  
-    <li><a href="/categories/meeting/">meeting</a><small>1</small></li>
-  
-    <li><a href="/categories/meetup/">meetup</a><small>1</small></li>
-  
-    <li><a href="/categories/tools/">tools</a><small>1</small></li>
-  
-    <li><a href="/categories/名言佳句/">名言佳句</a><small>1</small></li>
+    <li><a href="/categories/轉載/Common-Lisp/">Common Lisp</a><small>3</small></li>
   
     <li><a href="/categories/譯文/">譯文</a><small>2</small></li>
   
-    <li><a href="/categories/Common-Lisp/轉載/">轉載</a><small>5</small></li>
+    <li><a href="/categories/譯文/Clojure/">Clojure</a><small>1</small></li>
+  
+    <li><a href="/categories/meeting/">meeting</a><small>1</small></li>
+  
+    <li><a href="/categories/轉載/Lisp/">Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/">Scheme</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/Lisp/">Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/Lisp/Tutorials/">Tutorials</a><small>1</small></li>
+  
+    <li><a href="/categories/Lisp/">Lisp</a><small>2</small></li>
+  
+    <li><a href="/categories/meetup/">meetup</a><small>1</small></li>
+  
+    <li><a href="/categories/名言佳句/">名言佳句</a><small>1</small></li>
+  
+    <li><a href="/categories/名言佳句/Lisp/">Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/Common-Lisp/轉載/">轉載</a><small>1</small></li>
+  
+    <li><a href="/categories/Books/">Books</a><small>1</small></li>
+  
+    <li><a href="/categories/Books/Common-Lisp/">Common Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/tools/">tools</a><small>1</small></li>
   
   </ul>
 </div>
@@ -429,45 +790,45 @@ var moment_js_path = '/js/moment.min.js';
   <h3 class="title">標籤</h3>
   <ul class="entry">
   
+    <li><a href="/tags/Common-Lisp/">Common Lisp</a><small>13</small></li>
+  
     <li><a href="/tags/ANSI-Common-Lisp/">ANSI Common Lisp</a><small>1</small></li>
+  
+    <li><a href="/tags/Paul-Graham/">Paul Graham</a><small>1</small></li>
+  
+    <li><a href="/tags/Lisp/">Lisp</a><small>12</small></li>
+  
+    <li><a href="/tags/book/">book</a><small>1</small></li>
   
     <li><a href="/tags/ASDF/">ASDF</a><small>1</small></li>
   
     <li><a href="/tags/Clojure/">Clojure</a><small>1</small></li>
   
-    <li><a href="/tags/Common-Lisp/">Common Lisp</a><small>13</small></li>
-  
-    <li><a href="/tags/Erlang/">Erlang</a><small>1</small></li>
+    <li><a href="/tags/田春/">田春</a><small>2</small></li>
   
     <li><a href="/tags/Haskell/">Haskell</a><small>2</small></li>
   
-    <li><a href="/tags/IBM-1130/">IBM 1130</a><small>1</small></li>
+    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
+  
+    <li><a href="/tags/common-lisp/">common lisp</a><small>1</small></li>
+  
+    <li><a href="/tags/Erlang/">Erlang</a><small>1</small></li>
   
     <li><a href="/tags/Java/">Java</a><small>1</small></li>
   
-    <li><a href="/tags/LISP-1.6/">LISP 1.6</a><small>1</small></li>
+    <li><a href="/tags/Scheme/">Scheme</a><small>1</small></li>
   
-    <li><a href="/tags/Lisp/">Lisp</a><small>12</small></li>
+    <li><a href="/tags/IBM-1130/">IBM 1130</a><small>1</small></li>
+  
+    <li><a href="/tags/LISP-1.6/">LISP 1.6</a><small>1</small></li>
   
     <li><a href="/tags/PAIP/">PAIP</a><small>1</small></li>
   
     <li><a href="/tags/Package-Manager/">Package Manager</a><small>1</small></li>
   
-    <li><a href="/tags/Paul-Graham/">Paul Graham</a><small>1</small></li>
-  
-    <li><a href="/tags/Scheme/">Scheme</a><small>1</small></li>
-  
-    <li><a href="/tags/book/">book</a><small>1</small></li>
-  
-    <li><a href="/tags/common-lisp/">common lisp</a><small>1</small></li>
-  
-    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
-  
-    <li><a href="/tags/productivity/">productivity</a><small>1</small></li>
-  
     <li><a href="/tags/quicklisp/">quicklisp</a><small>1</small></li>
   
-    <li><a href="/tags/田春/">田春</a><small>2</small></li>
+    <li><a href="/tags/productivity/">productivity</a><small>1</small></li>
   
   </ul>
 </div>

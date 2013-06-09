@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>在 IBM 1130 模擬器上跑 Lisp 1.6! | Lisp Taiwan 入</title>
+  <title>在 IBM 1130 模擬器上跑 LISP 1.6! | Lisp Taiwan 入</title>
   <meta name="author" content="Lisp Taiwan">
   
   <meta name="description" content="Lisp Taiwan 致力於分享及彙整 Lisp 相關資料與知識。">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="在 IBM 1130 模擬器上跑 Lisp 1.6!"/>
+  <meta property="og:title" content="在 IBM 1130 模擬器上跑 LISP 1.6!"/>
   <meta property="og:site_name" content="Lisp Taiwan 入"/>
 
   
@@ -85,7 +85,7 @@
       
       
   
-    <h1 class="title">在 IBM 1130 模擬器上跑 Lisp 1.6!</h1>
+    <h1 class="title">在 IBM 1130 模擬器上跑 LISP 1.6!</h1>
   
 
     </header>
@@ -97,7 +97,7 @@
 </span></p>
 <img src="/images/IBM_1130_concole.jpg" title="IBM 1130">
 
-<span id="more"></span>
+<a name="more"></a>
 
 <h2>先講個故事</h2>
 <p><a href="http://en.wikipedia.org/wiki/Guy_L._Steele,_Jr.">Guy Steele</a> ── Common Lisp The Language 2nd 的作者、Java 語言規範制定者、Common Lisp 標準化委員會成員 ── 早在高中時代，年僅十七歲，就在 IBM 1130 機器上，用 Assembly Language 寫出了 LISP。</p>
@@ -111,42 +111,202 @@
 <p>上面提供了 IBM 1130 模擬器，以及其它你所需要的軟件，都在上面。以下我將敘述，如何在 Linux / Mac OSX 上模擬一個 IBM 1130，跑一個簡單的 Lisp 程式，並使用 LISP 1.6 的 REPL。</p>
 <h2>下載 IBM 1130 模擬器及 LISP 鏡像。</h2>
 <p>下載並解壓縮：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="variable">$ </span>mkdir ibm113<span class="number">0</span> && cd ibm113<span class="number">0</span></div><div class="line"><span class="variable">$ </span>curl -<span class="constant">O</span> <span class="symbol">http:</span>/<span class="regexp">/media.ibm1130.org/sim</span><span class="regexp">/ibm1130.zip -O http:/</span><span class="regexp">/media.ibm1130.org/lisp</span>.zip</div><div class="line"><span class="variable">$ </span>unzip <span class="string">'*.zip'</span></div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="variable">$ </span>mkdir ibm113<span class="number">0</span> && cd ibm113<span class="number">0</span>
+<span class="variable">$ </span>curl -<span class="constant">O</span> <span class="symbol">http:</span>/<span class="regexp">/media.ibm1130.org/sim</span><span class="regexp">/ibm1130.zip -O http:/</span><span class="regexp">/media.ibm1130.org/lisp</span>.zip
+<span class="variable">$ </span>unzip <span class="string">'*.zip'</span>
+</pre></td></tr></table></figure>
 
 <h2>編譯 IBM 1130 執行檔</h2>
 <p>需要安裝 GCC。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="variable">$ </span>make</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>make
+</pre></td></tr></table></figure>
 
 <p>注意，若是使用 linux 系的作業系統，make 之後會有錯誤：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="literal">undefined</span> reference to `<span class="javascript">clock_getres<span class="string">'</span></div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="literal">undefined</span> reference to `<span class="javascript">clock_getres<span class="string">'</span>
+</pre></td></tr></table></figure>
 
 <p>這個在 time.h 定義的 <code>clock_getres</code> 函數，需要連結 librt.so 這個 Runtime 連結庫。</p>
 <p>修改 makefile （MacOSX 無需修改），在 74 行最後加上 <code>-lrt</code> ：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="variable">${</span><span class="constant">BIN</span>}ibm113<span class="number">0</span> <span class="symbol">:</span> <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} <span class="variable">${</span>ibm1130_INC} <span class="variable">${</span><span class="constant">SIM_INC</span>}</div><div class="line">  <span class="variable">${</span><span class="constant">CC</span>} <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} -o <span class="variable">$@</span> -lrt</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="variable">${</span><span class="constant">BIN</span>}ibm113<span class="number">0</span> <span class="symbol">:</span> <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} <span class="variable">${</span>ibm1130_INC} <span class="variable">${</span><span class="constant">SIM_INC</span>}
+<span class="keyword">true</span><span class="variable">${</span><span class="constant">CC</span>} <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} -o <span class="variable">$@</span> -lrt
+</pre></td></tr></table></figure>
 
 <p>編譯成功就看到目錄下有個 IBM 1130 的可執行檔。</p>
 <h2>Factorial in IBM 1130 LISP 1.6</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="variable">$ </span>touch fact.job</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>touch fact.job
+</pre></td></tr></table></figure>
 
 <p>用你喜愛的編輯器輸入：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="comment">//JOB</span></div><div class="line"><span class="comment">//XEQ LISP</span></div><div class="line">(SETQQ FACT (LAMBDA (N)</div><div class="line">             (COND</div><div class="line">               ((LESSP N <span class="number">2</span>) <span class="number">1</span>)</div><div class="line">               (T (TIMES N (FACT (SUB1 N)))))))</div><div class="line">(FACT <span class="number">5</span>)</div><div class="line">(QUIT)</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="comment">//JOB</span>
+<span class="comment">//XEQ LISP</span>
+(SETQQ FACT (LAMBDA (N)
+             (COND
+               ((LESSP N <span class="number">2</span>) <span class="number">1</span>)
+               (T (TIMES N (FACT (SUB1 N)))))))
+(FACT <span class="number">5</span>)
+(QUIT)
+</pre></td></tr></table></figure>
 
 <p>關於 IBM 1130 的 LISP 1.6 的語法可查閱這兩個手冊：</p>
 <p><a href="/pdfs/IBM1130-LispUsersGuidePart1.PDF">IBM1130-LispUsersGuidePart1.pdf</a> &nbsp;
 <a href="/pdfs/IBM1130-LispUsersGuidePart2.PDF">IBM1130-LispUsersGuidePart2.pdf</a></p>
 <h3>運行 fact.job：</h3>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div></code></pre></td><td class="code"><pre><code><div class="line">$ ./ibm1130 job fact</div><div class="line">IBM <span class="number">1130</span> simulator V3<span class="number">.8</span>-<span class="number">0</span></div><div class="line">PRT: creating <span class="keyword">new</span> <span class="keyword">file</span></div><div class="line">Loaded DMS V2M12 cold start card</div><br><div class="line"><span class="keyword">Wait</span>, IAR: <span class="number">0000002</span>A (<span class="number">4</span>c80 BSC  I  ,<span class="number">0028</span>   )</div><div class="line">sim&gt;</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>$ ./ibm1130 job fact
+IBM <span class="number">1130</span> simulator V3<span class="number">.8</span>-<span class="number">0</span>
+PRT: creating <span class="keyword">new</span> <span class="keyword">file</span>
+Loaded DMS V2M12 cold start card
+
+<span class="keyword">Wait</span>, IAR: <span class="number">0000002</span>A (<span class="number">4</span>c80 BSC  I  ,<span class="number">0028</span>   )
+sim&gt;
+</pre></td></tr></table></figure>
 
 <p>進到模擬器輸入 <code>quit</code></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div></code></pre></td><td class="code"><pre><code><div class="line"><span class="title">IBM</span> <span class="number">1130</span> simulator V3.<span class="number">8</span>-<span class="number">0</span></div><div class="line">PRT: creating new file</div><div class="line">Loaded DMS V2M12 cold start card</div><br><div class="line">Wait, IAR: 0000002A (4c80 BSC  I  ,<span class="number">0028</span>   )</div><div class="line">sim&gt; <span class="title">quit</span></div><div class="line">Goodbye</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="title">IBM</span> <span class="number">1130</span> simulator V3.<span class="number">8</span>-<span class="number">0</span>
+PRT: creating new file
+Loaded DMS V2M12 cold start card
+
+Wait, IAR: 0000002A (4c80 BSC  I  ,<span class="number">0028</span>   )
+sim&gt; <span class="title">quit</span>
+Goodbye
+</pre></td></tr></table></figure>
 
 <p>此時會產生一個 fact.lst 文件，打開看看程序運行的結果：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div><div class="line-number">11</div><div class="line-number">12</div><div class="line-number">13</div><div class="line-number">14</div><div class="line-number">15</div><div class="line-number">16</div><div class="line-number">17</div><div class="line-number">18</div><div class="line-number">19</div><div class="line-number">20</div><div class="line-number">21</div><div class="line-number">22</div><div class="line-number">23</div><div class="line-number">24</div><div class="line-number">25</div><div class="line-number">26</div><div class="line-number">27</div><div class="line-number">28</div><div class="line-number">29</div><div class="line-number">30</div><div class="line-number">31</div><div class="line-number">32</div><div class="line-number">33</div><div class="line-number">34</div><div class="line-number">35</div><div class="line-number">36</div><div class="line-number">37</div><div class="line-number">38</div><div class="line-number">39</div><div class="line-number">40</div></code></pre></td><td class="code"><pre><code><div class="line">PAGE   <span class="number">1</span></div><br><div class="line"><span class="comment">// JOB    1234</span></div><br><div class="line">LOG DRIVE   CART SPEC   CART AVAIL  PHY DRIVE</div><div class="line">  <span class="number">0000</span>        <span class="number">1234</span>        <span class="number">1234</span>        <span class="number">0000</span></div><br><div class="line">V2 M12   ACTUAL <span class="number">32</span>K  CONFIG <span class="number">32</span>K</div><div class="line"></div><div class="line">PAGE   <span class="number">1</span></div><br><div class="line"><span class="comment">// JOB</span></div><br><div class="line">LOG DRIVE   CART SPEC   CART AVAIL  PHY DRIVE</div><div class="line">  <span class="number">0000</span>        <span class="number">1234</span>        <span class="number">1234</span>        <span class="number">0000</span></div><br><div class="line">V2 M12   ACTUAL <span class="number">32</span>K  CONFIG <span class="number">32</span>K</div><br><div class="line"><span class="comment">// XEQ LISP</span></div><br><div class="line"><span class="variable">**</span><span class="variable">**</span>* <span class="number">1130</span> LISP <span class="number">1.6</span> <span class="variable">**</span><span class="variable">**</span>* BOSTON LATIN SCHOOL <span class="variable">**</span><span class="variable">**</span>* LITHP ITH LITHTENING...</div><br><br><br><br><div class="line">(SETQQ FACT (LAMBDA (N) (COND ((LESSP N <span class="number">2</span>) <span class="number">1</span>) (T (TIMES N (FACT (SUB1 N)))))))</div><br><div class="line">(LAMBDA (N) (COND ((LESSP N <span class="number">2</span>) <span class="number">1</span>) (T (TIMES N (FACT (SUB1 N))))))</div><br><br><br><div class="line">(FACT <span class="number">7</span>)</div><br><div class="line"><span class="number">5040</span></div><br><br><br><div class="line">(QUIT)</div><br><div class="line"><span class="variable">**</span><span class="variable">**</span>* <span class="number">1130</span> LISP <span class="number">1.6</span> <span class="variable">**</span><span class="variable">**</span>* END OF RUN <span class="variable">**</span><span class="variable">**</span>* THO LONG, COME AGAIN THOON</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+</pre></td><td class="code"><pre>PAGE   <span class="number">1</span>
+
+<span class="comment">// JOB    1234</span>
+
+LOG DRIVE   CART SPEC   CART AVAIL  PHY DRIVE
+  <span class="number">0000</span>        <span class="number">1234</span>        <span class="number">1234</span>        <span class="number">0000</span>
+
+V2 M12   ACTUAL <span class="number">32</span>K  CONFIG <span class="number">32</span>K
+
+PAGE   <span class="number">1</span>
+
+<span class="comment">// JOB</span>
+
+LOG DRIVE   CART SPEC   CART AVAIL  PHY DRIVE
+  <span class="number">0000</span>        <span class="number">1234</span>        <span class="number">1234</span>        <span class="number">0000</span>
+
+V2 M12   ACTUAL <span class="number">32</span>K  CONFIG <span class="number">32</span>K
+
+<span class="comment">// XEQ LISP</span>
+
+<span class="variable">**</span><span class="variable">**</span>* <span class="number">1130</span> LISP <span class="number">1.6</span> <span class="variable">**</span><span class="variable">**</span>* BOSTON LATIN SCHOOL <span class="variable">**</span><span class="variable">**</span>* LITHP ITH LITHTENING...
+
+
+
+
+(SETQQ FACT (LAMBDA (N) (COND ((LESSP N <span class="number">2</span>) <span class="number">1</span>) (T (TIMES N (FACT (SUB1 N)))))))
+
+(LAMBDA (N) (COND ((LESSP N <span class="number">2</span>) <span class="number">1</span>) (T (TIMES N (FACT (SUB1 N))))))
+
+
+
+(FACT <span class="number">7</span>)
+
+<span class="number">5040</span>
+
+
+
+(QUIT)
+
+<span class="variable">**</span><span class="variable">**</span>* <span class="number">1130</span> LISP <span class="number">1.6</span> <span class="variable">**</span><span class="variable">**</span>* END OF RUN <span class="variable">**</span><span class="variable">**</span>* THO LONG, COME AGAIN THOON
+</pre></td></tr></table></figure>
 
 <p>注意到別嘗試太大的數字，IBM 1130 的整數最大只到 32768（2 的 15 次方）。</p>
 <h3>IBM 1130 LISP 1.6 REPL</h3>
 <p>一個宏的例子：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><code><div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div><div class="line-number">6</div><div class="line-number">7</div><div class="line-number">8</div><div class="line-number">9</div><div class="line-number">10</div></code></pre></td><td class="code"><pre><code><div class="line">$ ./ibm1130 job ilisp</div><br><div class="line">(SETQQ CONSCONS (MLAMBDA X (COND</div><div class="line">    ((<span class="keyword">NULL</span> X) NIL)</div><div class="line">    ((<span class="keyword">NULL</span> (CDR X)) (CAR X))</div><div class="line">    (T (LIST <span class="attribute">'CONS</span> (CAR X) (CONS <span class="attribute">'CONSCONS</span> (CDR X)))) )))</div><br><div class="line">(CONSCONS A B C)</div><br><div class="line">(A B . C)</div></code></pre></td></tr></table></figure>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre>$ ./ibm1130 job ilisp
+
+(SETQQ CONSCONS (MLAMBDA X (COND
+    ((<span class="keyword">NULL</span> X) NIL)
+    ((<span class="keyword">NULL</span> (CDR X)) (CAR X))
+    (T (LIST <span class="attribute">'CONS</span> (CAR X) (CONS <span class="attribute">'CONSCONS</span> (CDR X)))) )))
+
+(CONSCONS A B C)
+
+(A B . C)
+</pre></td></tr></table></figure>
 
 <p>輸入 <code>(QUIT)</code> 可離開 REPL。</p>
 <p>你可以把 LISP 1.6 手冊上的指令在 REPL 裡都試一遍，在 1970 年，就有這樣的交互式環境，程序可直譯＋編譯、宏、垃圾回收，太強大了！</p>
@@ -262,31 +422,43 @@ var moment_js_path = '/js/moment.min.js';
   <h3 class="title">分類</h3>
   <ul class="entry">
   
+    <li><a href="/categories/Common-Lisp/">Common Lisp</a><small>3</small></li>
+  
     <li><a href="/categories/Common-Lisp/Book/">Book</a><small>1</small></li>
   
-    <li><a href="/categories/Books/">Books</a><small>1</small></li>
+    <li><a href="/categories/轉載/">轉載</a><small>4</small></li>
   
-    <li><a href="/categories/譯文/Clojure/">Clojure</a><small>1</small></li>
-  
-    <li><a href="/categories/Common-Lisp/">Common-Lisp</a><small>7</small></li>
-  
-    <li><a href="/categories/Lisp/">Lisp</a><small>5</small></li>
-  
-    <li><a href="/categories/Scheme/">Scheme</a><small>1</small></li>
-  
-    <li><a href="/categories/Scheme/Lisp/Tutorials/">Tutorials</a><small>1</small></li>
-  
-    <li><a href="/categories/meeting/">meeting</a><small>1</small></li>
-  
-    <li><a href="/categories/meetup/">meetup</a><small>1</small></li>
-  
-    <li><a href="/categories/tools/">tools</a><small>1</small></li>
-  
-    <li><a href="/categories/名言佳句/">名言佳句</a><small>1</small></li>
+    <li><a href="/categories/轉載/Common-Lisp/">Common Lisp</a><small>3</small></li>
   
     <li><a href="/categories/譯文/">譯文</a><small>2</small></li>
   
-    <li><a href="/categories/Common-Lisp/轉載/">轉載</a><small>5</small></li>
+    <li><a href="/categories/譯文/Clojure/">Clojure</a><small>1</small></li>
+  
+    <li><a href="/categories/meeting/">meeting</a><small>1</small></li>
+  
+    <li><a href="/categories/轉載/Lisp/">Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/">Scheme</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/Lisp/">Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/Scheme/Lisp/Tutorials/">Tutorials</a><small>1</small></li>
+  
+    <li><a href="/categories/Lisp/">Lisp</a><small>2</small></li>
+  
+    <li><a href="/categories/meetup/">meetup</a><small>1</small></li>
+  
+    <li><a href="/categories/名言佳句/">名言佳句</a><small>1</small></li>
+  
+    <li><a href="/categories/名言佳句/Lisp/">Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/Common-Lisp/轉載/">轉載</a><small>1</small></li>
+  
+    <li><a href="/categories/Books/">Books</a><small>1</small></li>
+  
+    <li><a href="/categories/Books/Common-Lisp/">Common Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/tools/">tools</a><small>1</small></li>
   
   </ul>
 </div>
@@ -297,45 +469,45 @@ var moment_js_path = '/js/moment.min.js';
   <h3 class="title">標籤</h3>
   <ul class="entry">
   
+    <li><a href="/tags/Common-Lisp/">Common Lisp</a><small>13</small></li>
+  
     <li><a href="/tags/ANSI-Common-Lisp/">ANSI Common Lisp</a><small>1</small></li>
+  
+    <li><a href="/tags/Paul-Graham/">Paul Graham</a><small>1</small></li>
+  
+    <li><a href="/tags/Lisp/">Lisp</a><small>12</small></li>
+  
+    <li><a href="/tags/book/">book</a><small>1</small></li>
   
     <li><a href="/tags/ASDF/">ASDF</a><small>1</small></li>
   
     <li><a href="/tags/Clojure/">Clojure</a><small>1</small></li>
   
-    <li><a href="/tags/Common-Lisp/">Common Lisp</a><small>13</small></li>
-  
-    <li><a href="/tags/Erlang/">Erlang</a><small>1</small></li>
+    <li><a href="/tags/田春/">田春</a><small>2</small></li>
   
     <li><a href="/tags/Haskell/">Haskell</a><small>2</small></li>
   
-    <li><a href="/tags/IBM-1130/">IBM 1130</a><small>1</small></li>
+    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
+  
+    <li><a href="/tags/common-lisp/">common lisp</a><small>1</small></li>
+  
+    <li><a href="/tags/Erlang/">Erlang</a><small>1</small></li>
   
     <li><a href="/tags/Java/">Java</a><small>1</small></li>
   
-    <li><a href="/tags/LISP-1.6/">LISP 1.6</a><small>1</small></li>
+    <li><a href="/tags/Scheme/">Scheme</a><small>1</small></li>
   
-    <li><a href="/tags/Lisp/">Lisp</a><small>12</small></li>
+    <li><a href="/tags/IBM-1130/">IBM 1130</a><small>1</small></li>
+  
+    <li><a href="/tags/LISP-1.6/">LISP 1.6</a><small>1</small></li>
   
     <li><a href="/tags/PAIP/">PAIP</a><small>1</small></li>
   
     <li><a href="/tags/Package-Manager/">Package Manager</a><small>1</small></li>
   
-    <li><a href="/tags/Paul-Graham/">Paul Graham</a><small>1</small></li>
-  
-    <li><a href="/tags/Scheme/">Scheme</a><small>1</small></li>
-  
-    <li><a href="/tags/book/">book</a><small>1</small></li>
-  
-    <li><a href="/tags/common-lisp/">common lisp</a><small>1</small></li>
-  
-    <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
-  
-    <li><a href="/tags/productivity/">productivity</a><small>1</small></li>
-  
     <li><a href="/tags/quicklisp/">quicklisp</a><small>1</small></li>
   
-    <li><a href="/tags/田春/">田春</a><small>2</small></li>
+    <li><a href="/tags/productivity/">productivity</a><small>1</small></li>
   
   </ul>
 </div>

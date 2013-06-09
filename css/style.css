@@ -137,8 +137,8 @@ ol.inline > li {
   padding: 0;
 }
 body {
-  background: #f8f8f8;
-  color: #444;
+  background: #f60;
+  color: #000;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-size: 18px;
   text-shadow: 0 0 1px transparent;
@@ -401,7 +401,7 @@ article header .title {
   font-weight: normal;
 }
 article header .title a {
-  color: #444;
+  color: #000;
 }
 article header .title a:hover {
   color: #258fb8;
@@ -764,7 +764,7 @@ hr.end:after {
   color: #999;
 }
 #sidebar .search input:focus {
-  color: #444;
+  color: #000;
 }
 #sidebar .tag small {
   margin-left: 15px;
@@ -1008,4 +1008,7 @@ pre .tex .command {
 }
 .image-copyright:before {
   content: "圖片來自: ";
+}
+#google-plus-author {
+  display: none;
 }
