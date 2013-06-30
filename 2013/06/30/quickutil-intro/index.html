@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Lisp | Lisp Taiwan 入</title>
+  <title>Quickutil Common Lisp 實用設施介紹 | Lisp Taiwan 入</title>
   <meta name="author" content="Lisp Taiwan">
   
   <meta name="description" content="Lisp Taiwan 致力於分享及彙整 Lisp 相關資料與知識。">
@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Quickutil Common Lisp 實用設施介紹"/>
   <meta property="og:site_name" content="Lisp Taiwan 入"/>
 
   
-    <meta property="og:image" content="https://dl.dropbox.com/u/4708852/cover.png"/>
+    <meta property="og:image" content="http://lisp.tw/images/quickutil.png" />
   
 
   <link href="/favicon.png" rel="icon">
@@ -75,25 +75,92 @@
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
 
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-06-30T07:59:35.000Z"><a href="/2013/06/30/quickutil-intro/">Jun 30 2013</a></time>
+      
+      
+  
+    <h1 class="title">Quickutil Common Lisp 實用設施介紹</h1>
+  
 
-<h2 class="archive-title category">Lisp</h2>
+    </header>
+    <div class="entry">
+      
+        <p><span class="meta-info">
+作者：Lisp Taiwan
+<span class="image-copyright"><a href="http://quickutil.org/">http://quickutil.org/</a></span>
+</span></p>
+<img src="/images/quicklisp.png" title="Quickutil Common Lisp 實用設施下載">
 
+<a name="more"></a>
 
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2013-02-16T19:39:43.000Z"><a href="/2013/02/17/god-wrote-in-lisp-code/">Feb 17 2013</a></time>
-            
-              <h1 class="title"><a href="/2013/02/17/god-wrote-in-lisp-code/">God wrote in Lisp code</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
+<h2>什麼是 Quickutil?</h2>
+<p>深入了解，請參考此篇文章：<a href="http://symbo1ics.com/blog/?p=1936">http://symbo1ics.com/blog/?p=1936</a></p>
+<h2>安裝</h2>
+<h3>用 Quicklisp 下載 Quickutil</h3>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">ql</span><span class="body"><span class="keyword">:quickload</span> <span class="keyword">:quickutil</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<h3>選擇你要的設施</h3>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">quickutil-client</span><span class="body"><span class="keyword">:utilize</span> <span class="keyword">:factorial</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<h3>使用方法</h3>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">qtl</span><span class="body"><span class="keyword">:factorial</span> <span class="number">10</span>)</span></span> <span class="comment">; =&gt; 3628800</span>
+</pre></td></tr></table></figure>
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/tools/">tools</a>
   </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Common-Lisp/">Common Lisp</a>, <a href="/tags/Package-Manager/">Package Manager</a>, <a href="/tags/quickutil/">quickutil</a>, <a href="/tags/productivity/">productivity</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </div></div>
     <aside id="sidebar" class="alignright">
 <div class="search">
@@ -271,7 +338,7 @@ var disqus_shortname = 'lisptw';
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
-  dsq.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>
