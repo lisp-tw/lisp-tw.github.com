@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-06-09T13:43:02.232Z</updated>
+  <updated>2013-06-30T07:56:43.490Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -3189,6 +3189,105 @@ continue on to Peter Seibel&#39;s excellent <a href="http://www.gigamonkeys.com/
 <h2>延伸閱讀</h2>
 <p><a href="http://www.quicklisp.org/beta/faq.html">Quciklisp FAQ</a></p>
 <p><a id="google-plus-author" href="https://plus.google.com/116526763595254359821?rel=author">Google</a></p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/Package-Manager/" term="Package Manager"/>
+    <category scheme="http://lisp.tw//tags/quicklisp/" term="quicklisp"/>
+    <category scheme="http://lisp.tw//tags/productivity/" term="productivity"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Quicklisp beta 常見問題]]></title>
+    <link href="http://lisp.tw//2013/06/30/quicklisp-faq/"/>
+    <id>http://lisp.tw//2013/06/30/quicklisp-faq/</id>
+    <published>2013-06-30T07:45:12.000Z</published>
+    <updated>2013-06-30T07:56:11.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：Lisp Taiwan
+<span class="image-copyright">Lisp Taiwan</span>
+</span></p>
+<img src="/images/quicklisp-faq.png" title="Quicklisp 常見問答">
+
+<a name="more"></a>
+
+<h2>如何提交一個項目給 Quicklisp?</h2>
+<ol>
+<li>項目<strong>必須</strong>可以透過 HTTP, CVS, git 等，公開的方式取用。</li>
+<li>到 <a href="https://github.com/quicklisp/quicklisp-projects/issues">Quicklisp GitHub Repository</a> 提出申請，附上相關訊息（在哪找到此項目）</li>
+</ol>
+<h2>Quicklisp 與 ASDF 差在哪？</h2>
+<p>ASDF 用來編譯及加載項目與依賴關係。想想 <code>make</code> ，Quicklisp =&gt; Linux 包管理工具，想想 <code>apt-get</code> 。</p>
+<h2>可以用代理伺服器嗎？</h2>
+<p><strong>可以。</strong></p>
+<p>在加載 <code>quicklisp.lisp</code> 之後，可以使用 <code>:proxy</code> 選項：</p>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">quicklisp-quickstart</span><span class="body"><span class="keyword">:install</span> <span class="keyword">:proxy</span> <span class="string">"http://myproxy.site.com:8080/"</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<p>目前不支持 SSL 及 Proxy 驗證。</p>
+<h3>換個代理伺服器？</h3>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">setf</span><span class="body"> <span class="list">(<span class="title">ql-config</span><span class="body"><span class="keyword">:config-value</span> <span class="string">"proxy-url"</span>)</span></span> <span class="string">"http://proxy.value.here"</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<p>這在不同的 Quicklisp 會話階段會保存下來。</p>
+<h2>Quciklisp 可不可以安裝在別的路徑？</h2>
+<p><strong>可以。</strong></p>
+<p>在加載 <code>quicklisp.lisp</code> 之後，使用 <code>:path</code> 選項：</p>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">quicklisp-quickstart</span><span class="body"><span class="keyword">:install</span> <span class="keyword">:path</span> <span class="string">".quicklisp/"</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<p>你也可以在安裝 Quicklisp 之後，將 <code>~/quicklisp</code> 目錄，改成別的名字來自訂路徑。</p>
+<h2>Emacs 使用 quicklisp-slime-helper 碰到錯誤？</h2>
+<p>錯誤內容：</p>
+<blockquote>
+<p>Searching for program: no such file or directory, lisp</p>
+</blockquote>
+<p>這表示你沒告訴 slime 你用的是哪個 Lisp 實現，如果你使用的是 SBCL，可以添加這一行到 <code>.emacs</code> 文件裡：</p>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">setq</span><span class="body"> inferior-lisp-program <span class="string">"/usr/local/bin/sbcl"</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<p>其它的 SLIME 設定請參考 <a href="https://github.com/JuanitoFatas/slime-user-manual">SLIME 使用手冊</a>。</p>
+<h2>“Quicklisp 已經安裝”錯誤？</h2>
+<p>錯誤內容：</p>
+<blockquote>
+<p>I got this error: Quicklisp has already been installed.</p>
+</blockquote>
+<p>如果你在初次安裝後又加載 <code>quicklisp.lisp</code> 便會看到此錯誤。Quicklisp 安裝之後無需再加載 <code>quicklisp.lisp</code> 一次。要加載 Quciklisp 到你的 Lisp 環境，可以這麼做：</p>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">load</span><span class="body"> <span class="list">(<span class="title">merge-pathnames</span><span class="body"> <span class="string">"quicklisp/setup.lisp"</span> <span class="list">(<span class="title">user-homedir-pathname</span><span class="body">)</span></span>)</span></span>)</span></span>
+</pre></td></tr></table></figure>
+
+<h3>啟動時加載 Quicklisp?</h3>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">ql</span><span class="body"><span class="keyword">:add-to-init-file</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<h3>要是想使用的項目，不在 Quicklisp 的項目列表裡怎麼辦？</h3>
+<p>參考 <a href="http://www.quicklisp.org/beta/releases.html">Quicklisp 項目列表</a></p>
+<p>將該項目放至 <code>~/quicklisp/local-projects</code> 目錄：</p>
+<figure class="highlight lang-bash"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>$ cd ~/quicklisp/local-projects/
+$ git clone git://github.com/xach/format-time.git
+</pre></td></tr></table></figure>
+
+<p>現在這個項目便可用 <code>(ql:quickload &quot;format-time&quot;)</code> 來加載了。</p>
+<p>另一點要說明的是，可以透過 ASDF 的 source registry system 加載的系統文件，也可以用 <code>(ql:quickload &quot;system-name&quot;)</code> 來加載。舉個例子，如果你有一個系統文件 <code>my-awesome-project.asd</code> ，放在 <code>~/projects/my-awesome-project/</code> ，則可以這麼做：</p>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="list">(<span class="title">push</span><span class="body"> #p<span class="string">"~/projects/my-awesome-project/"</span> asdf<span class="keyword">:*central-registry*</span>)</span></span>
+<span class="list">(<span class="title">ql</span><span class="body"><span class="keyword">:quickload</span> <span class="string">"my-awesome-project"</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<p>如果 <code>my-awesome-project</code> 系統依賴任何尚未安裝但可透過 Quicklisp 安裝的系統，Quicklisp 會自動替你安裝。</p>
+<h2>可以加載一個不同於 Quicklisp 項目列表版本的項目嗎？</h2>
+<p><strong>可以。</strong></p>
+<p>任何可在 <code>local-projects</code> 或 ASDF 的 source registry system 找到的系統文件，加載時的優先權高於 Quicklisp 的遠端項目列表。</p>
+<h2>不同 Lisp 實現要分別裝 Quicklisp 嗎？</h2>
+<p><strong>不用。</strong></p>
+<p>多實現之間可用相同的 Quicklisp，只要他們加載的是相同的 <code>setup.lisp</code> 即可。多 Lisp 之間會共享 <code>metadata</code> 與 系統文件。</p>
 ]]></content>
     <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
     <category scheme="http://lisp.tw//tags/Package-Manager/" term="Package Manager"/>

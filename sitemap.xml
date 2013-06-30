@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lisp.tw//2013/06/30/quicklisp-faq/</loc>
+    <lastmod>2013-06-30T07:56:11.000Z</lastmod>
+  </url>
+  <url>
     <loc>http://lisp.tw//2013/05/10/quicklisp-intro/</loc>
     <lastmod>2013-06-09T12:51:48.000Z</lastmod>
   </url>
