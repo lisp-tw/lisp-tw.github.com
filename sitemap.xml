@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lisp.tw//404.html</loc>
+    <lastmod>2013-06-30T11:34:02.000Z</lastmod>
+  </url>
+  <url>
     <loc>http://lisp.tw//2013/06/30/quickutil-intro/</loc>
     <lastmod>2013-06-30T11:25:26.000Z</lastmod>
   </url>
@@ -119,9 +123,5 @@
   <url>
     <loc>http://lisp.tw//network/index.html</loc>
     <lastmod>2013-02-15T02:44:44.000Z</lastmod>
-  </url>
-  <url>
-    <loc>http://lisp.tw//404.html</loc>
-    <lastmod>2013-01-26T10:21:00.000Z</lastmod>
   </url>
 </urlset>
