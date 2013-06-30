@@ -1012,3 +1012,11 @@ pre .tex .command {
 #google-plus-author {
   display: none;
 }
+::-moz-selection {
+  background: #f60;
+  color: #fff;
+}
+::selection {
+  background: #f60;
+  color: #fff;
+}
