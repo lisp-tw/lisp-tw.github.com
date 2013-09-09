@@ -235,7 +235,7 @@ a:hover {
 }
 #header a {
   color: #999;
-  font-family: font-L;
+  font-family: "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 #header a:hover {
   color: #fff;
