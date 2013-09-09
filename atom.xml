@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-07-20T07:38:30.957Z</updated>
+  <updated>2013-09-09T13:28:30.303Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -2023,6 +2023,15 @@ So he wrote it all in Lisp. <br/></p>
     <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
   </entry>
   <entry>
+    <title type="html"><![CDATA[Hello, World!]]></title>
+    <link href="http://lisp.tw//2013/02/14/hello-world/"/>
+    <id>http://lisp.tw//2013/02/14/hello-world/</id>
+    <published>2013-02-14T03:11:11.000Z</published>
+    <updated>2013-02-19T05:05:09.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>Welcome to Lisp Taiwan.</strong></p>
+]]></content>
+  </entry>
+  <entry>
     <title type="html"><![CDATA[怎樣寫一個解釋器 by 王垠]]></title>
     <link href="http://lisp.tw//2013/02/28/interpreter-howto-yingwang0/"/>
     <id>http://lisp.tw//2013/02/28/interpreter-howto-yingwang0/</id>
@@ -2511,15 +2520,6 @@ So he wrote it all in Lisp. <br/></p>
     <category scheme="http://lisp.tw//tags/Lisp/" term="Lisp"/>
   </entry>
   <entry>
-    <title type="html"><![CDATA[Hello, World!]]></title>
-    <link href="http://lisp.tw//2013/02/14/hello-world/"/>
-    <id>http://lisp.tw//2013/02/14/hello-world/</id>
-    <published>2013-02-14T03:11:11.000Z</published>
-    <updated>2013-02-19T05:05:09.000Z</updated>
-    <content type="html"><![CDATA[<p><strong>Welcome to Lisp Taiwan.</strong></p>
-]]></content>
-  </entry>
-  <entry>
     <title type="html"><![CDATA[了解 Lisp 的文化]]></title>
     <link href="http://lisp.tw//2013/02/16/lisp-culture/"/>
     <id>http://lisp.tw//2013/02/16/lisp-culture/</id>
@@ -2579,7 +2579,7 @@ So he wrote it all in Lisp. <br/></p>
 <p>上面提供了 IBM 1130 模擬器，以及其它你所需要的軟件，都在上面。以下我將敘述，如何在 Linux / Mac OSX 上模擬一個 IBM 1130，跑一個簡單的 Lisp 程式，並使用 LISP 1.6 的 REPL。</p>
 <h2>下載 IBM 1130 模擬器及 LISP 鏡像。</h2>
 <p>下載並解壓縮：</p>
-<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
 2
 3
 </pre></td><td class="code"><pre><span class="variable">$ </span>mkdir ibm113<span class="number">0</span> && cd ibm113<span class="number">0</span>
@@ -2589,18 +2589,18 @@ So he wrote it all in Lisp. <br/></p>
 
 <h2>編譯 IBM 1130 執行檔</h2>
 <p>需要安裝 GCC。</p>
-<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="variable">$ </span>make
 </pre></td></tr></table></figure>
 
 <p>注意，若是使用 linux 系的作業系統，make 之後會有錯誤：</p>
-<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="literal">undefined</span> reference to `<span class="javascript">clock_getres<span class="string">'</span>
 </pre></td></tr></table></figure>
 
 <p>這個在 time.h 定義的 <code>clock_getres</code> 函數，需要連結 librt.so 這個 Runtime 連結庫。</p>
 <p>修改 makefile （MacOSX 無需修改），在 74 行最後加上 <code>-lrt</code> ：</p>
-<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
 2
 </pre></td><td class="code"><pre><span class="variable">${</span><span class="constant">BIN</span>}ibm113<span class="number">0</span> <span class="symbol">:</span> <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} <span class="variable">${</span>ibm1130_INC} <span class="variable">${</span><span class="constant">SIM_INC</span>}
 <span class="keyword">true</span><span class="variable">${</span><span class="constant">CC</span>} <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} -o <span class="variable">$@</span> -lrt
@@ -2608,7 +2608,7 @@ So he wrote it all in Lisp. <br/></p>
 
 <p>編譯成功就看到目錄下有個 IBM 1130 的可執行檔。</p>
 <h2>Factorial in IBM 1130 LISP 1.6</h2>
-<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="variable">$ </span>touch fact.job
 </pre></td></tr></table></figure>
 
@@ -3112,90 +3112,6 @@ continue on to Peter Seibel&#39;s excellent <a href="http://www.gigamonkeys.com/
     <category scheme="http://lisp.tw//tags/PAIP/" term="PAIP"/>
   </entry>
   <entry>
-    <title type="html"><![CDATA[Quicklisp 介紹]]></title>
-    <link href="http://lisp.tw//2013/05/10/quicklisp-intro/"/>
-    <id>http://lisp.tw//2013/05/10/quicklisp-intro/</id>
-    <published>2013-05-10T02:59:29.000Z</published>
-    <updated>2013-06-09T12:51:48.000Z</updated>
-    <content type="html"><![CDATA[<p><span class="meta-info">
-作者：Lisp Taiwan
-<span class="image-copyright"><a href="http://quicklisp.org/">http://quicklisp.org/</a></span>
-</span></p>
-<img src="/images/quicklisp.png" title="Quicklisp, Common Lisp 軟件包管理工具">
-
-<a name="more"></a>
-
-<p>由 <a href="http://www.xach.com/">Zach Beane</a> 所開發的 <a href="http://quicklisp.org/">Quicklisp</a> 是一個 Common Lisp 的函式庫管理工具，只需要幾個簡單的命令，就可以自動下載、安裝、載入超過 <a href="http://www.quicklisp.org/beta/releases.html">700+ 個軟件包</a>。如果要類比的話，Quicklisp 就像是 apt-get 之於 Ubuntu、Homebrew 之於 Mac、Gem 之於 Ruby、NPM 之於 Node.js。</p>
-<p>以前可能有人使用過 ASDF-INSTALL，但這個軟件已經<strong>沒有人再維護了，絕對不要再用了。</strong></p>
-<p>目前 Quicklisp 可以在 ABCL、Allegro CL、Clozure CL、CLISP、CMUCL、ECL、LispWorks、SBCL、以及 Scieneer CL 上使用。</p>
-<p>所有被納入 Quicklisp 的函式庫皆經過相容性與依賴性測試（由 zach 本人測試），確保它們在主流的 Common Lisp 實現上是可以工作的，並且與其它的函式庫不相互衝突。</p>
-<h2>安裝 Quicklisp</h2>
-<p>步驟很簡單，只要下載 quicklisp.lisp、加載進來、安裝、加入啟動文件。之後就可以輕鬆加載第三方函式庫摟。</p>
-<p>系統：Mac OSX</p>
-<p>Common Lisp 實現：SBCL</p>
-<p><code>$</code> 號為命令行、<code>?</code> 為 Lisp REPL。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-</pre></td><td class="code"><pre><span class="char">$ </span>curl -<span class="class">O</span> <span class="method">http:</span>//beta.quicklisp.org/quicklisp.lisp
-<span class="char">$ </span>sbcl --load quicklisp.lisp
-* (quicklisp-<span class="method">quickstart:</span>install)
-* (<span class="method">ql:</span>add-to-init-file)
-</pre></td></tr></table></figure>
-
-<h2>安裝過了，再次加載？</h2>
-<p>如果你沒有執行上面的 <code>(ql:add-to-init-file)</code>，將會需要再每次啟動 Common Lisp 之後手動加載 Quicklisp。</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="list">(<span class="title">load</span><span class="body"> <span class="string">"~/quicklisp/setup.lisp"</span>)</span></span>
-</pre></td></tr></table></figure>
-
-<p><strong>注意!!!!</strong></p>
-<p><strong>將路徑換成 quicklisp 所在的目錄，CMUCL 不支持解析 <code>~</code> 家目錄</strong></p>
-<h2>安裝特定版本的軟件包？</h2>
-<p>參考這篇文章：<a href="http://blog.quicklisp.org/2011/08/going-back-in-dist-time.html">Going back in dist time</a></p>
-<h2>Quicklisp 命令</h2>
-<table>
-  <tr>
-    <th>Command</th><th>Description</th><th></th>
-  </tr>
-  <tr>
-    <td><code>(ql:quickload system-name)</code></td><td>自動下載軟件包</td>
-  </tr>
-  <tr>
-    <td><code>(ql:system-apropos substring)</code></td><td>搜索帶有 <code>substring</code> 的軟件包</td>
-  </tr>
-  <tr>
-    <td><code>(ql:add-to-init-file)</code></td><td>啟動時自動加載 Quicklisp</td>
-  </tr>
-  <tr>
-    <td><code>(ql:quickload &quot;quicklisp-slime-helper&quot;)</code></td><td>安裝提供給 SLIME 的 Quicklisp 助手</td>
-  </tr>
-  <tr>
-    <td><code>(ql:update-all-dists)</code></td><td>獲取第三方軟件包更新</td>
-  </tr>
-  <tr>
-    <td><code>(ql:update-client)</code></td><td>更新 Quicklisp</td>
-  </tr>
-  <tr>
-    <td><code>(ql:who-depends-on system-name)</code></td><td>看特定軟件包的依賴關係</td>
-  </tr>
-</table>
-
-<h2>尋求幫助</h2>
-<p>最新消息：在推特上跟隨 <a href="http://twitter.com/quicklisp">@quicklisp</a> 或閱讀 <a href="http://blog.quicklisp.org/">Quicklisp 的 blog</a>。</p>
-<p>有任何問題或意見請<a href="mailto:zach@quicklisp.org">寄信給 zach</a>，或到 freenode 的 #quicklisp 頻道。</p>
-<p>Quicklisp 代碼放在 <a href="http://github.com/quicklisp/">GitHub</a></p>
-<h2>延伸閱讀</h2>
-<p><a href="http://www.quicklisp.org/beta/faq.html">Quciklisp FAQ</a></p>
-<p><a id="google-plus-author" href="https://plus.google.com/116526763595254359821?rel=author">Google</a></p>
-]]></content>
-    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
-    <category scheme="http://lisp.tw//tags/Package-Manager/" term="Package Manager"/>
-    <category scheme="http://lisp.tw//tags/quicklisp/" term="quicklisp"/>
-    <category scheme="http://lisp.tw//tags/productivity/" term="productivity"/>
-  </entry>
-  <entry>
     <title type="html"><![CDATA[Quicklisp 常見問題 FAQ]]></title>
     <link href="http://lisp.tw//2013/06/30/quicklisp-faq/"/>
     <id>http://lisp.tw//2013/06/30/quicklisp-faq/</id>
@@ -3288,6 +3204,90 @@ $ git clone git://github.com/xach/format-time.git
 <h2>不同 Lisp 實現要分別裝 Quicklisp 嗎？</h2>
 <p><strong>不用。</strong></p>
 <p>多實現之間可用相同的 Quicklisp，只要他們加載的是相同的 <code>setup.lisp</code> 即可。多 Lisp 之間會共享 <code>metadata</code> 與 系統文件。</p>
+]]></content>
+    <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
+    <category scheme="http://lisp.tw//tags/Package-Manager/" term="Package Manager"/>
+    <category scheme="http://lisp.tw//tags/quicklisp/" term="quicklisp"/>
+    <category scheme="http://lisp.tw//tags/productivity/" term="productivity"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Quicklisp 介紹]]></title>
+    <link href="http://lisp.tw//2013/05/10/quicklisp-intro/"/>
+    <id>http://lisp.tw//2013/05/10/quicklisp-intro/</id>
+    <published>2013-05-10T02:59:29.000Z</published>
+    <updated>2013-06-09T12:51:48.000Z</updated>
+    <content type="html"><![CDATA[<p><span class="meta-info">
+作者：Lisp Taiwan
+<span class="image-copyright"><a href="http://quicklisp.org/">http://quicklisp.org/</a></span>
+</span></p>
+<img src="/images/quicklisp.png" title="Quicklisp, Common Lisp 軟件包管理工具">
+
+<a name="more"></a>
+
+<p>由 <a href="http://www.xach.com/">Zach Beane</a> 所開發的 <a href="http://quicklisp.org/">Quicklisp</a> 是一個 Common Lisp 的函式庫管理工具，只需要幾個簡單的命令，就可以自動下載、安裝、載入超過 <a href="http://www.quicklisp.org/beta/releases.html">700+ 個軟件包</a>。如果要類比的話，Quicklisp 就像是 apt-get 之於 Ubuntu、Homebrew 之於 Mac、Gem 之於 Ruby、NPM 之於 Node.js。</p>
+<p>以前可能有人使用過 ASDF-INSTALL，但這個軟件已經<strong>沒有人再維護了，絕對不要再用了。</strong></p>
+<p>目前 Quicklisp 可以在 ABCL、Allegro CL、Clozure CL、CLISP、CMUCL、ECL、LispWorks、SBCL、以及 Scieneer CL 上使用。</p>
+<p>所有被納入 Quicklisp 的函式庫皆經過相容性與依賴性測試（由 zach 本人測試），確保它們在主流的 Common Lisp 實現上是可以工作的，並且與其它的函式庫不相互衝突。</p>
+<h2>安裝 Quicklisp</h2>
+<p>步驟很簡單，只要下載 quicklisp.lisp、加載進來、安裝、加入啟動文件。之後就可以輕鬆加載第三方函式庫摟。</p>
+<p>系統：Mac OSX</p>
+<p>Common Lisp 實現：SBCL</p>
+<p><code>$</code> 號為命令行、<code>?</code> 為 Lisp REPL。</p>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="char">$ </span>curl -<span class="class">O</span> <span class="method">http:</span>//beta.quicklisp.org/quicklisp.lisp
+<span class="char">$ </span>sbcl --load quicklisp.lisp
+* (quicklisp-<span class="method">quickstart:</span>install)
+* (<span class="method">ql:</span>add-to-init-file)
+</pre></td></tr></table></figure>
+
+<h2>安裝過了，再次加載？</h2>
+<p>如果你沒有執行上面的 <code>(ql:add-to-init-file)</code>，將會需要再每次啟動 Common Lisp 之後手動加載 Quicklisp。</p>
+<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="list">(<span class="title">load</span><span class="body"> <span class="string">"~/quicklisp/setup.lisp"</span>)</span></span>
+</pre></td></tr></table></figure>
+
+<p><strong>注意!!!!</strong></p>
+<p><strong>將路徑換成 quicklisp 所在的目錄，CMUCL 不支持解析 <code>~</code> 家目錄</strong></p>
+<h2>安裝特定版本的軟件包？</h2>
+<p>參考這篇文章：<a href="http://blog.quicklisp.org/2011/08/going-back-in-dist-time.html">Going back in dist time</a></p>
+<h2>Quicklisp 命令</h2>
+<table>
+  <tr>
+    <th>Command</th><th>Description</th><th></th>
+  </tr>
+  <tr>
+    <td><code>(ql:quickload system-name)</code></td><td>自動下載軟件包</td>
+  </tr>
+  <tr>
+    <td><code>(ql:system-apropos substring)</code></td><td>搜索帶有 <code>substring</code> 的軟件包</td>
+  </tr>
+  <tr>
+    <td><code>(ql:add-to-init-file)</code></td><td>啟動時自動加載 Quicklisp</td>
+  </tr>
+  <tr>
+    <td><code>(ql:quickload &quot;quicklisp-slime-helper&quot;)</code></td><td>安裝提供給 SLIME 的 Quicklisp 助手</td>
+  </tr>
+  <tr>
+    <td><code>(ql:update-all-dists)</code></td><td>獲取第三方軟件包更新</td>
+  </tr>
+  <tr>
+    <td><code>(ql:update-client)</code></td><td>更新 Quicklisp</td>
+  </tr>
+  <tr>
+    <td><code>(ql:who-depends-on system-name)</code></td><td>看特定軟件包的依賴關係</td>
+  </tr>
+</table>
+
+<h2>尋求幫助</h2>
+<p>最新消息：在推特上跟隨 <a href="http://twitter.com/quicklisp">@quicklisp</a> 或閱讀 <a href="http://blog.quicklisp.org/">Quicklisp 的 blog</a>。</p>
+<p>有任何問題或意見請<a href="mailto:zach@quicklisp.org">寄信給 zach</a>，或到 freenode 的 #quicklisp 頻道。</p>
+<p>Quicklisp 代碼放在 <a href="http://github.com/quicklisp/">GitHub</a></p>
+<h2>延伸閱讀</h2>
+<p><a href="http://www.quicklisp.org/beta/faq.html">Quciklisp FAQ</a></p>
+<p><a id="google-plus-author" href="https://plus.google.com/116526763595254359821?rel=author">Google</a></p>
 ]]></content>
     <category scheme="http://lisp.tw//tags/Common-Lisp/" term="Common Lisp"/>
     <category scheme="http://lisp.tw//tags/Package-Manager/" term="Package Manager"/>
