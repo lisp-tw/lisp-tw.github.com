@@ -111,7 +111,7 @@
 <p>上面提供了 IBM 1130 模擬器，以及其它你所需要的軟件，都在上面。以下我將敘述，如何在 Linux / Mac OSX 上模擬一個 IBM 1130，跑一個簡單的 Lisp 程式，並使用 LISP 1.6 的 REPL。</p>
 <h2>下載 IBM 1130 模擬器及 LISP 鏡像。</h2>
 <p>下載並解壓縮：</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 2
 3
 </pre></td><td class="code"><pre><span class="variable">$ </span>mkdir ibm113<span class="number">0</span> && cd ibm113<span class="number">0</span>
@@ -121,18 +121,18 @@
 
 <h2>編譯 IBM 1130 執行檔</h2>
 <p>需要安裝 GCC。</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="variable">$ </span>make
 </pre></td></tr></table></figure>
 
 <p>注意，若是使用 linux 系的作業系統，make 之後會有錯誤：</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="literal">undefined</span> reference to `<span class="javascript">clock_getres<span class="string">'</span>
 </pre></td></tr></table></figure>
 
 <p>這個在 time.h 定義的 <code>clock_getres</code> 函數，需要連結 librt.so 這個 Runtime 連結庫。</p>
 <p>修改 makefile （MacOSX 無需修改），在 74 行最後加上 <code>-lrt</code> ：</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 2
 </pre></td><td class="code"><pre><span class="variable">${</span><span class="constant">BIN</span>}ibm113<span class="number">0</span> <span class="symbol">:</span> <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} <span class="variable">${</span>ibm1130_INC} <span class="variable">${</span><span class="constant">SIM_INC</span>}
 <span class="keyword">true</span><span class="variable">${</span><span class="constant">CC</span>} <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} -o <span class="variable">$@</span> -lrt
@@ -140,7 +140,7 @@
 
 <p>編譯成功就看到目錄下有個 IBM 1130 的可執行檔。</p>
 <h2>Factorial in IBM 1130 LISP 1.6</h2>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="variable">$ </span>touch fact.job
 </pre></td></tr></table></figure>
 
@@ -422,6 +422,10 @@ var moment_js_path = '/js/moment.min.js';
   <h3 class="title">分類</h3>
   <ul class="entry">
   
+    <li><a href="/categories/Common-Lisp/">Common Lisp</a><small>3</small></li>
+  
+    <li><a href="/categories/Common-Lisp/Book/">Book</a><small>1</small></li>
+  
     <li><a href="/categories/轉載/">轉載</a><small>4</small></li>
   
     <li><a href="/categories/轉載/Common-Lisp/">Common Lisp</a><small>3</small></li>
@@ -430,17 +434,9 @@ var moment_js_path = '/js/moment.min.js';
   
     <li><a href="/categories/譯文/Clojure/">Clojure</a><small>1</small></li>
   
-    <li><a href="/categories/Common-Lisp/">Common Lisp</a><small>3</small></li>
-  
-    <li><a href="/categories/Common-Lisp/Book/">Book</a><small>1</small></li>
-  
     <li><a href="/categories/meeting/">meeting</a><small>1</small></li>
   
     <li><a href="/categories/轉載/Lisp/">Lisp</a><small>1</small></li>
-  
-    <li><a href="/categories/Lisp/">Lisp</a><small>2</small></li>
-  
-    <li><a href="/categories/meetup/">meetup</a><small>1</small></li>
   
     <li><a href="/categories/Scheme/">Scheme</a><small>1</small></li>
   
@@ -448,21 +444,21 @@ var moment_js_path = '/js/moment.min.js';
   
     <li><a href="/categories/Scheme/Lisp/Tutorials/">Tutorials</a><small>1</small></li>
   
-    <li><a href="/categories/tools/">tools</a><small>3</small></li>
+    <li><a href="/categories/Lisp/">Lisp</a><small>2</small></li>
+  
+    <li><a href="/categories/meetup/">meetup</a><small>1</small></li>
   
     <li><a href="/categories/名言佳句/">名言佳句</a><small>1</small></li>
   
     <li><a href="/categories/名言佳句/Lisp/">Lisp</a><small>1</small></li>
-  
-    <li><a href="/categories/jobs/">jobs</a><small>1</small></li>
-  
-    <li><a href="/categories/jobs/Lisp/">Lisp</a><small>1</small></li>
   
     <li><a href="/categories/Common-Lisp/轉載/">轉載</a><small>1</small></li>
   
     <li><a href="/categories/Books/">Books</a><small>1</small></li>
   
     <li><a href="/categories/Books/Common-Lisp/">Common Lisp</a><small>1</small></li>
+  
+    <li><a href="/categories/tools/">tools</a><small>3</small></li>
   
   </ul>
 </div>
@@ -475,15 +471,21 @@ var moment_js_path = '/js/moment.min.js';
   
     <li><a href="/tags/Common-Lisp/">Common Lisp</a><small>15</small></li>
   
-    <li><a href="/tags/Lisp/">Lisp</a><small>13</small></li>
-  
-    <li><a href="/tags/Clojure/">Clojure</a><small>1</small></li>
-  
     <li><a href="/tags/ANSI-Common-Lisp/">ANSI Common Lisp</a><small>1</small></li>
   
     <li><a href="/tags/Paul-Graham/">Paul Graham</a><small>1</small></li>
   
+    <li><a href="/tags/Lisp/">Lisp</a><small>12</small></li>
+  
     <li><a href="/tags/book/">book</a><small>1</small></li>
+  
+    <li><a href="/tags/ASDF/">ASDF</a><small>1</small></li>
+  
+    <li><a href="/tags/田春/">田春</a><small>2</small></li>
+  
+    <li><a href="/tags/Clojure/">Clojure</a><small>1</small></li>
+  
+    <li><a href="/tags/Haskell/">Haskell</a><small>2</small></li>
   
     <li><a href="/tags/meeting/">meeting</a><small>1</small></li>
   
@@ -491,19 +493,15 @@ var moment_js_path = '/js/moment.min.js';
   
     <li><a href="/tags/Erlang/">Erlang</a><small>1</small></li>
   
-    <li><a href="/tags/Haskell/">Haskell</a><small>2</small></li>
-  
     <li><a href="/tags/Java/">Java</a><small>1</small></li>
   
-    <li><a href="/tags/ASDF/">ASDF</a><small>1</small></li>
+    <li><a href="/tags/Scheme/">Scheme</a><small>1</small></li>
   
     <li><a href="/tags/IBM-1130/">IBM 1130</a><small>1</small></li>
   
     <li><a href="/tags/LISP-1.6/">LISP 1.6</a><small>1</small></li>
   
-    <li><a href="/tags/田春/">田春</a><small>2</small></li>
-  
-    <li><a href="/tags/Scheme/">Scheme</a><small>1</small></li>
+    <li><a href="/tags/PAIP/">PAIP</a><small>1</small></li>
   
     <li><a href="/tags/Package-Manager/">Package Manager</a><small>3</small></li>
   
@@ -512,10 +510,6 @@ var moment_js_path = '/js/moment.min.js';
     <li><a href="/tags/productivity/">productivity</a><small>3</small></li>
   
     <li><a href="/tags/quickutil/">quickutil</a><small>1</small></li>
-  
-    <li><a href="/tags/jobs/">jobs</a><small>1</small></li>
-  
-    <li><a href="/tags/PAIP/">PAIP</a><small>1</small></li>
   
   </ul>
 </div>

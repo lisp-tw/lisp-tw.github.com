@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Sharing and Collecting knowledge of Lisp]]></subtitle>
   <link href="http://lisp.tw//atom.xml" rel="self"/>
   <link href="http://lisp.tw/"/>
-  <updated>2013-09-09T13:45:05.958Z</updated>
+  <updated>2013-10-11T11:51:16.469Z</updated>
   <id>http://lisp.tw//</id>
   <author>
     <name><![CDATA[Lisp Taiwan]]></name>
@@ -2579,7 +2579,7 @@ So he wrote it all in Lisp. <br/></p>
 <p>上面提供了 IBM 1130 模擬器，以及其它你所需要的軟件，都在上面。以下我將敘述，如何在 Linux / Mac OSX 上模擬一個 IBM 1130，跑一個簡單的 Lisp 程式，並使用 LISP 1.6 的 REPL。</p>
 <h2>下載 IBM 1130 模擬器及 LISP 鏡像。</h2>
 <p>下載並解壓縮：</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 2
 3
 </pre></td><td class="code"><pre><span class="variable">$ </span>mkdir ibm113<span class="number">0</span> && cd ibm113<span class="number">0</span>
@@ -2589,18 +2589,18 @@ So he wrote it all in Lisp. <br/></p>
 
 <h2>編譯 IBM 1130 執行檔</h2>
 <p>需要安裝 GCC。</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="variable">$ </span>make
 </pre></td></tr></table></figure>
 
 <p>注意，若是使用 linux 系的作業系統，make 之後會有錯誤：</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="literal">undefined</span> reference to `<span class="javascript">clock_getres<span class="string">'</span>
 </pre></td></tr></table></figure>
 
 <p>這個在 time.h 定義的 <code>clock_getres</code> 函數，需要連結 librt.so 這個 Runtime 連結庫。</p>
 <p>修改 makefile （MacOSX 無需修改），在 74 行最後加上 <code>-lrt</code> ：</p>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 2
 </pre></td><td class="code"><pre><span class="variable">${</span><span class="constant">BIN</span>}ibm113<span class="number">0</span> <span class="symbol">:</span> <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} <span class="variable">${</span>ibm1130_INC} <span class="variable">${</span><span class="constant">SIM_INC</span>}
 <span class="keyword">true</span><span class="variable">${</span><span class="constant">CC</span>} <span class="variable">${</span>ibm113<span class="number">0</span>} <span class="variable">${</span><span class="constant">SIM</span>} -o <span class="variable">$@</span> -lrt
@@ -2608,7 +2608,7 @@ So he wrote it all in Lisp. <br/></p>
 
 <p>編譯成功就看到目錄下有個 IBM 1130 的可執行檔。</p>
 <h2>Factorial in IBM 1130 LISP 1.6</h2>
-<figure class="highlight lang-cl"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-scheme"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="variable">$ </span>touch fact.job
 </pre></td></tr></table></figure>
 
